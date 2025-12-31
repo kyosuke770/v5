@@ -691,35 +691,30 @@ function gradeCard(grade) {
 
   const level = prefs.level;
   const card = cardsByMode[index];
-  const intervalMs = nextIntervalMs(grade);
 
   if (!srs[card.no]) srs[card.no] = {};
-  srs[card.no][level] = {
-    intervalMs,
-    dueAt: now() + intervalMs,
-    lastGrade: grade
-  };
+  if (!srs[card.no][level]) srs[card.no][level] = {};
+
+  const rec = srs[card.no][level];
+
+  // ✅ カウント追加
+  rec.total = (rec.total || 0) + 1;
+  if (grade === 3) {          // ← easy が 3 の場合（あなたの現状に合わせて）
+    rec.easy = (rec.easy || 0) + 1;
+  }
+
+  // 既存のSRS処理（dueAtなど）
+  rec.lastGrade = grade;
+  rec.intervalMs = nextIntervalMs(grade);
+  rec.dueAt = now() + rec.intervalMs;
+
   saveAll();
 
-  if (sessionMode === "normal") {
-    if (grade === 1 || grade === 2) {
-      sessionDueSet.add(card.no);
-    } else if (grade === 3) {
-      ensureDaily();
-      daily.goodCount = (daily.goodCount || 0) + 1;
-      saveAll();
-    }
-  } else {
-    // due mode
-    if (grade === 3) {
-      sessionDueSet.delete(card.no);
-
-      ensureDaily();
-      daily.goodCount = (daily.goodCount || 0) + 1;
-      saveAll();
-    } else {
-      sessionDueSet.add(card.no);
-    }
+  // 既存の進捗加算（easyだけ進む、など）
+  if (grade === 3) {
+    ensureDaily();
+    daily.goodCount = (daily.goodCount || 0) + 1;
+    saveAll();
   }
 
   goNext();
