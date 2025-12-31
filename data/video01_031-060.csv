@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene
-31,どうしたんですか？,What happened?,,1,1,状況や相手の様子がおかしい時に使う。,daily
-32,さっきはごめんなさい。,Sorry about earlier.,,1,1,直前の出来事について軽く謝る表現。,relationship
-33,来られますか？,Can you make it?,,1,1,予定やイベントに参加できるか聞く。,daily
-34,何か提案はありますか？,What do you suggest?,,1,1,相手の意見やアイデアを求める。,work
-35,時間を取ってくれてありがとう。,Thanks for your time.,,1,1,忙しい中対応してもらった時。,work
-36,できる限りやってみます。,I'll see what I can do.,,1,1,確約せず努力する意思を示す。,work
-37,全て順調です。,Everything is going well.,,1,1,進捗や状況が良好な時。,daily
-38,こちらこそ。,My pleasure.,,1,1,感謝された時の丁寧な返し。,service
-39,大したことないですよ。,It's nothing.,,1,1,お礼や謝罪に対する軽い返答。,daily
-40,お待ちいただきありがとうございます。,Thanks for waiting.,,1,1,待たせた相手への第一声。,service
-41,また連絡します。,I'll let you know.,,1,1,後で情報を共有する時。,work
-42,ご遠慮なく聞いてください。,Feel free to ask.,,1,1,相手に安心して質問させる。,work
-43,自分がいいと思うようにして。,Do what feels right.,,1,1,相手の判断を尊重する。,relationship
-44,詳しく教えてもらえますか？,Could you elaborate?,,1,1,説明が足りない時に使う。,work
-45,ご理解ありがとうございます。,Thanks for understanding.,,1,1,無理なお願いや説明の後。,service
-46,楽しんでください。,Enjoy yourself.,,1,1,出かける人への一言。,daily
-47,念のため確認します。,I'll double-check.,,1,1,ミス防止のため再確認。,work
-48,ちょっと違います。,That's not quite right.,,1,1,やんわり訂正する表現。,work
-49,確認してみます。,Let me check.,,1,1,情報や状況を調べる時。,service
-50,まだはっきりしていません。,It's not clear yet.,,1,1,状況が未確定な時。,work
-51,説明するのは難しいです。,It's hard to explain.,,1,1,一言で言えない時。,daily
-52,気にしないでください。,No worries.,,1,1,謝罪や感謝への返し。,daily
-53,一つ聞いてもいいですか？,Can I ask you something?,,1,1,本題に入る前の前置き。,daily
-54,私がやります。,I'll handle it.,,1,1,自分が責任を持つ時。,work
-55,結果はどうでしたか？,How did it turn out?,,1,1,結果や結末を聞く。,daily
-56,いつでもどうぞ。,Anytime.,,1,1,「どういたしまして」の意味。,daily
-57,少し時間ありますか？,Do you have a minute?,,1,1,話しかける前の確認。,work
-58,様子を見ましょう。,Let's see how it goes.,,1,1,判断を保留する時。,work
-59,問題ありません。,No problem at all.,,1,1,全く問題ないと伝える。,daily
-60,また後で話しましょう。,I'll talk to you later.,,1,1,カジュアルな別れの挨拶。,daily
+no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+31,どうしたんですか？,What happened?,,1,1,状況や相手の様子がおかしい時に使う。,daily,What を使う,過去形を使う,何が起こったのか理由を尋ねる表現,相手の様子がおかしい時や事情を知りたい時に使う,What happened? は過去形で「何があった？」,What's wrong?|What's the matter?|Is everything OK?
+32,さっきはごめんなさい。,Sorry about earlier.,,1,1,直前の出来事について軽く謝る表現。,relationship,earlier を使う,about を使う,先ほどの出来事について謝罪する,時間を置いてから軽く謝る時に便利,earlier は「先ほど」という意味の副詞,Sorry about that|My apologies earlier|Sorry for what happened
+33,来られますか？,Can you make it?,,1,1,予定やイベントに参加できるか聞く。,daily,make it で「間に合う」,Can you を使う,予定に参加できるか・都合がつくか尋ねる,make it は「成功する・間に合う」という慣用表現,Can you make it? で参加可否を聞く,Can you come?|Are you available?|Will you be there?
+34,何か提案はありますか？,What do you suggest?,,1,1,相手の意見やアイデアを求める。,work,suggest を使う,What を使う,相手の提案や意見を求める表現,アドバイスや代替案を求める丁寧な聞き方,suggest は「提案する」という動詞,What's your suggestion?|Any suggestions?|What would you recommend?
+35,時間を取ってくれてありがとう。,Thanks for your time.,,1,1,忙しい中対応してもらった時。,work,time を使う,Thanks for の後に名詞,貴重な時間を割いてもらったことへの感謝,ミーティングや面談の終わりに使う定番,for your time で「お時間をいただいて」,Thank you for your time|I appreciate your time|Thanks for making time
+36,できる限りやってみます。,I'll see what I can do.,,1,1,確約せず努力する意思を示す。,work,see what を使う,can do で「できること」,確約はできないが努力すると伝える表現,期待値を上げすぎず、でも協力的な印象,I'll see what I can do は慣用表現,I'll try my best|I'll do what I can|Let me see what's possible
+37,全て順調です。,Everything is going well.,,1,1,進捗や状況が良好な時。,daily,Everything を主語に,going well で「順調」,全てが良い方向に進んでいることを伝える,状況報告で使う前向きな表現,be going well は現在進行形で「順調に進んでいる」,Things are going well|All is good|Everything's fine
+38,こちらこそ。,My pleasure.,,1,1,感謝された時の丁寧な返し。,service,pleasure を使う,My で始まる,「どういたしまして」の丁寧な言い方,You're welcome よりフォーマルで親切な印象,My pleasure は「私の喜びです」という意味,It's my pleasure|You're welcome|Anytime
+39,大したことないですよ。,It's nothing.,,1,1,お礼や謝罪に対する軽い返答。,daily,nothing を使う,It's で始まる,「大したことじゃない」と軽く返す表現,謙遜や謝罪への返答として使う,It's nothing は「何でもない」という慣用表現,No big deal|Don't worry about it|It's no problem
+40,お待ちいただきありがとうございます。,Thanks for waiting.,,1,1,待たせた相手への第一声。,service,waiting を使う,Thanks for の形,相手を待たせたことへの感謝,Sorry for the wait の代わりに使える前向きな表現,Thanks for + 動名詞で感謝を表す,Thank you for waiting|Appreciate your patience|Sorry for the wait
+41,また連絡します。,I'll let you know.,,1,1,後で情報を共有する時。,work,let you know で「知らせる」,I'll で始まる,後で情報を伝えることを約束する表現,詳細が分かり次第連絡する意思を示す,let someone know は「知らせる」という慣用表現,I'll keep you posted|I'll update you|I'll be in touch
+42,ご遠慮なく聞いてください。,Feel free to ask.,,1,1,相手に安心して質問させる。,work,Feel free を使う,ask を使う,遠慮せず質問してほしいと伝える,質問を歓迎する親切な表現,Feel free to + 動詞の原形,Don't hesitate to ask|Please ask|Ask me anything
+43,自分がいいと思うようにして。,Do what feels right.,,1,1,相手の判断を尊重する。,relationship,feels を使う,what を使う,自分の直感や判断を信じて行動してと伝える,相手の自主性を尊重する表現,what feels right は「正しいと感じること」,Follow your gut|Do what you think is best|Trust your instinct
+44,詳しく教えてもらえますか？,Could you elaborate?,,1,1,説明が足りない時に使う。,work,elaborate を使う,Could you で丁寧に,もっと詳しく説明してほしいと依頼する,説明が不十分な時の丁寧な聞き方,elaborate は「詳しく述べる」という動詞,Could you explain more?|Can you go into detail?|Could you be more specific?
+45,ご理解ありがとうございます。,Thanks for understanding.,,1,1,無理なお願いや説明の後。,service,understanding を使う,Thanks for の形,理解してくれたことへの感謝,不便や変更を受け入れてもらった時に使う,Thanks for + 動名詞で感謝,Thank you for understanding|I appreciate your understanding|Thanks for being understanding
+46,楽しんでください。,Enjoy yourself.,,1,1,出かける人への一言。,daily,Enjoy を使う,yourself を使う,楽しい時間を過ごしてと伝える挨拶,イベントや外出前の気の利いた一言,Enjoy yourself は命令形だが親切な表現,Have fun|Have a good time|Enjoy
+47,念のため確認します。,I'll double-check.,,1,1,ミス防止のため再確認。,work,double を使う,check を使う,念のためもう一度確認すると伝える,慎重さや丁寧さを示す表現,double-check は「二重確認する」という動詞,I'll check again|Let me verify|I'll confirm
+48,ちょっと違います。,That's not quite right.,,1,1,やんわり訂正する表現。,work,quite を使う,not を使う,完全に正しくはないとやんわり指摘する,直接的な否定を避ける丁寧な訂正,not quite は「完全には〜ない」という表現,That's not exactly right|Not quite|That's a bit off
+49,確認してみます。,Let me check.,,1,1,情報や状況を調べる時。,service,Let me を使う,check を使う,今から確認すると伝える表現,すぐに調べて答える意思を示す,Let me + 動詞の原形で「させてください」,I'll check|Let me see|I'll look into it
+50,まだはっきりしていません。,It's not clear yet.,,1,1,状況が未確定な時。,work,clear を使う,yet を使う,まだ明確になっていないことを伝える,結論が出ていない状態を説明する表現,yet は文末で「まだ」という意味,It's unclear|We don't know yet|It's uncertain
+51,説明するのは難しいです。,It's hard to explain.,,1,1,一言で言えない時。,daily,hard を使う,to explain を使う,簡単には説明できない複雑さを伝える,言葉で表現しにくい状況を示す,It's hard to + 動詞の原形,It's difficult to explain|It's complicated|Hard to put into words
+52,気にしないでください。,No worries.,,1,1,謝罪や感謝への返し。,daily,worries を使う,No で始まる,心配しなくていいと伝える軽い表現,謝罪や感謝に対するカジュアルな返答,No worries は「心配無用」という慣用表現,Don't worry about it|No problem|It's fine
+53,一つ聞いてもいいですか？,Can I ask you something?,,1,1,本題に入る前の前置き。,daily,ask を使う,something を使う,質問していいか許可を求める表現,会話を始める時の丁寧な前置き,Can I + 動詞の原形で許可を求める,May I ask something?|Can I ask a question?|Quick question
+54,私がやります。,I'll handle it.,,1,1,自分が責任を持つ時。,work,handle を使う,I'll で始まる,自分が対応すると宣言する表現,責任を持って処理する意思を示す,handle は「処理する・対応する」という動詞,I'll take care of it|I've got this|Let me handle it
+55,結果はどうでしたか？,How did it turn out?,,1,1,結果や結末を聞く。,daily,turn out を使う,How で始まる,最終的な結果や成り行きを尋ねる,過去の出来事の結末を知りたい時,turn out は「結果的に〜になる」という句動詞,How did it go?|What was the result?|How did things go?
+56,いつでもどうぞ。,Anytime.,,1,1,「どういたしまして」の意味。,daily,1語だけ,時間に関する単語,「いつでもいいよ」という親切な返答,Thank you への軽くて親しみやすい返答,Anytime は副詞だが返答として使える,You're welcome|No problem|Sure thing
+57,少し時間ありますか？,Do you have a minute?,,1,1,話しかける前の確認。,work,minute を使う,Do you have を使う,少し時間をもらえるか尋ねる表現,話しかける前の丁寧な確認,a minute は「少しの時間」という意味,Got a minute?|Do you have time?|Can I talk to you?
+58,様子を見ましょう。,Let's see how it goes.,,1,1,判断を保留する時。,work,see を使う,how it goes を使う,経過を観察してから判断しようと提案する,即断を避ける慎重なアプローチ,Let's see + 疑問詞節で「〜を見よう」,Let's wait and see|We'll see|Let's see what happens
+59,問題ありません。,No problem at all.,,1,1,全く問題ないと伝える。,daily,at all を使う,No problem を使う,全く問題ないことを強調する表現,相手の心配を完全に払拭する言い方,at all で強調「全く」,No problem|Not a problem|That's fine
+60,また後で話しましょう。,I'll talk to you later.,,1,1,カジュアルな別れの挨拶。,daily,later を使う,talk to you を使う,後でまた話そうという別れの挨拶,会話を一旦終える時の自然な表現,I'll talk to you later は未来形,Talk to you later|Catch you later|Speak to you soon
