@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene
-61,ちょっといいですか？,Do you have a second?,,1,1,相手に一瞬だけ時間をもらう時。,work
-62,少し待ってください。,Just a moment.,,1,1,短い待ち時間をお願いする定番。,service
-63,すぐ戻ります。,I'll be right back.,,1,1,席を外す時に使う。,daily
-64,今ちょうど出るところです。,I'm just heading out.,,1,1,今から出発するところ。,daily
-65,あとで連絡します。,I'll get back to you.,,1,1,後で返信・回答する時。,work
-66,念のため言っておきます。,Just so you know.,,1,1,事前に軽く情報共有する。,work
-67,それは良いですね。,That sounds great.,,1,1,相手の提案に前向きな反応。,daily
-68,それはいい考えですね。,That's a good idea.,,1,1,アイデアを評価する一言。,work
-69,助かります。,That helps a lot.,,1,1,相手の行動に感謝を伝える。,daily
-70,ありがとうございます。,I appreciate it.,,1,1,丁寧に感謝する万能表現。,daily
-71,すみません、聞き取れませんでした。,I didn't catch that.,,1,1,聞き返す時の自然な言い方。,daily
-72,もう一度言ってもらえますか？,Could you say that again?,,1,1,丁寧に聞き返す。,daily
-73,ゆっくり話してもらえますか？,Could you speak more slowly?,,1,1,相手のスピードが速い時。,daily
-74,それで合ってます。,That's correct.,,1,1,正しいと確認する。,work
-75,間違いありません。,That's right.,,1,1,「その通り」の確信強め。,daily
-76,ちょっと考えさせて。,Let me think.,,1,1,即答せず考える時間を作る。,daily
-77,もう一度確認します。,Let me make sure.,,1,1,勘違い防止の確認。,work
-78,その通りです。,Exactly.,,1,1,強い同意・一致。,daily
-79,たぶんそうです。,Probably.,,1,1,確信は低いが肯定。,daily
-80,それは違うと思います。,I don't think so.,,1,1,やんわり否定する。,daily
-81,わかりません。,I have no idea.,,1,1,全く分からない時。,daily
-82,正直に言うと…,To be honest...,,1,1,本音を切り出す前置き。,daily
-83,つまり…,In other words...,,1,1,言い換えて説明する。,work
-84,例えば…,For example...,,1,1,例を出して補足する。,work
-85,それってどういう意味？,What do you mean?,,1,1,相手の意図を確認する。,daily
-86,本当？,Really?,,1,1,驚きや確認のリアクション。,daily
-87,冗談でしょ？,You're kidding.,,1,1,驚き・ツッコミで使う。,daily
-88,任せて。,Leave it to me.,,1,1,自分がやると引き受ける。,work
-89,大丈夫です。,I'm good.,,1,1,「大丈夫/足りてる」など幅広い。,daily
-90,それで問題ないです。,That works for me.,,1,1,提案に同意する時。,daily
+no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+61,ちょっといいですか？,Do you have a second?,,1,1,相手に一瞬だけ時間をもらう時。,work,second を使う,Do you have を使う,少しだけ時間をもらえるか尋ねる,a second は「一瞬」という意味だが実際はもう少し長い,Do you have a second? で時間確認,Got a second?|Do you have a minute?|Quick question
+62,少し待ってください。,Just a moment.,,1,1,短い待ち時間をお願いする定番。,service,Just を使う,moment を使う,短時間の待機をお願いする表現,丁寧で自然な待ち時間の依頼,Just a moment は「ちょっと待って」の丁寧版,One moment please|Just a second|Hold on
+63,すぐ戻ります。,I'll be right back.,,1,1,席を外す時に使う。,daily,right を使う,back を使う,すぐに戻ってくることを約束する,right は「すぐに」の意味で強調,I'll be right back は頻出の慣用表現,Be right back|I'll be back soon|Back in a sec
+64,今ちょうど出るところです。,I'm just heading out.,,1,1,今から出発するところ。,daily,heading を使う,just を使う,今まさに出かけようとしていることを伝える,just は「ちょうど今」というタイミングを示す,heading out は「出かける」という句動詞,I'm about to leave|I'm leaving now|Just going out
+65,あとで連絡します。,I'll get back to you.,,1,1,後で返信・回答する時。,work,get back を使う,you を使う,後で返答や連絡をすると約束する,ビジネスで頻繁に使う定番フレーズ,get back to someone は「連絡する」という慣用表現,I'll contact you later|I'll let you know|I'll follow up
+66,念のため言っておきます。,Just so you know.,,1,1,事前に軽く情報共有する。,work,Just を使う,you know を使う,念のため情報を伝える前置き,重要度は高くないが知っておいてほしい時,Just so you know は前置き表現,FYI|For your information|By the way
+67,それは良いですね。,That sounds great.,,1,1,相手の提案に前向きな反応。,daily,sounds を使う,great を使う,提案や計画に対して好意的な反応を示す,sound は「聞こえる」で印象を表す,That sounds + 形容詞で感想を述べる,Sounds good|That's great|Sounds perfect
+68,それはいい考えですね。,That's a good idea.,,1,1,アイデアを評価する一言。,work,good idea を使う,That's を使う,相手のアイデアを肯定的に評価する,シンプルで使いやすい褒め言葉,That's a good idea は定番の肯定表現,Good thinking|That's smart|Great idea
+69,助かります。,That helps a lot.,,1,1,相手の行動に感謝を伝える。,daily,helps を使う,a lot を使う,相手の助けに感謝を表現する,「本当に助かる」という実感を込めた表現,help は動詞で「助ける」,That's helpful|That really helps|Much appreciated
+70,ありがとうございます。,I appreciate it.,,1,1,丁寧に感謝する万能表現。,daily,appreciate を使う,it を使う,感謝を丁寧に伝える表現,Thank you より少しフォーマル,appreciate は「感謝する」という動詞,Thank you|Thanks a lot|I'm grateful
+71,すみません、聞き取れませんでした。,I didn't catch that.,,1,1,聞き返す時の自然な言い方。,daily,catch を使う,didn't を使う,聞き取れなかったことを伝える,catch は「捕まえる」で「理解する」の意味も,catch は理解や聞き取りを表す動詞,I didn't hear that|Could you repeat?|Pardon?
+72,もう一度言ってもらえますか？,Could you say that again?,,1,1,丁寧に聞き返す。,daily,say again を使う,Could you を使う,もう一度言ってもらうよう丁寧に依頼,Can you より丁寧な聞き返し,Could you + 動詞の原形で丁寧な依頼,Can you repeat that?|Could you repeat?|Say that again?
+73,ゆっくり話してもらえますか？,Could you speak more slowly?,,1,1,相手のスピードが速い時。,daily,slowly を使う,more を使う,話すスピードを落としてもらう依頼,言語学習者が使う重要表現,more slowly は「もっとゆっくり」という比較級,Slow down please|A bit slower please|Could you slow down?
+74,それで合ってます。,That's correct.,,1,1,正しいと確認する。,work,correct を使う,That's を使う,相手の理解や答えが正しいと確認する,ビジネスや教育でよく使う確認表現,correct は形容詞で「正しい」,That's right|Exactly|Yes that's it
+75,間違いありません。,That's right.,,1,1,「その通り」の確信強め。,daily,right を使う,That's を使う,完全に正しいことを強く肯定する,確信を持って同意する時,right は「正しい」という形容詞,Exactly|That's correct|Absolutely
+76,ちょっと考えさせて。,Let me think.,,1,1,即答せず考える時間を作る。,daily,Let me を使う,think を使う,考える時間が欲しいと伝える,即答を避けて思考時間を確保,Let me + 動詞の原形で「させて」,Give me a moment|Let me consider|Hold on
+77,もう一度確認します。,Let me make sure.,,1,1,勘違い防止の確認。,work,make sure を使う,Let me を使う,念のため再確認すると伝える,慎重さを示す丁寧な表現,make sure は「確認する」という慣用表現,I'll double-check|Let me verify|Let me confirm
+78,その通りです。,Exactly.,,1,1,強い同意・一致。,daily,1語だけ,完全一致を示す単語,完全に同意・一致していることを示す,シンプルで強い肯定の返答,Exactly は副詞で強調,Precisely|That's right|Absolutely
+79,たぶんそうです。,Probably.,,1,1,確信は低いが肯定。,daily,1語だけ,可能性を示す単語,おそらくそうだと控えめに肯定する,確信はないが可能性が高い時,Probably は副詞で「おそらく」,Maybe|Perhaps|Likely
+80,それは違うと思います。,I don't think so.,,1,1,やんわり否定する。,daily,don't think を使う,so を使う,やんわりと否定的な意見を述べる,直接的な否定より柔らかい表現,I don't think so は婉曲的否定,I disagree|Not really|I'm not sure about that
+81,わかりません。,I have no idea.,,1,1,全く分からない時。,daily,no idea を使う,have を使う,全く見当がつかないことを伝える,I don't know より強い「わからなさ」,have no idea は「全く分からない」という慣用表現,I don't know|No clue|Not sure
+82,正直に言うと…,To be honest...,,1,1,本音を切り出す前置き。,daily,honest を使う,To be を使う,率直な意見を言う前の前置き,本音や批判的な内容の前に使う,To be honest は「正直に言うと」という慣用表現,Honestly|Frankly|To tell the truth
+83,つまり…,In other words...,,1,1,言い換えて説明する。,work,other words を使う,In を使う,別の言い方で説明し直す時の前置き,難しい内容を簡単に言い換える時,In other words は「言い換えると」という慣用表現,That is to say|Meaning|So basically
+84,例えば…,For example...,,1,1,例を出して補足する。,work,example を使う,For を使う,具体例を挙げる時の前置き,説明を分かりやすくする定番表現,For example は「例えば」という慣用表現,Like|Such as|For instance
+85,それってどういう意味？,What do you mean?,,1,1,相手の意図を確認する。,daily,mean を使う,What を使う,相手の発言の意味や意図を確認する,理解できない時の自然な聞き返し,What do you mean? は意味確認の定番,What does that mean?|I don't understand|Can you explain?
+86,本当？,Really?,,1,1,驚きや確認のリアクション。,daily,1語だけ,驚きを示す単語,驚きや疑問を表す万能リアクション,疑問と驚きの両方を表現できる,Really? は上昇イントネーションで疑問,Seriously?|Are you sure?|No way
+87,冗談でしょ？,You're kidding.,,1,1,驚き・ツッコミで使う。,daily,kidding を使う,You're を使う,冗談だと思いたいほどの驚き,信じられない出来事へのリアクション,You're kidding は「冗談でしょ」という慣用表現,Are you serious?|No way|You must be joking
+88,任せて。,Leave it to me.,,1,1,自分がやると引き受ける。,work,Leave を使う,to me を使う,自分に任せてと引き受ける表現,自信を持って引き受ける時,Leave it to me は「私に任せて」という慣用表現,I'll handle it|I've got this|Count on me
+89,大丈夫です。,I'm good.,,1,1,「大丈夫/足りてる」など幅広い。,daily,good を使う,I'm を使う,大丈夫・問題ない・足りているなど多用途,状況によって意味が変わる便利な表現,I'm good は状況依存の多義表現,I'm fine|I'm okay|No thanks
+90,それで問題ないです。,That works for me.,,1,1,提案に同意する時。,daily,works を使う,for me を使う,提案や計画に同意することを伝える,柔軟に受け入れる意思を示す,work for someone は「都合が良い」という意味,That's fine|Sounds good|That's okay

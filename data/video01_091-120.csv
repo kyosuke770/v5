@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene
-91,少し時間をください。,Give me a moment.,,1,1,短時間の猶予を求める。,work
-92,今忙しいです。,I'm busy right now.,,1,1,今は対応できない時。,daily
-93,後で話せますか？,Can we talk later?,,1,1,今は無理な時の代替提案。,daily
-94,了解しました。,Got it.,,1,1,カジュアルな理解の返事。,daily
-95,問題ありません。,No problem.,,1,1,軽い承諾・安心の返答。,daily
-96,それでいいです。,That's fine.,,1,1,提案を受け入れる。,daily
-97,そうしましょう。,Let's do that.,,1,1,提案に同意して進める。,work
-98,確認ありがとうございます。,Thanks for checking.,,1,1,確認してくれたことへの感謝。,work
-99,助けが必要です。,I need some help.,,1,1,支援を求める時。,daily
-100,手伝ってもらえますか？,Could you help me?,,1,1,丁寧に助けを頼む。,daily
-101,どう思いますか？,What do you think?,,1,1,相手の意見を聞く。,daily
-102,それは私のミスです。,That's my fault.,,1,1,自分の責任を認める。,work
-103,申し訳ありません。,I apologize.,,1,1,フォーマルな謝罪。,work
-104,急ぎです。,It's urgent.,,1,1,優先度が高いことを伝える。,work
-105,時間があります。,I have time.,,1,1,今は余裕がある。,daily
-106,時間がありません。,I don't have time.,,1,1,急いでいる時。,daily
-107,それは難しいです。,That's difficult.,,1,1,簡単ではない時。,daily
-108,簡単です。,It's easy.,,1,1,問題が単純な時。,daily
-109,後で確認します。,I'll check later.,,1,1,後回しにする時。,work
-110,今すぐ必要です。,I need it now.,,1,1,即時対応が必要。,work
-111,もう一度お願いします。,One more time, please.,,1,1,丁寧に繰り返し依頼。,daily
-112,問題が起きました。,There's a problem.,,1,1,トラブル発生の報告。,work
-113,解決しました。,It's resolved.,,1,1,問題が解決した。,work
-114,その必要はありません。,That's not necessary.,,1,1,不要だと伝える。,daily
-115,了解です。,Understood.,,1,1,ややフォーマルな理解。,work
-116,気をつけます。,I'll be careful.,,1,1,注意する意思表示。,daily
-117,忘れないでください。,Please don't forget.,,1,1,リマインドする。,daily
-118,問題ありませんか？,Is that okay?,,1,1,相手の了承を確認。,daily
-119,確認できました。,I checked.,,1,1,確認完了の報告。,work
-120,準備できました。,I'm ready.,,1,1,準備完了を伝える。,daily
+no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+91,少し時間をください。,Give me a moment.,,1,1,短時間の猶予を求める。,work,moment を使う,Give me を使う,少しの時間をもらいたいと依頼する,丁寧かつ自然な時間確保の表現,Give me + 名詞で「〜をください」,Just a moment|One moment|Hold on
+92,今忙しいです。,I'm busy right now.,,1,1,今は対応できない時。,daily,busy を使う,right now を使う,現在忙しくて対応できないことを伝える,断りの理由として使う直接的な表現,right now は「まさに今」という強調,I'm occupied|I can't right now|I'm tied up
+93,後で話せますか？,Can we talk later?,,1,1,今は無理な時の代替提案。,daily,later を使う,Can we を使う,別の時間に話すことを提案する,今は無理だが後なら対応できる意思,Can we + 動詞で提案,Can we discuss this later?|Let's talk later|Maybe later?
+94,了解しました。,Got it.,,1,1,カジュアルな理解の返事。,daily,2語だけ,Get の過去形,理解したことをカジュアルに伝える,友人やカジュアルな場面で使う,Got it は I've got it の短縮,Understood|I see|Okay
+95,問題ありません。,No problem.,,1,1,軽い承諾・安心の返答。,daily,problem を使う,No で始まる,問題ないことを軽く伝える表現,謝罪や依頼への気軽な返答,No problem は頻出の慣用表現,No worries|That's fine|Not a problem
+96,それでいいです。,That's fine.,,1,1,提案を受け入れる。,daily,fine を使う,That's を使う,提案や状況を受け入れることを伝える,特に不満がないことを示す,fine は「問題ない」という形容詞,That's okay|That works|Sounds good
+97,そうしましょう。,Let's do that.,,1,1,提案に同意して進める。,work,do that を使う,Let's を使う,提案に同意して実行を決める,積極的に同意する時の表現,Let's + 動詞で提案・勧誘,Let's go with that|That's the plan|Let's proceed
+98,確認ありがとうございます。,Thanks for checking.,,1,1,確認してくれたことへの感謝。,work,checking を使う,Thanks for を使う,確認作業への感謝を伝える,相手の配慮に対する感謝,Thanks for + 動名詞で感謝,Thank you for checking|Appreciate the check|Thanks for verifying
+99,助けが必要です。,I need some help.,,1,1,支援を求める時。,daily,help を使う,need を使う,助けが必要だと率直に伝える,素直に支援を求める表現,I need + 名詞で必要性を伝える,I need assistance|Can someone help?|I could use some help
+100,手伝ってもらえますか？,Could you help me?,,1,1,丁寧に助けを頼む。,daily,help を使う,Could you を使う,助けを丁寧に依頼する,Can you より丁寧な依頼,Could you + 動詞で丁寧な依頼,Can you help?|Would you help?|Could you assist me?
+101,どう思いますか？,What do you think?,,1,1,相手の意見を聞く。,daily,think を使う,What を使う,相手の意見や考えを尋ねる,フィードバックを求める定番表現,What do you think? は意見を聞く基本形,What's your opinion?|Your thoughts?|How do you feel?
+102,それは私のミスです。,That's my fault.,,1,1,自分の責任を認める。,work,fault を使う,my を使う,自分の過ちを認めて謝る,責任を認める誠実な表現,fault は「過失・責任」という名詞,That's my mistake|My bad|I'm responsible
+103,申し訳ありません。,I apologize.,,1,1,フォーマルな謝罪。,work,apologize を使う,I で始まる,正式に謝罪する表現,Sorry より格式が高い謝罪,apologize は動詞で「謝罪する」,I'm sorry|My apologies|Please accept my apology
+104,急ぎです。,It's urgent.,,1,1,優先度が高いことを伝える。,work,urgent を使う,It's を使う,緊急性が高いことを強調する,すぐに対応が必要な時,urgent は形容詞で「緊急の」,This is urgent|It's time-sensitive|It's important
+105,時間があります。,I have time.,,1,1,今は余裕がある。,daily,time を使う,have を使う,時間的余裕があることを伝える,対応可能であることを示す,I have + 名詞で所有を表す,I'm available|I'm free|I've got time
+106,時間がありません。,I don't have time.,,1,1,急いでいる時。,daily,time を使う,don't have を使う,時間的余裕がないことを伝える,忙しさや急ぎを示す表現,don't have は否定形,I'm busy|I'm in a hurry|No time
+107,それは難しいです。,That's difficult.,,1,1,簡単ではない時。,daily,difficult を使う,That's を使う,困難であることを伝える,簡単ではないことを正直に言う,difficult は形容詞で「難しい」,That's hard|That's tough|That's challenging
+108,簡単です。,It's easy.,,1,1,問題が単純な時。,daily,easy を使う,It's を使う,簡単であることを伝える,問題ないことを安心させる表現,easy は形容詞で「簡単な」,It's simple|No problem|That's straightforward
+109,後で確認します。,I'll check later.,,1,1,後回しにする時。,work,later を使う,check を使う,後で確認すると約束する,今はできないが後で対応する意思,I'll + 動詞で未来の約束,I'll look at it later|I'll review it later|Check back later
+110,今すぐ必要です。,I need it now.,,1,1,即時対応が必要。,work,now を使う,need を使う,今すぐ必要だと強調する,緊急性を強く伝える表現,I need it now は強い要求,I need this immediately|Right now|ASAP
+111,もう一度お願いします。,One more time please.,,1,1,丁寧に繰り返し依頼。,daily,one more time を使う,please を使う,もう一度やってもらうよう丁寧に頼む,繰り返しを求める丁寧な表現,one more time は「もう一度」,Again please|Could you do that again?|Repeat please
+112,問題が起きました。,There's a problem.,,1,1,トラブル発生の報告。,work,problem を使う,There's を使う,問題が発生したことを報告する,トラブルを伝える直接的な表現,There's + 名詞で存在を示す,We have a problem|Something's wrong|There's an issue
+113,解決しました。,It's resolved.,,1,1,問題が解決した。,work,resolved を使う,It's を使う,問題が解決したことを報告する,トラブルが収束したことを伝える,resolved は「解決された」という過去分詞,It's fixed|Problem solved|All set
+114,その必要はありません。,That's not necessary.,,1,1,不要だと伝える。,daily,necessary を使う,not を使う,不要であることを伝える,やらなくていいと安心させる表現,necessary は形容詞で「必要な」,You don't have to|No need|That's not needed
+115,了解です。,Understood.,,1,1,ややフォーマルな理解。,work,1語だけ,過去分詞形,理解したことをフォーマルに伝える,ビジネスでよく使う簡潔な返答,Understood は過去分詞で「理解された」,Got it|I understand|Roger
+116,気をつけます。,I'll be careful.,,1,1,注意する意思表示。,daily,careful を使う,be を使う,注意することを約束する,気をつけて行動する意思を示す,I'll be + 形容詞で状態を約束,I'll watch out|I'll be cautious|I'll pay attention
+117,忘れないでください。,Please don't forget.,,1,1,リマインドする。,daily,forget を使う,don't を使う,忘れないよう念を押す,大事なことのリマインダー,Please don't + 動詞で否定の依頼,Don't forget|Remember|Keep in mind
+118,問題ありませんか？,Is that okay?,,1,1,相手の了承を確認。,daily,okay を使う,Is that を使う,問題ないか確認する,相手の同意を確認する表現,Is that okay? は了承確認の基本形,Is that alright?|Are you okay with that?|Any problem?
+119,確認できました。,I checked.,,1,1,確認完了の報告。,work,checked を使う,I で始まる,確認作業が完了したことを報告する,タスク完了の簡潔な報告,過去形で完了を示す,I've checked|Confirmed|I verified
+120,準備できました。,I'm ready.,,1,1,準備完了を伝える。,daily,ready を使う,I'm を使う,準備が整ったことを伝える,開始可能であることを示す,I'm ready は状態を表す,All set|I'm prepared|Ready to go

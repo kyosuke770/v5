@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene
-121,少し早すぎます。,It's a bit early.,,1,1,予定や時間が早い時。,daily
-122,少し遅すぎます。,It's a bit late.,,1,1,時間が遅いと感じる時。,daily
-123,今すぐ戻ります。,I'll be back shortly.,,1,1,すぐ戻ることを伝える。,daily
-124,急いでいます。,I'm in a hurry.,,1,1,時間がない時。,daily
-125,落ち着いてください。,Please calm down.,,1,1,相手をなだめる時。,daily
-126,それは知りませんでした。,I didn't know that.,,1,1,初めて知った時。,daily
-127,そう聞いています。,That's what I heard.,,1,1,伝聞であることを示す。,daily
-128,間違っていたらすみません。,Correct me if I'm wrong.,,1,1,前置きとして使う。,work
-129,私の理解では…,As I understand it...,,1,1,自分の理解を述べる。,work
-130,それで大丈夫です。,That should be fine.,,1,1,問題ないと判断する。,daily
-131,その必要はないと思います。,I don't think it's necessary.,,1,1,やんわり否定する。,work
-132,念のため聞きますが…,Just to be sure...,,1,1,確認の前置き。,work
-133,それは予想外でした。,I didn't expect that.,,1,1,想定外の出来事。,daily
-134,その通りだと思います。,I think you're right.,,1,1,相手に同意する。,daily
-135,それは理にかなっています。,That seems reasonable.,,1,1,判断が妥当だと伝える。,work
-136,ちょっと考え直します。,Let me reconsider.,,1,1,判断を見直す時。,work
-137,それで決まりですね。,So it's settled.,,1,1,結論が出た時。,work
-138,念のため保存します。,I'll save it just in case.,,1,1,万一に備える。,work
-139,すぐに対応します。,I'll take care of it right away.,,1,1,即対応を約束。,work
-140,あとで説明します。,I'll explain later.,,1,1,詳細は後で。,work
-141,それは私の勘違いでした。,That was my misunderstanding.,,1,1,誤解を認める。,work
-142,もう一度確認してください。,Please check again.,,1,1,再確認を依頼。,work
-143,今は難しいです。,It's not possible right now.,,1,1,現時点では不可。,daily
-144,別の方法を考えましょう。,Let's find another way.,,1,1,代替案を提案。,work
-145,少し調整が必要です。,It needs some adjustment.,,1,1,微調整が必要。,work
-146,その点は同意します。,I agree on that point.,,1,1,部分的に同意。,work
-147,それは別の話です。,That's a different matter.,,1,1,話題を切り分ける。,work
-148,その件は後回しで。,Let's put that aside for now.,,1,1,一旦保留。,work
-149,急ぐ必要はありません。,There's no rush.,,1,1,急がなくていいと伝える。,daily
-150,準備は整っています。,Everything is set.,,1,1,全て準備完了。,daily
+no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+121,少し早すぎます。,It's a bit early.,,1,1,予定や時間が早い時。,daily,early を使う,a bit を使う,時間が早すぎることを伝える,予定より早いことを指摘する表現,a bit は「少し」という意味の副詞,Too early|A little early|Bit soon
+122,少し遅すぎます。,It's a bit late.,,1,1,時間が遅いと感じる時。,daily,late を使う,a bit を使う,時間が遅すぎることを伝える,予定より遅いことを指摘する表現,a bit late は「少し遅い」,Too late|A little late|Running late
+123,今すぐ戻ります。,I'll be back shortly.,,1,1,すぐ戻ることを伝える。,daily,shortly を使う,back を使う,短時間で戻ることを約束する,soon より短い時間のニュアンス,shortly は副詞で「すぐに」,Be right back|I'll return soon|Back in a moment
+124,急いでいます。,I'm in a hurry.,,1,1,時間がない時。,daily,hurry を使う,in を使う,急いでいることを伝える,時間がないことを強調する表現,in a hurry は「急いで」という慣用表現,I'm rushing|I'm pressed for time|In a rush
+125,落ち着いてください。,Please calm down.,,1,1,相手をなだめる時。,daily,calm を使う,Please を使う,興奮している人を落ち着かせる,感情的な相手への対応,calm down は「落ち着く」という句動詞,Take it easy|Relax|Stay calm
+126,それは知りませんでした。,I didn't know that.,,1,1,初めて知った時。,daily,know を使う,didn't を使う,知らなかったことを伝える,新情報への反応として使う,過去形で「知らなかった」,I wasn't aware|News to me|I had no idea
+127,そう聞いています。,That's what I heard.,,1,1,伝聞であることを示す。,daily,heard を使う,what を使う,他の人から聞いた情報であることを示す,情報源が自分ではないことを明示,That's what I heard は伝聞を表す定番,So I've heard|That's the word|I heard that too
+128,間違っていたらすみません。,Correct me if I'm wrong.,,1,1,前置きとして使う。,work,correct を使う,if を使う,誤りがあれば指摘してほしいと前置き,控えめに意見を述べる時の枕詞,Correct me if I'm wrong は定型表現,Please correct me|If I'm mistaken|I might be wrong but
+129,私の理解では…,As I understand it...,,1,1,自分の理解を述べる。,work,understand を使う,As を使う,自分の理解に基づく意見の前置き,誤解の可能性を含む控えめな表現,As I understand は「私の理解では」という前置き,From what I understand|As far as I know|My understanding is
+130,それで大丈夫です。,That should be fine.,,1,1,問題ないと判断する。,daily,should を使う,fine を使う,おそらく問題ないと判断する,確信はないが大丈夫だと思う時,should は「〜のはず」という推量,That's probably fine|Should work|That ought to be okay
+131,その必要はないと思います。,I don't think it's necessary.,,1,1,やんわり否定する。,work,necessary を使う,don't think を使う,不要だと柔らかく意見する,直接否定を避ける婉曲表現,I don't think は控えめな否定,I don't think we need that|Not necessary|Probably not needed
+132,念のため聞きますが…,Just to be sure...,,1,1,確認の前置き。,work,sure を使う,Just to be を使う,確認のための質問の前置き,慎重さを示す丁寧な前置き,Just to be sure は確認の定型表現,To confirm|To double-check|Just checking
+133,それは予想外でした。,I didn't expect that.,,1,1,想定外の出来事。,daily,expect を使う,didn't を使う,予想していなかったことを伝える,驚きや意外性を表現,expect は「予想する」という動詞,That's unexpected|I wasn't expecting that|Surprised by that
+134,その通りだと思います。,I think you're right.,,1,1,相手に同意する。,daily,think を使う,you're right を使う,相手の意見が正しいと同意する,控えめな同意の表現,I think + 節で意見を述べる,You're probably right|I agree|I think so too
+135,それは理にかなっています。,That seems reasonable.,,1,1,判断が妥当だと伝える。,work,reasonable を使う,seems を使う,妥当な判断だと評価する,論理的で納得できる時の表現,reasonable は「妥当な」という形容詞,That makes sense|Sounds reasonable|That's logical
+136,ちょっと考え直します。,Let me reconsider.,,1,1,判断を見直す時。,work,reconsider を使う,Let me を使う,もう一度考え直すと伝える,柔軟に判断を変える意思,reconsider は「再考する」という動詞,Let me think again|I'll rethink that|Let me review
+137,それで決まりですね。,So it's settled.,,1,1,結論が出た時。,work,settled を使う,it's を使う,決定事項として確認する,合意が成立したことを示す,settled は「決まった」という意味,It's decided|That's final|We're set
+138,念のため保存します。,I'll save it just in case.,,1,1,万一に備える。,work,save を使う,just in case を使う,万一に備えて保存すると伝える,慎重な対応を示す表現,just in case は「念のため」という慣用表現,I'll save it to be safe|Better save it|Just to be safe
+139,すぐに対応します。,I'll take care of it right away.,,1,1,即対応を約束。,work,take care を使う,right away を使う,すぐに処理することを約束する,迅速な対応を保証する表現,take care of は「対処する」という慣用表現,I'll handle it now|On it right away|I'll do it immediately
+140,あとで説明します。,I'll explain later.,,1,1,詳細は後で。,work,explain を使う,later を使う,後で詳しく説明すると約束する,今は時間がない時の対応,I'll + 動詞 + later で後回し,I'll tell you later|Explanation later|More details later
+141,それは私の勘違いでした。,That was my misunderstanding.,,1,1,誤解を認める。,work,misunderstanding を使う,was を使う,自分の誤解だったと認める,誤りを素直に認める表現,misunderstanding は「誤解」という名詞,I misunderstood|My mistake|I got it wrong
+142,もう一度確認してください。,Please check again.,,1,1,再確認を依頼。,work,again を使う,check を使う,もう一度確認してほしいと依頼する,念のための再確認依頼,Please + 動詞で丁寧な依頼,Double-check please|Verify again|Please recheck
+143,今は難しいです。,It's not possible right now.,,1,1,現時点では不可。,daily,possible を使う,right now を使う,今は実現できないことを伝える,タイミングの問題を示す表現,not possible は「不可能」,Can't do it now|Not at the moment|Currently impossible
+144,別の方法を考えましょう。,Let's find another way.,,1,1,代替案を提案。,work,another way を使う,find を使う,別のアプローチを探そうと提案する,柔軟な問題解決の姿勢,Let's + 動詞で提案,Let's try a different approach|Find an alternative|Look for another solution
+145,少し調整が必要です。,It needs some adjustment.,,1,1,微調整が必要。,work,adjustment を使う,needs を使う,調整が必要だと伝える,ほぼ完成だが改善の余地あり,adjustment は「調整」という名詞,Needs tweaking|Requires adjustment|Some changes needed
+146,その点は同意します。,I agree on that point.,,1,1,部分的に同意。,work,point を使う,agree を使う,特定の点については同意すると伝える,全面同意ではないが部分的に賛成,agree on は「〜に同意する」,I agree with that|On that I agree|That point is valid
+147,それは別の話です。,That's a different matter.,,1,1,話題を切り分ける。,work,different を使う,matter を使う,別の問題であることを指摘する,話題を整理して区別する表現,matter は「問題・事柄」という名詞,That's another issue|Different topic|Separate matter
+148,その件は後回しで。,Let's put that aside for now.,,1,1,一旦保留。,work,aside を使う,for now を使う,その話題を一旦保留にしようと提案する,優先順位を整理する表現,put aside は「脇に置く」という句動詞,Table that for now|Save that for later|Park that
+149,急ぐ必要はありません。,There's no rush.,,1,1,急がなくていいと伝える。,daily,rush を使う,no を使う,急ぐ必要がないと安心させる,時間的余裕があることを伝える,There's no + 名詞で不要を示す,Take your time|No hurry|No need to rush
+150,準備は整っています。,Everything is set.,,1,1,全て準備完了。,daily,set を使う,Everything を使う,全ての準備が完了したことを伝える,開始可能な状態を示す,set は形容詞で「準備完了」,We're ready|All set|Everything's ready
