@@ -1,0 +1,33 @@
+no,jp,en,slots,video,lv,note,scene
+211,今は問題ありません。,No issues at the moment.,,1,1,現時点では問題なし。,work
+212,少し様子を見ます。,I'll keep an eye on it.,,1,1,経過観察する。,work
+213,それについて確認します。,I'll check on that.,,1,1,対象について確認。,work
+214,今すぐ対応は不要です。,No action needed right now.,,1,1,現時点では対応不要。,work
+215,それは後回しで大丈夫です。,That can wait.,,1,1,優先度が低い。,daily
+216,今は判断できません。,I can't decide right now.,,1,1,即断できない。,daily
+217,それは検討中です。,It's under consideration.,,1,1,検討段階。,work
+218,その点は後で話しましょう。,Let's discuss that later.,,1,1,話題を後回し。,work
+219,その件は把握しています。,I'm aware of it.,,1,1,認識済み。,work
+220,少し時間が必要です。,I need a bit more time.,,1,1,時間が必要。,daily
+
+221,もう少しで{x}。,I'm almost {x}.,done=終わり|ready=準備完了|there=到着,1,2,定番の進捗表現。,daily
+222,{x}してもいいですか？,Can I {x}?,ask something=一つ聞く|check this=これ確認する|join you=参加する,1,2,許可を求める基本形。,daily
+223,少し{x}ありますか？,Do you have {x}?,a minute=時間|a moment=少し,1,2,会話の切り出し。,work
+224,それは{x}次第です。,It depends on {x}.,the situation=状況|the timing=タイミング,1,2,条件付き判断。,work
+225,後で{x}します。,I'll {x} later.,check=確認する|explain=説明する|reply=返信する,1,2,後回し対応。,work
+226,{x}してくれてありがとう。,Thanks for {x}.,waiting=待ってくれて|checking=確認してくれて,1,2,行為への感謝。,daily
+227,それは{x}ですね。,That's {x}.,fine=問題ない|interesting=興味深い,1,2,短い評価表現。,daily
+228,私が{x}します。,I'll {x}.,handle it=対応する|take care of it=片付ける,1,2,引き受け表現。,work
+229,{x}する必要があります。,We need to {x}.,fix this=修正する|decide=決める,1,2,必要性を伝える。,work
+230,もう一度{x}してください。,Please {x} again.,check=確認|explain=説明,1,2,再依頼。,work
+
+231,それは良い方向です。,That's a good sign.,,1,1,ポジティブ評価。,daily
+232,少し違和感があります。,Something feels off.,,1,1,違和感を表す。,daily
+233,その点は重要です。,That point is important.,,1,1,重要点を強調。,work
+234,問題はそこです。,That's the issue.,,1,1,問題点を指摘。,work
+235,それは想定内です。,That's within expectations.,,1,1,想定内。,work
+236,今のところ順調です。,Everything looks good so far.,,1,1,現状良好。,work
+237,もう少し様子を見ましょう。,Let's monitor it a bit more.,,1,1,継続観察。,work
+238,対応を進めています。,We're working on it.,,1,1,対応中。,work
+239,それは後で対応します。,I'll deal with that later.,,1,1,後対応。,work
+240,ここまでで大丈夫です。,That should be enough for now.,,1,1,一旦十分。,daily
