@@ -91,6 +91,9 @@ const statsView = document.getElementById("statsView");
 const homeDueBtn = document.getElementById("homeDue");
 const homeVideoBtn = document.getElementById("homeVideo");
 const homeStatsBtn = document.getElementById("homeStats");
+const homeLv1Btn = document.getElementById("homeLv1");
+const homeLv2Btn = document.getElementById("homeLv2");
+const homeLv3Btn = document.getElementById("homeLv3");
 
 const backHomeBtn = document.getElementById("backHome");
 const videoBtn = document.getElementById("videoOrder");
@@ -132,6 +135,8 @@ function showHome() {
   renderProgress();
   renderBlockTable();
   renderSceneButtons();
+  renderHomeLevelButtons();
+  renderDueCount();
 }
 
 function showStudy() {
@@ -643,6 +648,39 @@ function renderDaily() {
   barEl.style.width = goal ? `${Math.min(100, Math.round((done / goal) * 100))}%` : "0%";
 }
 
+function renderHomeLevelButtons() {
+  const level = prefs.level || 1;
+
+  // 現在のレベル表示
+  const currentLevelEl = document.getElementById("currentLevel");
+  if (currentLevelEl) {
+    currentLevelEl.textContent = `Lv${level}`;
+  }
+
+  // ボタンのactive状態
+  [homeLv1Btn, homeLv2Btn, homeLv3Btn].forEach((btn, idx) => {
+    if (!btn) return;
+    if (idx + 1 === level) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+}
+
+function renderDueCount() {
+  const dueCountEl = document.getElementById("dueCount");
+  if (!dueCountEl) return;
+
+  const level = prefs.level;
+  const dueCount = cards.filter(c => {
+    const d = srs[c.no]?.[level]?.dueAt ?? Infinity;
+    return d <= now();
+  }).length;
+
+  dueCountEl.textContent = `${dueCount}件`;
+}
+
 /*************************************************
  * Card rendering (Lv behavior)
  *************************************************/
@@ -892,6 +930,10 @@ function gradeCard(grade) {
 if (homeDueBtn) homeDueBtn.addEventListener("click", () => startReviewDue(true));
 if (homeVideoBtn) homeVideoBtn.addEventListener("click", () => startVideoOrder(true));
 if (homeStatsBtn) homeStatsBtn.addEventListener("click", showStats);
+
+if (homeLv1Btn) homeLv1Btn.addEventListener("click", () => { prefs.level = 1; saveAll(); showHome(); });
+if (homeLv2Btn) homeLv2Btn.addEventListener("click", () => { prefs.level = 2; saveAll(); showHome(); });
+if (homeLv3Btn) homeLv3Btn.addEventListener("click", () => { prefs.level = 3; saveAll(); showHome(); });
 
 if (backHomeBtn) backHomeBtn.addEventListener("click", showHome);
 

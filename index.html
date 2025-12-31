@@ -27,6 +27,18 @@
 
     <section class="cardBox">
       <div class="rowBetween">
+        <div class="hLabel">現在のレベル</div>
+        <div id="currentLevel" class="hValue">Lv1</div>
+      </div>
+      <div class="levelSelectRow">
+        <button id="homeLv1" class="levelSelectBtn active">Lv1</button>
+        <button id="homeLv2" class="levelSelectBtn">Lv2</button>
+        <button id="homeLv3" class="levelSelectBtn">Lv3</button>
+      </div>
+    </section>
+
+    <section class="cardBox">
+      <div class="rowBetween">
         <div class="hLabel">ブロック進捗</div>
         <div id="progressText" class="hValue">進捗：Lv1 0 / 0</div>
       </div>
@@ -35,10 +47,22 @@
       </div>
     </section>
 
-    <section class="homeActions">
-      <button id="homeDue" class="primaryBtn">復習（Due）</button>
-      <button id="homeVideo" class="ghostBtn">動画順モード</button>
-      <button id="homeStats" class="ghostBtn">統計を見る</button>
+    <section class="homeActionsGrid">
+      <button id="homeDue" class="actionCard primary">
+        <div class="actionIcon">📚</div>
+        <div class="actionTitle">復習（Due）</div>
+        <div id="dueCount" class="actionCount">0件</div>
+      </button>
+      <button id="homeVideo" class="actionCard">
+        <div class="actionIcon">▶️</div>
+        <div class="actionTitle">動画順</div>
+        <div class="actionSub">全カード</div>
+      </button>
+      <button id="homeStats" class="actionCard">
+        <div class="actionIcon">📊</div>
+        <div class="actionTitle">統計</div>
+        <div class="actionSub">進捗確認</div>
+      </button>
     </section>
 
     <section class="cardBox">
