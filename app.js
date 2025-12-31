@@ -295,6 +295,14 @@ function getVideoUrl(videoId) {
  * CSV Auto Loader (manifest不要, iPhone向け軽量探索)
  *************************************************/
 async function loadAllCSVs() {
+  const loadingOverlay = document.getElementById("loadingOverlay");
+  const loadingMessage = document.getElementById("loadingMessage");
+
+  // Initial loading message
+  if (loadingMessage) {
+    loadingMessage.innerHTML = 'Loading English cards<span class="dots"></span>';
+  }
+
   cards = [];
   await loadVideosMeta();
 
@@ -302,9 +310,6 @@ async function loadAllCSVs() {
   const MAX_BLOCK = 50;
   const MISS_LIMIT_VIDEO = 3; // 連続で動画が無い → 終了
   const MISS_LIMIT_BLOCK = 2; // 連続でブロックが無い → 次の動画へ
-
-  if (jpEl) jpEl.textContent = "CSV読み込み中…";
-  if (enEl) enEl.textContent = "";
 
   let missVideo = 0;
 
@@ -347,10 +352,26 @@ async function loadAllCSVs() {
 
   cards.sort((a, b) => a.no - b.no);
 
+  // Change to "Preparing" message
+  if (loadingMessage) {
+    loadingMessage.innerHTML = 'Preparing your practice<span class="dots"></span>';
+  }
+
   // 初期モード（ブロック）
   cardsByMode = getCardsByBlock(prefs.block || 1);
   index = 0;
   resetCardView();
+
+  // Wait a bit for the "Preparing" message to be visible
+  await new Promise(resolve => setTimeout(resolve, 500));
+
+  // Hide loading overlay with fade out
+  if (loadingOverlay) {
+    loadingOverlay.classList.add("hidden");
+  }
+
+  // Wait for fade out animation to complete
+  await new Promise(resolve => setTimeout(resolve, 500));
 
   showHome();
 }
