@@ -1,55 +1,51 @@
-no,jp,en,slots,video,lv,note,scene
-301,えーと…,Well...,,1,1,考える間を作る。,daily
-302,つまり…,I mean...,,1,1,言い直しの前置き。,daily
-303,実は…,Actually...,,1,1,本音や修正。,daily
-304,基本的に…,Basically...,,1,1,要点をまとめる。,work
-305,というか…,I guess...,,1,1,断定を避ける。,daily
-306,正直に言うと…,To be honest...,,1,1,率直さを出す。,daily
-307,どう言えばいいかな…,How should I put this...,,1,1,表現を探す。,daily
-308,言い換えると…,In other words...,,1,1,説明を補足。,work
-309,ある意味では…,In a way...,,1,1,ニュアンス調整。,daily
-310,まあ…,Well, yeah.,,1,1,軽い同意。,daily
-
-311,それは助かります。,That helps.,,1,1,感謝・評価。,daily
-312,それはありがたいです。,I appreciate that.,,1,1,丁寧な感謝。,daily
-313,それは安心しました。,That's a relief.,,1,1,安心を表す。,daily
-314,それは残念です。,That's a shame.,,1,1,残念な気持ち。,daily
-315,それは大変ですね。,That sounds tough.,,1,1,共感。,daily
-316,気持ちわかります。,I feel you.,,1,1,強い共感。,daily
-317,なるほど。,I see.,,1,1,理解の相槌。,daily
-318,そうだよね。,I know, right?,,1,1,同意・共感。,daily
-319,確かに。,Exactly.,,1,1,強い同意。,daily
-320,本当だ。,You're right.,,1,1,相手を認める。,daily
-
-321,たぶん…,Probably...,,1,1,確信低め。,daily
-322,もしかしたら…,Maybe...,,1,1,可能性。,daily
-323,〜のように思えます。,It seems like...,,1,1,推測。,daily
-324,〜っぽいです。,It looks like...,,1,1,見た目判断。,daily
-325,何とも言えません。,It's hard to say.,,1,1,判断保留。,daily
-326,ケースバイケースです。,It depends.,,1,1,条件付き。,work
-327,個人的には…,Personally...,,1,1,個人意見。,daily
-328,私としては…,From my side...,,1,1,立場表明。,work
-329,ざっくり言うと…,Roughly speaking...,,1,1,概要。,work
-330,大体そんな感じです。,More or less.,,1,1,曖昧表現。,daily
-
-331,いや、違うな…,Actually, no...,,1,1,訂正。,daily
-332,言い方間違えました。,That came out wrong.,,1,1,言い直し。,daily
-333,言い直します。,Let me rephrase.,,1,1,修正。,work
-334,最初から言うと…,Let me start over.,,1,1,やり直し。,daily
-335,もう一度整理します。,Let me clarify.,,1,1,明確化。,work
-336,要するに…,Long story short...,,1,1,要約。,daily
-337,つまりそういうことです。,That's what I mean.,,1,1,意図説明。,daily
-338,言いたいのは…,What I'm saying is...,,1,1,主張。,daily
-339,ちょっと話が逸れました。,I got sidetracked.,,1,1,話題戻し。,daily
-340,話を戻すと…,Back to the point...,,1,1,軌道修正。,work
-
-341,大丈夫です。,I'm fine.,,1,1,状態説明。,daily
-342,全然問題ないです。,Totally fine.,,1,1,強調。,daily
-343,もちろんです。,Of course.,,1,1,即答。,daily
-344,了解です。,Sure.,,1,1,軽い承諾。,daily
-345,まあまあです。,It's okay.,,1,1,無難評価。,daily
-346,本当に？,Seriously?,,1,1,驚き。,daily
-347,冗談だよね？,Are you serious?,,1,1,確認。,daily
-348,正直言って…,Honestly...,,1,1,本音。,daily
-349,マジで。,For real.,,1,1,カジュアル強調。,daily
-350,その通り。,That's exactly it.,,1,1,完全一致。,daily
+no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+301,えーと…,Well...,,1,1,考える間を作る。,daily,1語だけ,間を埋める,考えながら話す時の間つなぎ,次の言葉を探している時に使う,Well... は典型的なfiller word,Uh...|Um...|Let me see...
+302,つまり…,I mean...,,1,1,言い直しの前置き。,daily,mean を使う,I で始まる,言い換えや修正の前置き,説明を補足する時の定番表現,I mean は「つまり」という意味,What I mean is|In other words|So...
+303,実は…,Actually...,,1,1,本音や修正。,daily,Actually を使う,1語だけ,事実や本音を伝える前置き,訂正や追加情報の導入,Actually は「実は」という副詞,To be honest|In fact|Truth is
+304,基本的に…,Basically...,,1,1,要点をまとめる。,work,Basically を使う,1語だけ,要約や本質を伝える前置き,複雑な内容を簡潔にする時,Basically は「基本的に」という副詞,Essentially|In essence|Fundamentally
+305,というか…,I guess...,,1,1,断定を避ける。,daily,guess を使う,I で始まる,確信がない時の推測表現,断定を避ける控えめな言い方,I guess は「〜だと思う」という推量,I suppose|I think|Maybe
+306,正直に言うと…,To be honest...,,1,1,率直さを出す。,daily,honest を使う,To be を使う,率直な意見を述べる前置き,本音を打ち明ける時の表現,To be honest は「正直に言えば」,Honestly|Frankly|To tell the truth
+307,どう言えばいいかな…,How should I put this...,,1,1,表現を探す。,daily,put を使う,How を使う,適切な表現を探している時の前置き,言葉を選んでいる時の間つなぎ,How should I put this は慣用表現,How do I say this|Let me think|How to say...
+308,言い換えると…,In other words...,,1,1,説明を補足。,work,words を使う,other を使う,別の言い方で説明する前置き,より分かりやすく言い直す時,In other words は「言い換えれば」,To put it differently|That is to say|In simple terms
+309,ある意味では…,In a way...,,1,1,ニュアンス調整。,daily,way を使う,In a を使う,部分的に正しいことを示す前置き,完全には同意しない時の表現,In a way は「ある意味では」,Sort of|Kind of|In some sense
+310,まあ…,Well, yeah.,,1,1,軽い同意。,daily,2語だけ,yeah を使う,消極的な同意や相槌,特に強くない同意を示す,Well, yeah は軽い同意,I guess so|Sort of|Yeah
+311,それは助かります。,That helps.,,1,1,感謝・評価。,daily,helps を使う,That を使う,役立つことへの感謝,シンプルな感謝の表現,That helps は「それは助かる」,That's helpful|Appreciate it|That's useful
+312,それはありがたいです。,I appreciate that.,,1,1,丁寧な感謝。,daily,appreciate を使う,I で始まる,感謝を丁寧に伝える,より formal な感謝の表現,appreciate は「感謝する」という動詞,Thank you for that|I'm grateful|Thanks so much
+313,それは安心しました。,That's a relief.,,1,1,安心を表す。,daily,relief を使う,That's を使う,安心したことを伝える,心配が解消された時の表現,relief は「安心・安堵」という名詞,That's reassuring|I'm relieved|Good to hear
+314,それは残念です。,That's a shame.,,1,1,残念な気持ち。,daily,shame を使う,That's を使う,残念であることを伝える,同情や遺憾の気持ちを示す,shame は「残念なこと」という名詞,That's too bad|That's unfortunate|What a shame
+315,それは大変ですね。,That sounds tough.,,1,1,共感。,daily,tough を使う,sounds を使う,相手の苦労に共感する,困難な状況への理解を示す,sounds tough は「大変そう」,That's hard|Sounds difficult|That's rough
+316,気持ちわかります。,I feel you.,,1,1,強い共感。,daily,feel を使う,I で始まる,強く共感することを伝える,カジュアルな強い共感表現,I feel you は「気持ちわかる」というスラング,I understand|I get it|I relate
+317,なるほど。,I see.,,1,1,理解の相槌。,daily,2語だけ,see を使う,理解したことを示す相槌,最も基本的な理解の表現,I see は「なるほど」という定番表現,I understand|Got it|I get it
+318,そうだよね。,I know, right?,,1,1,同意・共感。,daily,know を使う,right を使う,相手に同意して共感する,カジュアルな同意の表現,I know, right? は「そうだよね」というスラング,Exactly|Yeah, right|Tell me about it
+319,確かに。,Exactly.,,1,1,強い同意。,daily,1語だけ,Exactly を使う,完全に同意することを示す,強い肯定と同意の表現,Exactly は「まさにその通り」,Precisely|Absolutely|That's right
+320,本当だ。,You're right.,,1,1,相手を認める。,daily,right を使う,You're を使う,相手の意見が正しいと認める,素直に相手を肯定する表現,You're right は「あなたが正しい」,That's true|You have a point|True
+321,たぶん…,Probably...,,1,1,確信低め。,daily,1語だけ,Probably を使う,おそらくという推測,確信度60-70%程度の推量,Probably は「おそらく」という副詞,Maybe|Likely|I think so
+322,もしかしたら…,Maybe...,,1,1,可能性。,daily,1語だけ,Maybe を使う,可能性を示す表現,確信度50%程度の推量,Maybe は「もしかしたら」という副詞,Perhaps|Possibly|Could be
+323,〜のように思えます。,It seems like...,,1,1,推測。,daily,seems を使う,like を使う,〜のように見えると推測する,直接断定を避ける表現,It seems like は「〜のように思える」,It looks like|Appears that|Seems that
+324,〜っぽいです。,It looks like...,,1,1,見た目判断。,daily,looks を使う,like を使う,見た目から判断する表現,外見や状況からの推測,It looks like は「〜っぽい」,Seems like|Appears to be|Looks to be
+325,何とも言えません。,It's hard to say.,,1,1,判断保留。,daily,hard を使う,say を使う,判断できないことを伝える,明確な答えを出せない時,It's hard to say は「何とも言えない」,Difficult to say|Can't tell|Unclear
+326,ケースバイケースです。,It depends.,,1,1,条件付き。,work,depends を使う,It で始まる,状況によると伝える,一律の答えを避ける表現,It depends は「場合による」という定番表現,Varies|Case by case|Depends on the situation
+327,個人的には…,Personally...,,1,1,個人意見。,daily,1語だけ,Personally を使う,個人的な意見の前置き,主観であることを明示,Personally は「個人的には」という副詞,In my opinion|For me|My view is
+328,私としては…,From my side...,,1,1,立場表明。,work,side を使う,From を使う,自分の立場から見た意見,立場を明確にする表現,From my side は「私の側から見れば」,From my perspective|In my position|From where I stand
+329,ざっくり言うと…,Roughly speaking...,,1,1,概要。,work,Roughly を使う,speaking を使う,大まかに言うという前置き,詳細を省いた概要を示す,Roughly speaking は「大雑把に言えば」,Generally speaking|In broad terms|Loosely speaking
+330,大体そんな感じです。,More or less.,,1,1,曖昧表現。,daily,3語のフレーズ,or を使う,大体そうだと曖昧に伝える,正確ではないが近いことを示す,More or less は「だいたい」という慣用表現,Pretty much|About right|Roughly
+331,いや、違うな…,Actually, no...,,1,1,訂正。,daily,no を使う,Actually を使う,自分の発言を否定して訂正する,考え直して否定する時,Actually, no は「いや、違う」,Wait, no|No, actually|On second thought, no
+332,言い方間違えました。,That came out wrong.,,1,1,言い直し。,daily,came out を使う,wrong を使う,言い方が不適切だったと認める,誤解を招く表現を訂正,That came out wrong は「言い方を間違えた」,I misspoke|I said that wrong|Didn't mean it that way
+333,言い直します。,Let me rephrase.,,1,1,修正。,work,rephrase を使う,Let me を使う,言い直させてほしいと伝える,より適切な表現に修正する意思,rephrase は「言い換える」という動詞,Let me reword that|I'll rephrase|Let me say that differently
+334,最初から言うと…,Let me start over.,,1,1,やり直し。,daily,start over を使う,Let me を使う,最初からやり直すと伝える,説明を一から始め直す時,start over は「やり直す」という句動詞,Let me begin again|From the top|Let me restart
+335,もう一度整理します。,Let me clarify.,,1,1,明確化。,work,clarify を使う,Let me を使う,明確にし直すと伝える,誤解を防ぐための再説明,clarify は「明確にする」という動詞,Let me explain|I'll make it clear|Let me be more specific
+336,要するに…,Long story short...,,1,1,要約。,daily,story を使う,Long を使う,要点を短く伝える前置き,長い話を要約する時の定番表現,Long story short は「要するに」という慣用表現,To sum up|In short|Bottom line
+337,つまりそういうことです。,That's what I mean.,,1,1,意図説明。,daily,mean を使う,what を使う,それが言いたかったことだと確認する,自分の意図を明確にする表現,That's what I mean は「そういうこと」,That's my point|That's the idea|That's it
+338,言いたいのは…,What I'm saying is...,,1,1,主張。,daily,saying を使う,What を使う,主張したいことの前置き,要点を強調する時の表現,What I'm saying is は「言いたいのは」,My point is|What I mean is|I'm trying to say
+339,ちょっと話が逸れました。,I got sidetracked.,,1,1,話題戻し。,daily,sidetracked を使う,got を使う,話が逸れたことを認める,本題から外れたことに気づいた時,get sidetracked は「脱線する」という慣用表現,I went off topic|I digressed|Got off track
+340,話を戻すと…,Back to the point...,,1,1,軌道修正。,work,Back を使う,point を使う,本題に戻ると前置きする,脱線から本題に戻す表現,Back to the point は「話を戻すと」,Anyway|Getting back|To return to the topic
+341,大丈夫です。,I'm fine.,,1,1,状態説明。,daily,fine を使う,I'm を使う,問題ないことを伝える,心配に対する安心の返答,I'm fine は「大丈夫」という定番表現,I'm okay|I'm good|I'm alright
+342,全然問題ないです。,Totally fine.,,1,1,強調。,daily,Totally を使う,fine を使う,全く問題ないと強調する,fine を強める表現,Totally fine は「全然大丈夫」,Perfectly fine|Absolutely fine|Completely okay
+343,もちろんです。,Of course.,,1,1,即答。,daily,2語のフレーズ,course を使う,当然だと即答する,快く承諾する時の定番表現,Of course は「もちろん」,Sure|Certainly|Definitely
+344,了解です。,Sure.,,1,1,軽い承諾。,daily,1語だけ,Sure を使う,了解したと軽く返答する,カジュアルな承諾の表現,Sure は「了解」というシンプルな返答,Okay|Alright|Got it
+345,まあまあです。,It's okay.,,1,1,無難評価。,daily,okay を使う,It's を使う,特に良くも悪くもないと伝える,中立的な評価を示す,It's okay は「まあまあ」,So-so|Not bad|It's alright
+346,本当に？,Seriously?,,1,1,驚き。,daily,1語だけ,Seriously を使う,驚きや疑問を示す,信じられない時の反応,Seriously? は「マジで？」という驚き,Really?|For real?|No way
+347,冗談だよね？,Are you serious?,,1,1,確認。,daily,serious を使う,Are you を使う,本気かどうか確認する,驚きや疑問の確認表現,Are you serious? は「本気？」,You're kidding, right?|Are you joking?|Really?
+348,正直言って…,Honestly...,,1,1,本音。,daily,1語だけ,Honestly を使う,正直な意見の前置き,率直に本音を伝える時,Honestly は「正直」という副詞,To be honest|Frankly|Truthfully
+349,マジで。,For real.,,1,1,カジュアル強調。,daily,real を使う,For を使う,本当だと強調する,カジュアルな強調表現,For real は「マジで」というスラング,Seriously|Really|No joke
+350,その通り。,That's exactly it.,,1,1,完全一致。,daily,exactly を使う,it を使う,完全に一致することを示す,強い同意と確認の表現,That's exactly it は「まさにその通り」,Exactly|Precisely|That's right
