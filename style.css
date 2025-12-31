@@ -274,9 +274,140 @@ a{ color:inherit; }
   font-weight:800;
 }
 
+/* stats view */
+.statsGrid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+.statItem{
+  text-align: center;
+  padding: 14px 10px;
+  background: var(--bg);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+.statValue{
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--blue);
+}
+.statLabel{
+  font-size: 12px;
+  color: var(--sub);
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.levelStatRow{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.levelStatRow:last-child{ margin-bottom: 0; }
+
+.levelStatLabel{
+  font-weight: 900;
+  font-size: 14px;
+  width: 40px;
+}
+
+.levelStatBar{
+  flex: 1;
+  height: 20px;
+  background: var(--bg);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.levelStatProgress{
+  height: 100%;
+  background: var(--blue);
+  transition: width 0.3s;
+}
+
+.levelStatText{
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--sub);
+  white-space: nowrap;
+}
+
+.gradeStatRow{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.gradeStatRow:last-child{ margin-bottom: 0; }
+
+.gradeStatLabel{
+  font-weight: 800;
+  font-size: 13px;
+  width: 55px;
+}
+
+.gradeStatBar{
+  flex: 1;
+  height: 18px;
+  background: var(--bg);
+  border-radius: 9px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.gradeStatProgress{
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.gradeStatText{
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--sub);
+  white-space: nowrap;
+  width: 80px;
+  text-align: right;
+}
+
+.sceneStatRow{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border: 1px solid var(--line);
+}
+.sceneStatRow:last-child{ margin-bottom: 0; }
+
+.sceneStatLabel{
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.sceneStatValue{
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--blue);
+}
+
+.noData{
+  text-align: center;
+  padding: 20px;
+  color: var(--sub);
+  font-size: 13px;
+}
+
 /* small screens */
 @media (max-width: 380px){
   .row{ grid-template-columns: 78px 1fr 1fr 1fr; }
   .lvBtn{ padding:9px 8px; }
   .jp{ font-size:19px; }
+  .statsGrid{ grid-template-columns: 1fr 1fr; gap: 10px; }
+  .statValue{ font-size: 24px; }
 }

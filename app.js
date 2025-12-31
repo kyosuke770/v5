@@ -86,9 +86,11 @@ let videos = {}; // videos["1"] = {title,url}
  *************************************************/
 const homeView = document.getElementById("homeView");
 const studyView = document.getElementById("studyView");
+const statsView = document.getElementById("statsView");
 
 const homeDueBtn = document.getElementById("homeDue");
 const homeVideoBtn = document.getElementById("homeVideo");
+const homeStatsBtn = document.getElementById("homeStats");
 
 const backHomeBtn = document.getElementById("backHome");
 const videoBtn = document.getElementById("videoOrder");
@@ -114,6 +116,7 @@ const lv3Btn = document.getElementById("lv3Btn");
 function showHome() {
   homeView.classList.remove("hidden");
   studyView.classList.add("hidden");
+  statsView.classList.add("hidden");
   renderDaily();
   renderProgress();
   renderBlockTable();
@@ -123,8 +126,16 @@ function showHome() {
 function showStudy() {
   homeView.classList.add("hidden");
   studyView.classList.remove("hidden");
+  statsView.classList.add("hidden");
   renderLevelButtons();
   render();
+}
+
+function showStats() {
+  homeView.classList.add("hidden");
+  studyView.classList.add("hidden");
+  statsView.classList.remove("hidden");
+  renderStats();
 }
 
 function resetCardView() {
@@ -725,8 +736,12 @@ function gradeCard(grade) {
  *************************************************/
 if (homeDueBtn) homeDueBtn.addEventListener("click", () => startReviewDue(true));
 if (homeVideoBtn) homeVideoBtn.addEventListener("click", () => startVideoOrder(true));
+if (homeStatsBtn) homeStatsBtn.addEventListener("click", showStats);
 
 if (backHomeBtn) backHomeBtn.addEventListener("click", showHome);
+
+const backFromStatsBtn = document.getElementById("backFromStats");
+if (backFromStatsBtn) backFromStatsBtn.addEventListener("click", showHome);
 if (videoBtn) videoBtn.addEventListener("click", () => startVideoOrder(false));
 if (reviewBtn) reviewBtn.addEventListener("click", () => startReviewDue(false));
 if (nextBtn) nextBtn.addEventListener("click", goNext);
@@ -744,6 +759,149 @@ if (cardEl) cardEl.addEventListener("click", () => {
   showNote = revealed;
   render();
 });
+
+/*************************************************
+ * Stats View
+ *************************************************/
+function calculateStats() {
+  const totalCards = cards.length;
+  let studied = 0;
+  let dueCount = 0;
+  let mastered = 0;
+
+  const levelStats = { 1: {}, 2: {}, 3: {} };
+  const gradeCount = { 1: 0, 2: 0, 3: 0 };
+  const sceneCount = {};
+
+  cards.forEach(card => {
+    const scene = card.scene || "その他";
+    sceneCount[scene] = (sceneCount[scene] || 0) + 1;
+
+    for (let lv = 1; lv <= 3; lv++) {
+      const rec = srs[card.no]?.[lv];
+
+      if (!levelStats[lv][scene]) {
+        levelStats[lv][scene] = { studied: 0, mastered: 0 };
+      }
+
+      if (rec && rec.total > 0) {
+        levelStats[lv][scene].studied++;
+
+        if (lv === prefs.level) {
+          studied++;
+        }
+
+        if (rec.lastGrade) {
+          gradeCount[rec.lastGrade]++;
+        }
+
+        // 習得済み判定：easy率が80%以上
+        if (rec.easy && rec.total >= 3 && (rec.easy / rec.total) >= 0.8) {
+          levelStats[lv][scene].mastered++;
+          if (lv === prefs.level) {
+            mastered++;
+          }
+        }
+
+        // Due判定
+        if (rec.dueAt && rec.dueAt <= now() && lv === prefs.level) {
+          dueCount++;
+        }
+      }
+    }
+  });
+
+  return {
+    totalCards,
+    studied,
+    dueCount,
+    mastered,
+    levelStats,
+    gradeCount,
+    sceneCount
+  };
+}
+
+function renderStats() {
+  const stats = calculateStats();
+
+  // 全体サマリー
+  document.getElementById("totalCards").textContent = stats.totalCards;
+  document.getElementById("studiedCards").textContent = stats.studied;
+  document.getElementById("dueCards").textContent = stats.dueCount;
+  document.getElementById("masteredCards").textContent = stats.mastered;
+
+  // レベル別進捗
+  const levelStatsEl = document.getElementById("levelStats");
+  let levelHtml = "";
+  for (let lv = 1; lv <= 3; lv++) {
+    const total = stats.totalCards;
+    const studied = Object.values(stats.levelStats[lv]).reduce((sum, s) => sum + s.studied, 0);
+    const mastered = Object.values(stats.levelStats[lv]).reduce((sum, s) => sum + s.mastered, 0);
+    const pct = total > 0 ? Math.round((studied / total) * 100) : 0;
+
+    levelHtml += `
+      <div class="levelStatRow">
+        <div class="levelStatLabel">Lv${lv}</div>
+        <div class="levelStatBar">
+          <div class="levelStatProgress" style="width: ${pct}%"></div>
+        </div>
+        <div class="levelStatText">${studied} / ${total} (習得: ${mastered})</div>
+      </div>
+    `;
+  }
+  levelStatsEl.innerHTML = levelHtml;
+
+  // 評価の分布
+  const gradeDistEl = document.getElementById("gradeDistribution");
+  const gradeTotal = stats.gradeCount[1] + stats.gradeCount[2] + stats.gradeCount[3];
+  let gradeHtml = "";
+
+  if (gradeTotal > 0) {
+    const grades = [
+      { grade: 1, label: "Again", color: "#ef4444" },
+      { grade: 2, label: "Hard", color: "#f59e0b" },
+      { grade: 3, label: "Easy", color: "#10b981" }
+    ];
+
+    grades.forEach(({ grade, label, color }) => {
+      const count = stats.gradeCount[grade];
+      const pct = Math.round((count / gradeTotal) * 100);
+      gradeHtml += `
+        <div class="gradeStatRow">
+          <div class="gradeStatLabel">${label}</div>
+          <div class="gradeStatBar">
+            <div class="gradeStatProgress" style="width: ${pct}%; background: ${color}"></div>
+          </div>
+          <div class="gradeStatText">${count} (${pct}%)</div>
+        </div>
+      `;
+    });
+  } else {
+    gradeHtml = '<div class="noData">まだ学習データがありません</div>';
+  }
+  gradeDistEl.innerHTML = gradeHtml;
+
+  // シーン別カード数
+  const sceneStatsEl = document.getElementById("sceneStats");
+  let sceneHtml = "";
+  const scenes = Object.keys(stats.sceneCount).sort();
+
+  scenes.forEach(scene => {
+    const count = stats.sceneCount[scene];
+    sceneHtml += `
+      <div class="sceneStatRow">
+        <div class="sceneStatLabel">${scene}</div>
+        <div class="sceneStatValue">${count}</div>
+      </div>
+    `;
+  });
+  sceneStatsEl.innerHTML = sceneHtml || '<div class="noData">データがありません</div>';
+
+  // 最近7日間の学習
+  const recentEl = document.getElementById("recentActivity");
+  recentEl.innerHTML = '<div class="noData">履歴機能は今後実装予定</div>';
+}
 
 /*************************************************
  * Init
