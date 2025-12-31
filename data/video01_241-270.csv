@@ -1,0 +1,33 @@
+no,jp,en,slots,video,lv,note,scene
+241,今は特に問題ありません。,No major issues right now.,,1,1,大きな問題はない。,work
+242,少し様子が変です。,Something seems odd.,,1,1,違和感がある。,daily
+243,その点について補足します。,Let me add to that.,,1,1,追加説明。,work
+244,その件は後で整理します。,I'll sort that out later.,,1,1,後で対応。,work
+245,今は判断を控えます。,I'll hold off on deciding for now.,,1,1,判断保留。,work
+246,その必要はなさそうです。,It doesn't seem necessary.,,1,1,不要そう。,daily
+247,少し確認が必要です。,We need to double-check.,,1,1,再確認。,work
+248,状況は改善しています。,The situation is improving.,,1,1,良くなっている。,work
+249,今はそれで十分です。,That's sufficient for now.,,1,1,一旦十分。,daily
+250,対応は完了しました。,The task is complete.,,1,1,完了報告。,work
+
+251,{x}してもらえますか？,Could you {x}?,check this=これ確認|take a look=見てみる|help me=手伝う,1,2,丁寧な依頼。,work
+252,もう少し{x}が必要です。,We need a bit more {x}.,time=時間|information=情報,1,2,不足を伝える。,work
+253,後で{x}を共有します。,I'll share {x} later.,the details=詳細|the update=更新内容,1,2,後で共有。,work
+254,{x}について話しましょう。,Let's talk about {x}.,this issue=この問題|the plan=計画,1,2,話題指定。,work
+255,{x}で大丈夫です。,{x} works for me.,that plan=その案|tomorrow=明日,1,2,条件付き同意。,daily
+256,少し{x}すぎます。,It's a bit too {x}.,early=早い|late=遅い,1,2,程度を表す。,daily
+257,{x}かもしれません。,It might be {x}.,a mistake=ミス|too late=遅すぎる,1,2,可能性表現。,daily
+258,まず{x}しましょう。,Let's {x} first.,confirm=確認|check=チェック,1,2,最初の行動。,work
+259,{x}する予定です。,We're planning to {x}.,move forward=進める|fix it=直す,1,2,予定表現。,work
+260,少し{x}してください。,Please {x} a bit.,wait=待つ|slow down=ゆっくりする,1,2,軽い依頼。,daily
+
+261,今は話せません。,I can't talk right now.,,1,1,今は不可。,daily
+262,後ほど対応します。,I'll handle it shortly.,,1,1,すぐ後で。,work
+263,その点は問題ありません。,That point is fine.,,1,1,問題なし。,work
+264,少し時間を置きましょう。,Let's give it some time.,,1,1,時間を置く。,daily
+265,その判断は妥当です。,That's a fair decision.,,1,1,判断を評価。,work
+266,その件は対応中です。,We're addressing that.,,1,1,対応中。,work
+267,今はその余地がありません。,There's no room for that right now.,,1,1,余地がない。,work
+268,一旦ここまでにしましょう。,Let's call it here for now.,,1,1,ここで区切る。,daily
+269,その方向で進めます。,We'll proceed in that direction.,,1,1,方針決定。,work
+270,問題なければ続けましょう。,If there's no issue, let's continue.,,1,1,継続確認。,work
