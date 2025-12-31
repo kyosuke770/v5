@@ -1,0 +1,31 @@
+no,jp,en,slots,video,lv,note,scene
+91,少し時間をください。,Give me a moment.,,1,1,短時間の猶予を求める。,work
+92,今忙しいです。,I'm busy right now.,,1,1,今は対応できない時。,daily
+93,後で話せますか？,Can we talk later?,,1,1,今は無理な時の代替提案。,daily
+94,了解しました。,Got it.,,1,1,カジュアルな理解の返事。,daily
+95,問題ありません。,No problem.,,1,1,軽い承諾・安心の返答。,daily
+96,それでいいです。,That's fine.,,1,1,提案を受け入れる。,daily
+97,そうしましょう。,Let's do that.,,1,1,提案に同意して進める。,work
+98,確認ありがとうございます。,Thanks for checking.,,1,1,確認してくれたことへの感謝。,work
+99,助けが必要です。,I need some help.,,1,1,支援を求める時。,daily
+100,手伝ってもらえますか？,Could you help me?,,1,1,丁寧に助けを頼む。,daily
+101,どう思いますか？,What do you think?,,1,1,相手の意見を聞く。,daily
+102,それは私のミスです。,That's my fault.,,1,1,自分の責任を認める。,work
+103,申し訳ありません。,I apologize.,,1,1,フォーマルな謝罪。,work
+104,急ぎです。,It's urgent.,,1,1,優先度が高いことを伝える。,work
+105,時間があります。,I have time.,,1,1,今は余裕がある。,daily
+106,時間がありません。,I don't have time.,,1,1,急いでいる時。,daily
+107,それは難しいです。,That's difficult.,,1,1,簡単ではない時。,daily
+108,簡単です。,It's easy.,,1,1,問題が単純な時。,daily
+109,後で確認します。,I'll check later.,,1,1,後回しにする時。,work
+110,今すぐ必要です。,I need it now.,,1,1,即時対応が必要。,work
+111,もう一度お願いします。,One more time, please.,,1,1,丁寧に繰り返し依頼。,daily
+112,問題が起きました。,There's a problem.,,1,1,トラブル発生の報告。,work
+113,解決しました。,It's resolved.,,1,1,問題が解決した。,work
+114,その必要はありません。,That's not necessary.,,1,1,不要だと伝える。,daily
+115,了解です。,Understood.,,1,1,ややフォーマルな理解。,work
+116,気をつけます。,I'll be careful.,,1,1,注意する意思表示。,daily
+117,忘れないでください。,Please don't forget.,,1,1,リマインドする。,daily
+118,問題ありませんか？,Is that okay?,,1,1,相手の了承を確認。,daily
+119,確認できました。,I checked.,,1,1,確認完了の報告。,work
+120,準備できました。,I'm ready.,,1,1,準備完了を伝える。,daily
