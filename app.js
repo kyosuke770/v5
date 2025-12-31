@@ -1058,6 +1058,19 @@ function gradeCard(grade) {
 
   saveAll();
 
+  // DueSet管理（バリエーションモード以外）
+  if (sessionMode === "normal") {
+    // 1周目: again/hard => Due追加
+    if (grade === 1 || grade === 2) {
+      sessionDueSet.add(card.no);
+    }
+  } else if (sessionMode === "due") {
+    // 2周目以降: easy => Dueから外す
+    if (grade === 3) {
+      sessionDueSet.delete(card.no);
+    }
+  }
+
   // 既存の進捗加算（easyだけ進む、など）
   if (grade === 3) {
     ensureDaily();
