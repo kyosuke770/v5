@@ -1,0 +1,34 @@
+no,jp,en,slots,video,lv,note,scene
+271,今はそれで十分です。,That's enough for now.,,1,1,一旦区切る時。,daily
+272,問題は解決しました。,The problem is solved.,,1,1,完全解決。,work
+273,それは気にしなくていいです。,You don't need to worry about that.,,1,1,安心させる。,daily
+274,そのままで大丈夫です。,You can leave it as it is.,,1,1,変更不要。,work
+275,今は特にありません。,Nothing in particular.,,1,1,特にない時。,daily
+276,確認は完了しています。,The check is complete.,,1,1,確認完了。,work
+277,それは良い結果です。,That's a good outcome.,,1,1,結果を評価。,work
+278,時間が許せば…,If time allows...,,1,1,条件付き前置き。,work
+279,それについては同意します。,I agree with that.,,1,1,明確な同意。,daily
+280,一旦ここで終わりましょう。,Let's wrap it up here.,,1,1,終了の合図。,daily
+
+281,{x}しても大丈夫です。,It's okay to {x}.,wait=待つ|leave=帰る|skip it=飛ばす,1,2,許可表現。,daily
+282,念のため{x}します。,I'll {x} just in case.,check again=再確認|save it=保存する,1,2,保険行動。,work
+283,{x}する必要はありません。,There's no need to {x}.,rush=急ぐ|worry=心配する,1,2,不要を伝える。,daily
+284,まず{x}から始めましょう。,Let's start with {x}.,this part=この部分|the basics=基本,1,2,開始点を示す。,work
+285,{x}で問題ありません。,{x} is fine.,that approach=その方法|this plan=この案,1,2,方法承認。,work
+286,少し{x}すぎます。,It's a bit too {x}.,much=多い|complicated=複雑,1,2,程度表現。,daily
+287,{x}かもしれません。,It could be {x}.,a problem=問題|useful=役立つ,1,2,可能性表現。,daily
+288,一度{x}してみましょう。,Let's try {x}.,this way=この方法|again=もう一度,1,2,試行提案。,work
+289,{x}について確認します。,I'll check {x}.,the details=詳細|that point=その点,1,2,対象確認。,work
+290,{x}する時間があります。,We have time to {x}.,discuss=話し合う|review=見直す,1,2,余裕を示す。,work
+
+291,（日本語だけ）とりあえず落ち着こう。,Take a breath.,,1,3,感情リセット。,daily
+292,（日本語だけ）それは本質じゃない。,That's beside the point.,,1,3,論点ずらしを防ぐ。,work
+293,（日本語だけ）話が噛み合っていない。,We're not on the same page.,,1,3,認識ズレ。,work
+294,（日本語だけ）一旦整理しよう。,Let's regroup.,,1,3,立て直し。,work
+295,（日本語だけ）ここが分かれ目だ。,This is the turning point.,,1,3,重要局面。,daily
+
+296,今日はここまでにしましょう。,Let's call it a day.,,1,1,一日の終わり。,daily
+297,また明日続けましょう。,Let's continue tomorrow.,,1,1,継続の約束。,daily
+298,よくやりました。,Well done.,,1,1,労い。,daily
+299,いい進み具合です。,We're making good progress.,,1,1,進捗評価。,work
+300,これで完了です。,That's all for now.,,1,1,完全終了。,daily
