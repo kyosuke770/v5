@@ -132,9 +132,12 @@ function showStudy() {
 }
 
 function showStats() {
+  console.log("showStats called");
+  console.log("statsView:", statsView);
   homeView.classList.add("hidden");
   studyView.classList.add("hidden");
   statsView.classList.remove("hidden");
+  console.log("About to call renderStats, cards.length:", cards.length);
   renderStats();
 }
 
@@ -823,7 +826,9 @@ function calculateStats() {
 }
 
 function renderStats() {
+  console.log("renderStats called");
   const stats = calculateStats();
+  console.log("stats:", stats);
 
   // 全体サマリー
   document.getElementById("totalCards").textContent = stats.totalCards;
