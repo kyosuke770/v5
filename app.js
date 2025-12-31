@@ -70,6 +70,7 @@ let index = 0;
 let revealed = false;
 let showNote = false;
 let currentAnswer = "";
+let currentSlotIndex = null; // スロット別トラッキング用
 
 // Session control: 1周目→Due周回（Easyになるまで）
 let sessionMode = "normal";      // "normal" | "due"
@@ -684,23 +685,98 @@ function renderDueCount() {
 /*************************************************
  * Card rendering (Lv behavior)
  *************************************************/
+function getSlotSRS(card, slotIdx) {
+  const level = prefs.level;
+  return srs[card.no]?.[level]?.slots?.[slotIdx];
+}
+
 function pickSlot(card) {
-  if (!card.slots || !card.slots.length) return null;
+  if (!card.slots || !card.slots.length) {
+    currentSlotIndex = null;
+    return null;
+  }
+
+  let idx;
 
   // Lv1 = 固定（カード番号で固定化）
   if (prefs.level === 1) {
-    const idx = (card.no % card.slots.length);
-    return card.slots[idx];
+    idx = (card.no % card.slots.length);
+  }
+  // Lv2/3 = スマート選択（苦手なスロット優先）
+  else {
+    const level = prefs.level;
+    const slotPriorities = card.slots.map((slot, i) => {
+      const slotData = srs[card.no]?.[level]?.slots?.[i];
+
+      if (!slotData || !slotData.total) {
+        // 未学習スロットは最優先
+        return { idx: i, priority: 1000 };
+      }
+
+      // 優先度計算
+      const againRate = (slotData.againCount || 0) / (slotData.total || 1);
+      const lastGradeScore = (4 - (slotData.lastGrade || 3)) * 20;
+      const overdueDays = slotData.dueAt && slotData.dueAt <= now()
+        ? (now() - slotData.dueAt) / DAY
+        : 0;
+
+      const priority = (againRate * 100) + lastGradeScore + Math.min(overdueDays * 5, 30);
+
+      return { idx: i, priority };
+    });
+
+    // 優先度順にソート
+    slotPriorities.sort((a, b) => b.priority - a.priority);
+
+    // 上位3つからランダム選択（完全決定論的にならないように）
+    const topCandidates = slotPriorities.slice(0, Math.min(3, slotPriorities.length));
+    const selected = topCandidates[Math.floor(Math.random() * topCandidates.length)];
+    idx = selected.idx;
   }
 
-  // Lv2/Lv3 = 変動（ランダム）
-  const idx = Math.floor(Math.random() * card.slots.length);
+  currentSlotIndex = idx;
   return card.slots[idx];
 }
 
 function renderNote(card) {
   if (!noteEl) return;
   noteEl.textContent = (showNote && card.note) ? `💡 ${card.note}` : "";
+}
+
+function renderSlotProgress(card) {
+  const statsEl = document.getElementById("statsText");
+  if (!statsEl) return;
+
+  if (!card.slots || card.slots.length === 0) {
+    statsEl.textContent = "";
+    return;
+  }
+
+  const level = prefs.level;
+  let masteredCount = 0;
+  let totalSlots = card.slots.length;
+
+  // 各スロットの習得状況をチェック
+  for (let i = 0; i < totalSlots; i++) {
+    const slotData = srs[card.no]?.[level]?.slots?.[i];
+    if (slotData && slotData.total >= 2 && slotData.lastGrade === 3) {
+      masteredCount++;
+    }
+  }
+
+  // 進捗表示
+  const dots = Array(totalSlots).fill(0).map((_, i) => {
+    const slotData = srs[card.no]?.[level]?.slots?.[i];
+    if (slotData && slotData.total >= 2 && slotData.lastGrade === 3) {
+      return "●"; // 習得済み
+    } else if (slotData && slotData.total > 0) {
+      return "◐"; // 学習中
+    } else {
+      return "○"; // 未学習
+    }
+  }).join("");
+
+  statsEl.textContent = `バリエーション: ${dots} (${masteredCount}/${totalSlots}習得)`;
 }
 
 /*************************************************
@@ -821,6 +897,7 @@ function render() {
   renderNote(card);
   renderHints(card);
   renderExplain(card);
+  renderSlotProgress(card);
   renderProgress();
   renderDaily();
   renderLevelButtons();
@@ -899,18 +976,39 @@ function gradeCard(grade) {
 
   const rec = srs[card.no][level];
 
-  // ✅ カウント追加
-  rec.total = (rec.total || 0) + 1;
-  if (grade === 1) {          // Again
-    rec.againCount = (rec.againCount || 0) + 1;
-  } else if (grade === 3) {   // Easy
-    rec.easy = (rec.easy || 0) + 1;
-  }
+  // スロット有りの場合はスロット別に記録
+  if (card.slots && card.slots.length > 0 && currentSlotIndex !== null) {
+    if (!rec.slots) rec.slots = {};
+    if (!rec.slots[currentSlotIndex]) rec.slots[currentSlotIndex] = {};
 
-  // 既存のSRS処理（dueAtなど）
-  rec.lastGrade = grade;
-  rec.intervalMs = nextIntervalMs(grade);
-  rec.dueAt = now() + rec.intervalMs;
+    const slotRec = rec.slots[currentSlotIndex];
+
+    // スロット別カウント
+    slotRec.total = (slotRec.total || 0) + 1;
+    if (grade === 1) {
+      slotRec.againCount = (slotRec.againCount || 0) + 1;
+    } else if (grade === 3) {
+      slotRec.easy = (slotRec.easy || 0) + 1;
+    }
+
+    // スロット別SRS
+    slotRec.lastGrade = grade;
+    slotRec.intervalMs = nextIntervalMs(grade);
+    slotRec.dueAt = now() + slotRec.intervalMs;
+  }
+  // スロット無しの場合は従来通り
+  else {
+    rec.total = (rec.total || 0) + 1;
+    if (grade === 1) {
+      rec.againCount = (rec.againCount || 0) + 1;
+    } else if (grade === 3) {
+      rec.easy = (rec.easy || 0) + 1;
+    }
+
+    rec.lastGrade = grade;
+    rec.intervalMs = nextIntervalMs(grade);
+    rec.dueAt = now() + rec.intervalMs;
+  }
 
   saveAll();
 
