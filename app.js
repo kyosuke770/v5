@@ -499,6 +499,36 @@ function startVideoOrder(goStudy=false) {
   if (goStudy) showStudy(); else render();
 }
 
+/*************************************************
+ * 優先度スコア計算（苦手カード優先）
+ *************************************************/
+function calculatePriority(card) {
+  const level = prefs.level;
+  const rec = srs[card.no]?.[level];
+
+  if (!rec) return 0;
+
+  let score = 0;
+
+  // 1. Again率（最重要）
+  const againCount = rec.againCount || 0;
+  const totalCount = rec.total || 1;
+  const againRate = againCount / totalCount;
+  score += againRate * 100; // 0-100点
+
+  // 2. 最終評価の逆数（低い評価ほど高優先度）
+  const lastGrade = rec.lastGrade || 3;
+  score += (4 - lastGrade) * 20; // Again=60, Hard=40, Easy=20
+
+  // 3. Dueからの経過時間（長いほど優先）
+  if (rec.dueAt && rec.dueAt <= now()) {
+    const overdueDays = (now() - rec.dueAt) / DAY;
+    score += Math.min(overdueDays * 5, 30); // 最大30点
+  }
+
+  return score;
+}
+
 function startReviewDue(goStudy=false) {
   sessionMode = "normal";
   sessionDueSet = new Set();
@@ -511,7 +541,8 @@ function startReviewDue(goStudy=false) {
 
   if (!due.length) { alert("復習（Due）はありません"); return; }
 
-  cardsByMode = due.sort((a,b)=>a.no-b.no);
+  // 優先度スコアでソート（高い順）
+  cardsByMode = due.sort((a,b) => calculatePriority(b) - calculatePriority(a));
   index = 0; resetCardView();
   if (goStudy) showStudy(); else render();
 }
@@ -710,7 +741,9 @@ function gradeCard(grade) {
 
   // ✅ カウント追加
   rec.total = (rec.total || 0) + 1;
-  if (grade === 3) {          // ← easy が 3 の場合（あなたの現状に合わせて）
+  if (grade === 1) {          // Again
+    rec.againCount = (rec.againCount || 0) + 1;
+  } else if (grade === 3) {   // Easy
     rec.easy = (rec.easy || 0) + 1;
   }
 
