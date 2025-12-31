@@ -120,7 +120,11 @@ a{ color:inherit; }
 
 .blockTbl{ width:100%; border-collapse:collapse; }
 .blockTbl td{ padding:0; }
-
+.stats{
+  margin-top:10px;
+  font-size:13px;
+  opacity:0.75;
+}
 .row{
   display:grid;
   grid-template-columns: 90px 1fr 1fr 1fr;
