@@ -1,30 +1,30 @@
 /*************************************************
- * Keys (v2 3-step)
+ * Keys
  *************************************************/
-const SRS_KEY  = "srs_levels_v2_3step";
-const DAILY_KEY = "daily_levels_v2_3step";
-const PREF_KEY = "prefs_levels_v2_3step";
+const SRS_KEY   = "srs_levels_v2";
+const DAILY_KEY = "daily_levels_v2";
+const PREF_KEY  = "prefs_levels_v2";
 
 /*************************************************
  * Time
  *************************************************/
-const MIN = 60 * 1000;
+const MIN  = 60 * 1000;
 const HOUR = 60 * MIN;
-const DAY = 24 * HOUR;
-const now = () => Date.now();
+const DAY  = 24 * HOUR;
+const now  = () => Date.now();
 
 /*************************************************
- * 3段階SRS（あなたの設定）
- * 1 AGAIN : 5m
- * 2 HARD  : 6h
- * 3 EASY  : 12d
+ * 3段階SRS（again/hard/easy）
+ * - again/hard は due に追加
+ * - easy はクリア扱い（due除外）
  *************************************************/
 function nextIntervalMs(grade) {
+  // grade: 1 again, 2 hard, 3 easy
   switch (grade) {
-    case 1: return 5 * MIN;
-    case 2: return 6 * HOUR;
-    case 3: return 12 * DAY;
-    default: return 12 * DAY;
+    case 1: return 5 * MIN;     // again
+    case 2: return 6 * HOUR;    // hard
+    case 3: return 12 * DAY;    // easy（使わないが保険）
+    default: return 6 * HOUR;
   }
 }
 
@@ -32,7 +32,7 @@ function nextIntervalMs(grade) {
  * Load/Save
  *************************************************/
 let srs = JSON.parse(localStorage.getItem(SRS_KEY) || "{}");
-// srs[no] = { 1:{dueAt,intervalMs,lastGrade}, 2:{...}, 3:{...} }
+// srs[no] = { 1:{...}, 2:{...}, 3:{...} }  // level別
 
 let daily = JSON.parse(localStorage.getItem(DAILY_KEY) || "null") || {
   day: new Date().toDateString(),
@@ -71,15 +71,9 @@ let revealed = false;
 let showNote = false;
 let currentAnswer = "";
 
-// Session control: 1周目→Due周回（Easyになるまで）
-let sessionMode = "normal";      // "normal" | "due"
-let sessionDueSet = new Set();   // again/hard になったカード番号
-
-/*************************************************
- * Videos meta (optional)
- * data/videos.csv: video,title,url
- *************************************************/
-let videos = {}; // videos["1"] = {title,url}
+// 周回管理（1周で終わる → 残り復習のみ2周目）
+let loop = 1;        // 1 or 2
+let baseSet = [];    // 1周目の集合
 
 /*************************************************
  * DOM
@@ -87,8 +81,10 @@ let videos = {}; // videos["1"] = {title,url}
 const homeView = document.getElementById("homeView");
 const studyView = document.getElementById("studyView");
 
-const homeDueBtn = document.getElementById("homeDue");
 const homeVideoBtn = document.getElementById("homeVideo");
+const homeWeakBtn  = document.getElementById("homeWeak");
+const homeDueAllBtn   = document.getElementById("homeDueAll");
+const homeDueBlockBtn = document.getElementById("homeDueBlock");
 
 const backHomeBtn = document.getElementById("backHome");
 const videoBtn = document.getElementById("videoOrder");
@@ -99,6 +95,8 @@ const jpEl = document.getElementById("jp");
 const enEl = document.getElementById("en");
 const cardEl = document.getElementById("card");
 const noteEl = document.getElementById("noteText");
+const statsEl = document.getElementById("statsText");
+const loopEl  = document.getElementById("loopText");
 
 const g1 = document.getElementById("g1");
 const g2 = document.getElementById("g2");
@@ -107,6 +105,10 @@ const g3 = document.getElementById("g3");
 const lv1Btn = document.getElementById("lv1Btn");
 const lv2Btn = document.getElementById("lv2Btn");
 const lv3Btn = document.getElementById("lv3Btn");
+
+const dueAllText   = document.getElementById("dueAllText");
+const dueBlockText = document.getElementById("dueBlockText");
+const weakText     = document.getElementById("weakText");
 
 /*************************************************
  * Views
@@ -118,6 +120,7 @@ function showHome() {
   renderProgress();
   renderBlockTable();
   renderSceneButtons();
+  renderHomeDue();
 }
 
 function showStudy() {
@@ -133,41 +136,86 @@ function resetCardView() {
 }
 
 /*************************************************
- * CSV helpers
+ * CSV Auto Loader (manifest不要)
+ * 期待する命名規則:
+ *   ./data/video01_001-030.csv
+ *   ./data/video01_031-060.csv
+ *   ...
  *************************************************/
-function splitCSV(line) {
-  const result = [];
-  let cur = "";
-  let inQuotes = false;
-  for (let c of line) {
-    if (c === '"') inQuotes = !inQuotes;
-    else if (c === "," && !inQuotes) { result.push(cur); cur = ""; }
-    else cur += c;
+function pad2(n){ return String(n).padStart(2, "0"); }
+function pad3(n){ return String(n).padStart(3, "0"); }
+
+async function loadAllCSVs() {
+  cards = [];
+
+  const MAX_VIDEO = 50;
+  const MAX_BLOCK = 50; // 1動画あたり最大ブロック数（30問単位）
+
+  for (let v = 1; v <= MAX_VIDEO; v++) {
+    for (let b = 0; b < MAX_BLOCK; b++) {
+      const start = b * 30 + 1;
+      const end = start + 29;
+
+      const file = `./data/video${pad2(v)}_${pad3(start)}-${pad3(end)}.csv`;
+
+      try {
+        const res = await fetch(file, { cache: "no-store" });
+        if (!res.ok) continue;
+
+        const text = await res.text();
+        // HTMLを誤読しない
+        if (text.trim().startsWith("<!DOCTYPE") || text.includes("<html")) continue;
+
+        const parsed = parseCSV(text);
+        if (parsed.length) {
+          cards.push(...parsed);
+          console.log("Loaded:", file, parsed.length);
+        }
+      } catch (_) {
+        // 404想定：無視
+      }
+    }
   }
-  result.push(cur);
-  return result.map(s => s.replace(/^"|"$/g, ""));
+
+  if (!cards.length) {
+    alert("csvが1件も読み込めませんでした（/data のファイル名/場所/ヘッダを確認）");
+    return;
+  }
+
+  // noで整列
+  cards.sort((a, b) => a.no - b.no);
+
+  // 初期：選択中ブロック
+  cardsByMode = getCardsByBlock(prefs.block || 1);
+  baseSet = [...cardsByMode];
+  loop = 1;
+  index = 0;
+  resetCardView();
+
+  showHome();
 }
 
 function parseCSV(text) {
   const lines = text.trim().split("\n");
-  if (!lines.length) return [];
-  lines.shift(); // header
+  lines.shift(); // header 제거
 
   return lines
-    .filter(line => line.trim().length > 0)
+    .map(line => line.trim())
+    .filter(line => line.length > 0)
     .map(line => {
       const cols = splitCSV(line);
 
       const no = Number(cols[0]);
-      const jp = (cols[1] || "").trim();
-      const en = (cols[2] || "").trim();
-      const slotsRaw = (cols[3] || "").trim();
-      const video = (cols[4] || "").trim();
-      const lv = Number((cols[5] || "1").trim());
-      const note = (cols[6] || "").trim();
-      const scene = (cols[7] || "").trim();
+      const jp = cols[1] || "";
+      const en = cols[2] || "";
+      const slotsRaw = cols[3] || "";
+      const video = cols[4] || "";
+      const lv = Number(cols[5] || "1");
+      const note = cols[6] || "";
+      const scene = cols[7] || "";
 
       let slots = null;
+      // slots: "jp=en|jp2=en2"
       if (slotsRaw) {
         slots = slotsRaw.split("|").map(s => {
           const [jpSlot, enSlot] = s.split("=");
@@ -177,129 +225,23 @@ function parseCSV(text) {
       }
 
       return { no, jp, en, slots, video, lv, note, scene };
-    })
-    .filter(c => Number.isFinite(c.no) && c.jp);
+    });
 }
 
-/*************************************************
- * File naming / fetch
- *************************************************/
-function pad2(n){ return String(n).padStart(2, "0"); }
-function pad3(n){ return String(n).padStart(3, "0"); }
+function splitCSV(line) {
+  const result = [];
+  let cur = "";
+  let inQuotes = false;
 
-async function fetchTextSafe(file) {
-  try {
-    const res = await fetch(file, { cache: "no-store" });
-    if (!res.ok) return null;
-    const text = await res.text();
-    const t = text.trim();
-    if (t.startsWith("<!DOCTYPE") || t.includes("<html")) return null;
-    return text;
-  } catch (e) {
-    return null;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (c === '"') inQuotes = !inQuotes;
+    else if (c === "," && !inQuotes) { result.push(cur); cur = ""; }
+    else cur += c;
   }
-}
+  result.push(cur);
 
-/*************************************************
- * Videos meta loader (optional)
- *************************************************/
-async function loadVideosMeta() {
-  videos = {};
-  const text = await fetchTextSafe("./data/videos.csv");
-  if (!text) return;
-
-  const lines = text.trim().split("\n");
-  if (lines.length <= 1) return;
-
-  lines.shift(); // header
-  for (const line of lines) {
-    if (!line.trim()) continue;
-    const cols = splitCSV(line);
-    const id = String((cols[0] || "").trim());
-    if (!id) continue;
-    videos[id] = {
-      title: (cols[1] || "").trim(),
-      url: (cols[2] || "").trim()
-    };
-  }
-}
-
-function getVideoLabel(videoId) {
-  const id = String(videoId || "");
-  const meta = videos[id];
-  if (!id) return "Other（元動画なし）";
-  if (!meta) return `Video ${id}`;
-  const t = meta.title ? meta.title : `Video ${id}`;
-  return `Video ${id} — ${t}`;
-}
-
-function getVideoUrl(videoId) {
-  const id = String(videoId || "");
-  return videos[id]?.url || "";
-}
-
-/*************************************************
- * CSV Auto Loader (manifest不要, iPhone向け軽量探索)
- *************************************************/
-async function loadAllCSVs() {
-  cards = [];
-  await loadVideosMeta();
-
-  const MAX_VIDEO = 50;
-  const MAX_BLOCK = 50;
-  const MISS_LIMIT_VIDEO = 3; // 連続で動画が無い → 終了
-  const MISS_LIMIT_BLOCK = 2; // 連続でブロックが無い → 次の動画へ
-
-  if (jpEl) jpEl.textContent = "CSV読み込み中…";
-  if (enEl) enEl.textContent = "";
-
-  let missVideo = 0;
-
-  for (let v = 1; v <= MAX_VIDEO; v++) {
-    let missBlock = 0;
-    let loadedAnyInThisVideo = false;
-
-    for (let b = 0; b < MAX_BLOCK; b++) {
-      const start = b * 30 + 1;
-      const end = start + 29;
-
-      const file = `./data/video${pad2(v)}_${pad3(start)}-${pad3(end)}.csv`;
-      const text = await fetchTextSafe(file);
-
-      if (!text) {
-        missBlock++;
-        if (missBlock >= MISS_LIMIT_BLOCK) break;
-        continue;
-      }
-
-      missBlock = 0;
-      loadedAnyInThisVideo = true;
-
-      const parsed = parseCSV(text);
-      if (parsed.length) cards.push(...parsed);
-    }
-
-    if (!loadedAnyInThisVideo) {
-      missVideo++;
-      if (missVideo >= MISS_LIMIT_VIDEO) break;
-    } else {
-      missVideo = 0;
-    }
-  }
-
-  if (!cards.length) {
-    alert("csvが1件も読み込めませんでした（ファイル名/場所/ヘッダを確認）");
-    return;
-  }
-
-  cards.sort((a, b) => a.no - b.no);
-
-  // 初期モード（ブロック）
-  cardsByMode = getCardsByBlock(prefs.block || 1);
-  index = 0;
-  resetCardView();
-
-  showHome();
+  return result.map(s => s.replace(/^"|"$/g, "").trim());
 }
 
 /*************************************************
@@ -319,11 +261,12 @@ function getCardsByBlock(blockIndex) {
 }
 
 /*************************************************
- * Clear rule: EASY only
+ * Progress per Level
+ * easy(grade=3) を付けたらクリア扱い
  *************************************************/
 function isCleared(no, level) {
   const rec = srs[no]?.[level];
-  return !!rec && (rec.lastGrade === 3);
+  return !!rec && rec.lastGrade === 3;
 }
 function blockLevelCount(blockIndex, level) {
   const list = getCardsByBlock(blockIndex);
@@ -333,91 +276,41 @@ function blockLevelCount(blockIndex, level) {
 }
 
 /*************************************************
- * Block video id (for grouping)
- *************************************************/
-function getBlockVideoId(blockIndex) {
-  const list = getCardsByBlock(blockIndex);
-  if (!list.length) return "";
-  return String(list[0].video || "");
-}
-
-/*************************************************
- * Home Block Table (grouped by video) + ✔︎ when fully cleared
+ * Home: Block Table
  *************************************************/
 function renderBlockTable() {
   const root = document.getElementById("blockTable");
   if (!root) return;
 
   const max = getMaxBlock();
+  let html = "<table>";
 
-  const groups = {}; // key = videoId or "other"
   for (let b = 1; b <= max; b++) {
-    const vid = getBlockVideoId(b);
-    const key = vid ? vid : "other";
-    if (!groups[key]) groups[key] = [];
-    groups[key].push(b);
+    const a = blockLevelCount(b, 1);
+    const h = blockLevelCount(b, 2);
+    const o = blockLevelCount(b, 3);
+
+    const label = `${(b-1)*30+1}-${b*30}`;
+
+    html += `
+      <tr><td>
+        <div class="row">
+          <div class="blockLabel">${label}</div>
+          <button class="lvBtn" data-block="${b}" data-level="1">
+            <strong>Lv1</strong><span>${a.cleared}/${a.total}</span>
+          </button>
+          <button class="lvBtn" data-block="${b}" data-level="2">
+            <strong>Lv2</strong><span>${h.cleared}/${h.total}</span>
+          </button>
+          <button class="lvBtn" data-block="${b}" data-level="3">
+            <strong>Lv3</strong><span>${o.cleared}/${o.total}</span>
+          </button>
+        </div>
+      </td></tr>
+    `;
   }
 
-  const keys = Object.keys(groups).sort((a, b) => {
-    if (a === "other") return 1;
-    if (b === "other") return -1;
-    return Number(a) - Number(b);
-  });
-
-  let html = "";
-
-  keys.forEach(key => {
-    const isOther = (key === "other");
-    const label = isOther ? "Other（元動画なし）" : getVideoLabel(key);
-    const url = isOther ? "" : getVideoUrl(key);
-
-    html += `<div class="videoSection">`;
-    html += `<div class="videoHeader">`;
-    if (url) {
-      html += `<a class="videoLink" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
-    } else {
-      html += `<div class="videoTitle">${label}</div>`;
-    }
-    html += `</div>`;
-
-    html += `<table class="blockTbl">`;
-
-    groups[key].forEach(b => {
-      const a = blockLevelCount(b, 1);
-      const h = blockLevelCount(b, 2);
-      const o = blockLevelCount(b, 3);
-
-      const aDone = (a.total > 0 && a.cleared === a.total);
-      const hDone = (h.total > 0 && h.cleared === h.total);
-      const oDone = (o.total > 0 && o.cleared === o.total);
-
-      const range = `${(b-1)*30+1}-${b*30}`;
-
-      const aText = aDone ? `<span class="done">✔︎</span>` : `<span>${a.cleared}/${a.total}</span>`;
-      const hText = hDone ? `<span class="done">✔︎</span>` : `<span>${h.cleared}/${h.total}</span>`;
-      const oText = oDone ? `<span class="done">✔︎</span>` : `<span>${o.cleared}/${o.total}</span>`;
-
-      html += `
-        <tr><td>
-          <div class="row">
-            <div class="blockLabel">${range}</div>
-            <button class="lvBtn" data-block="${b}" data-level="1">
-              <strong>Lv1</strong>${aText}
-            </button>
-            <button class="lvBtn" data-block="${b}" data-level="2">
-              <strong>Lv2</strong>${hText}
-            </button>
-            <button class="lvBtn" data-block="${b}" data-level="3">
-              <strong>Lv3</strong>${oText}
-            </button>
-          </div>
-        </td></tr>
-      `;
-    });
-
-    html += `</table></div>`;
-  });
-
+  html += "</table>";
   root.innerHTML = html;
 
   root.querySelectorAll(".lvBtn").forEach(btn => {
@@ -430,7 +323,7 @@ function renderBlockTable() {
 }
 
 /*************************************************
- * Scenes filter
+ * Scenes
  *************************************************/
 function getScenes() {
   return [...new Set(cards.map(c => c.scene).filter(Boolean))];
@@ -452,14 +345,77 @@ function renderSceneButtons() {
     wrap.appendChild(btn);
   });
 }
-
 function startScene(scene) {
-  sessionMode = "normal";
-  sessionDueSet = new Set();
-
   cardsByMode = cards.filter(c => c.scene === scene).sort((a,b)=>a.no-b.no);
-  index = 0; resetCardView();
+  baseSet = [...cardsByMode];
+  loop = 1;
+  index = 0;
+  resetCardView();
   showStudy();
+}
+
+/*************************************************
+ * Due / Weak (Home導線)
+ *************************************************/
+function isDue(no, level){
+  const rec = srs[no]?.[level];
+  return rec && rec.dueAt && rec.dueAt <= now();
+}
+
+function countDueAll(){
+  const level = prefs.level;
+  return cards.filter(c => isDue(c.no, level)).length;
+}
+
+function countDueBlock(){
+  const level = prefs.level;
+  const blockIndex = prefs.block || 1;
+  return getCardsByBlock(blockIndex).filter(c => isDue(c.no, level)).length;
+}
+
+/*************************************************
+ * Accuracy / Weak
+ * 正答率 = easy / total
+ *************************************************/
+const WEAK_ACC_THRESHOLD = 0.70; // 70%
+const WEAK_MIN_TOTAL = 3;
+
+function getAcc(no, level){
+  const rec = srs[no]?.[level];
+  const total = rec?.total || 0;
+  const easy  = rec?.easy  || 0;
+  if (total === 0) return null;
+  return easy / total;
+}
+
+function isWeak(no, level){
+  const rec = srs[no]?.[level];
+  if (!rec) return false;
+
+  // 直近が again/hard は即苦手
+  if (rec.lastGrade === 1 || rec.lastGrade === 2) return true;
+
+  const total = rec.total || 0;
+  if (total < WEAK_MIN_TOTAL) return false;
+
+  const acc = getAcc(no, level);
+  return acc !== null && acc < WEAK_ACC_THRESHOLD;
+}
+
+function countWeak(){
+  const level = prefs.level;
+  const blockIndex = prefs.block || 1;
+  return getCardsByBlock(blockIndex).filter(c => isWeak(c.no, level)).length;
+}
+
+function renderHomeDue(){
+  const all  = countDueAll();
+  const blk  = countDueBlock();
+  const weak = countWeak();
+
+  if (dueAllText)   dueAllText.textContent   = `Due（全体）: ${all}`;
+  if (dueBlockText) dueBlockText.textContent = `Due（今のブロック）: ${blk}`;
+  if (weakText)     weakText.textContent     = `苦手（今ブロック）: ${weak}`;
 }
 
 /*************************************************
@@ -470,91 +426,102 @@ function startBlockLevel(blockIndex, level) {
   prefs.level = level;
   saveAll();
 
-  sessionMode = "normal";
-  sessionDueSet = new Set();
-
   cardsByMode = getCardsByBlock(blockIndex);
+  baseSet = [...cardsByMode];
+  loop = 1;
   index = 0;
   resetCardView();
   showStudy();
 }
 
 function startVideoOrder(goStudy=false) {
-  sessionMode = "normal";
-  sessionDueSet = new Set();
-
   cardsByMode = [...cards].sort((a,b)=>a.no-b.no);
-  index = 0; resetCardView();
+  baseSet = [...cardsByMode];
+  loop = 1;
+  index = 0;
+  resetCardView();
   if (goStudy) showStudy(); else render();
 }
 
-function startReviewDue(goStudy=false) {
-  sessionMode = "normal";
-  sessionDueSet = new Set();
-
+function startDueAll(goStudy=true){
   const level = prefs.level;
-  const due = cards.filter(c => {
-    const d = srs[c.no]?.[level]?.dueAt ?? Infinity;
-    return d <= now();
-  });
-
-  if (!due.length) { alert("復習（Due）はありません"); return; }
-
+  const due = cards.filter(c => isDue(c.no, level));
+  if (!due.length){
+    alert("Dueはありません");
+    return;
+  }
   cardsByMode = due.sort((a,b)=>a.no-b.no);
-  index = 0; resetCardView();
+  baseSet = [...cardsByMode];
+  loop = 1;
+  index = 0;
+  resetCardView();
+  if (goStudy) showStudy(); else render();
+}
+
+function startDueBlock(goStudy=true){
+  const level = prefs.level;
+  const blockIndex = prefs.block || 1;
+  const due = getCardsByBlock(blockIndex).filter(c => isDue(c.no, level));
+  if (!due.length){
+    alert("このブロックにDueはありません");
+    return;
+  }
+  cardsByMode = due.sort((a,b)=>a.no-b.no);
+  baseSet = [...cardsByMode];
+  loop = 1;
+  index = 0;
+  resetCardView();
+  if (goStudy) showStudy(); else render();
+}
+
+function startWeak(goStudy=true){
+  const level = prefs.level;
+  const blockIndex = prefs.block || 1;
+
+  const base = getCardsByBlock(blockIndex);
+  const weak = base.filter(c => isWeak(c.no, level));
+
+  if (!weak.length){
+    alert("苦手カードはありません（素晴らしい）");
+    return;
+  }
+
+  cardsByMode = weak.sort((a,b)=>a.no-b.no);
+  baseSet = [...cardsByMode];
+  loop = 1;
+  index = 0;
+  resetCardView();
   if (goStudy) showStudy(); else render();
 }
 
 /*************************************************
- * Level buttons
+ * Level buttons (Study)
  *************************************************/
 function renderLevelButtons() {
   const lv = prefs.level;
-  if (!lv1Btn || !lv2Btn || !lv3Btn) return;
-
-  lv1Btn.style.background = (lv===1) ? "#007aff" : "#eee";
-  lv1Btn.style.color = (lv===1) ? "#fff" : "#111";
-  lv2Btn.style.background = (lv===2) ? "#007aff" : "#eee";
-  lv2Btn.style.color = (lv===2) ? "#fff" : "#111";
-  lv3Btn.style.background = (lv===3) ? "#007aff" : "#eee";
-  lv3Btn.style.color = (lv===3) ? "#fff" : "#111";
+  [lv1Btn, lv2Btn, lv3Btn].forEach((btn, i) => {
+    const level = i + 1;
+    const active = (lv === level);
+    btn.style.background = active ? "#007aff" : "#202031";
+    btn.style.color = active ? "#fff" : "#f3f3f5";
+    btn.style.border = active ? "1px solid rgba(255,255,255,0.12)" : "1px solid rgba(255,255,255,0.08)";
+  });
 }
 
 /*************************************************
- * Progress bars (Home + Study) + mode tag
+ * Progress bars
  *************************************************/
 function renderProgress() {
+  const textEl = document.getElementById("progressText");
+  const barEl  = document.getElementById("progressBar");
+  if (!textEl || !barEl) return;
+
   const b = prefs.block || 1;
   const lv = prefs.level || 1;
   const { cleared, total } = blockLevelCount(b, lv);
 
-  const text = `進捗：Lv${lv}  ${cleared} / ${total}`;
-  const width = total ? `${Math.round((cleared / total) * 100)}%` : "0%";
-
-  // Home
-  const homeTextEl = document.getElementById("progressText");
-  const homeBarEl  = document.getElementById("progressBar");
-  if (homeTextEl) homeTextEl.textContent = text;
-  if (homeBarEl) homeBarEl.style.width = width;
-
-  // Study
-  const studyTextEl = document.getElementById("studyProgressText");
-  const studyBarEl  = document.getElementById("studyProgressBar");
-  if (studyTextEl) studyTextEl.textContent = text;
-  if (studyBarEl) studyBarEl.style.width = width;
-
-  // Mode tag (+ due remaining)
-  const tag = document.getElementById("studyModeTag");
-  if (tag) {
-    if (sessionMode === "due") {
-      const remaining = sessionDueSet ? sessionDueSet.size : 0;
-      tag.textContent = `Due（残り${remaining}）`;
-      tag.classList.add("due");
-    } else {
-      tag.textContent = "通常";
-      tag.classList.remove("due");
-    }
-  }
+  textEl.textContent = `進捗：Lv${lv}  ${cleared} / ${total}`;
+  barEl.style.width = total ? `${Math.round((cleared / total) * 100)}%` : "0%";
 }
 
 function renderDaily() {
@@ -570,7 +537,7 @@ function renderDaily() {
 }
 
 /*************************************************
- * Card rendering (Lv behavior)
+ * Card rendering
  *************************************************/
 function pickSlot(card) {
   if (!card.slots || !card.slots.length) return null;
@@ -580,15 +547,36 @@ function pickSlot(card) {
     const idx = (card.no % card.slots.length);
     return card.slots[idx];
   }
-
   // Lv2/Lv3 = 変動（ランダム）
   const idx = Math.floor(Math.random() * card.slots.length);
   return card.slots[idx];
 }
 
 function renderNote(card) {
-  if (!noteEl) return;
   noteEl.textContent = (showNote && card.note) ? `💡 ${card.note}` : "";
+}
+
+function renderStats(card){
+  if (!statsEl) return;
+
+  const level = prefs.level;
+  const rec = srs[card.no]?.[level];
+
+  const total = rec?.total || 0;
+  const easy  = rec?.easy  || 0;
+
+  if (total === 0) {
+    statsEl.textContent = "正答率: --%（まだ未回答）";
+    return;
+  }
+
+  const acc = Math.round((easy / total) * 100);
+  statsEl.textContent = `正答率: ${acc}%（easy ${easy} / 回答 ${total}）`;
+}
+
+function renderLoop(){
+  if (!loopEl) return;
+  loopEl.textContent = `周回: ${loop === 1 ? "1周目" : "2周目（復習）"}`;
 }
 
 function render() {
@@ -597,7 +585,7 @@ function render() {
   const card = cardsByMode[index];
   const slot = pickSlot(card);
 
-  // answer決定（JP/ENのセットで置換）
+  // answer決定（{x}両対応）
   if (slot && card.jp.includes("{x}") && card.en.includes("{x}")) {
     jpEl.textContent = card.jp.replace("{x}", slot.jp);
     currentAnswer = card.en.replace("{x}", slot.en);
@@ -606,10 +594,12 @@ function render() {
     currentAnswer = card.en;
   }
 
-  // 表示
+  // EN表示（Lv挙動）
   if (prefs.level === 3) {
+    // Lv3：英語ヒント無し（タップで答え）
     enEl.textContent = revealed ? currentAnswer : "（タップで答え）";
   } else {
+    // Lv1/Lv2：未表示時は穴埋め/タップ
     if (!revealed) {
       if (card.en.includes("{x}")) enEl.textContent = card.en.replace("{x}", "___");
       else enEl.textContent = "タップして答え";
@@ -619,72 +609,48 @@ function render() {
   }
 
   renderNote(card);
+  renderStats(card);
   renderProgress();
   renderDaily();
   renderLevelButtons();
+  renderHomeDue();
+  renderLoop();
 }
 
 /*************************************************
- * Due deck rebuild (Easyになるまで終わらない)
+ * 周回終了 → Dueだけ2周目
  *************************************************/
-function rebuildDueDeck() {
-  const dueNos = Array.from(sessionDueSet);
-  cardsByMode = cards
-    .filter(c => dueNos.includes(c.no))
-    .sort((a,b)=>a.no-b.no);
-
-  index = 0;
-  resetCardView();
+function buildDueFromBase(){
+  const level = prefs.level;
+  return baseSet.filter(c => {
+    const rec = srs[c.no]?.[level];
+    // easy(3) 以外が残り
+    return !rec || rec.lastGrade !== 3;
+  });
 }
 
-/*************************************************
- * Round control
- *************************************************/
-function handleEndOfRound() {
-  if (sessionMode === "normal") {
-    if (sessionDueSet.size > 0) {
-      sessionMode = "due";
-      rebuildDueDeck();
-      alert("1周目おわり！\n次は Due（Again/Hard）だけ。Easyになるまで終わらないよ。");
+function finishLoop(){
+  if (loop === 1){
+    const due = buildDueFromBase();
+    if (due.length){
+      loop = 2;
+      cardsByMode = due.sort((a,b)=>a.no-b.no);
+      index = 0;
+      resetCardView();
+      alert(`1周目完了。残り ${due.length} 問を復習します`);
       render();
       return;
-    } else {
-      alert("クリア！\nDueはありません。");
-      showHome();
-      return;
     }
+    alert("🎉 1周目で全クリア！");
+    showHome();
+  } else {
+    alert("🎉 復習も完了！");
+    showHome();
   }
-
-  // Due周回が終わった
-  if (sessionMode === "due") {
-    if (sessionDueSet.size > 0) {
-      rebuildDueDeck();
-      alert(`Due残り ${cardsByMode.length}問。もう一周いくよ。`);
-      render();
-      return;
-    } else {
-      alert("Dueも完了！おつかれ！");
-      showHome();
-      return;
-    }
-  }
-}
-
-function goNext() {
-  index += 1;
-  resetCardView();
-
-  if (index >= cardsByMode.length) {
-    handleEndOfRound();
-    return;
-  }
-  render();
 }
 
 /*************************************************
- * Grade (3-step)
- * - normal: again/hard => Due追加, easy => クリア扱い(進捗UP)
- * - due: easy => Dueから外す, again/hard => 残る
+ * Grade (level-separated + accuracy counters)
  *************************************************/
 function gradeCard(grade) {
   if (!cardsByMode.length) return;
@@ -697,20 +663,23 @@ function gradeCard(grade) {
 
   const rec = srs[card.no][level];
 
-  // ✅ カウント追加
+  // 回答数カウント
   rec.total = (rec.total || 0) + 1;
-  if (grade === 3) {          // ← easy が 3 の場合（あなたの現状に合わせて）
-    rec.easy = (rec.easy || 0) + 1;
-  }
+  if (grade === 3) rec.easy = (rec.easy || 0) + 1;
 
-  // 既存のSRS処理（dueAtなど）
   rec.lastGrade = grade;
   rec.intervalMs = nextIntervalMs(grade);
-  rec.dueAt = now() + rec.intervalMs;
+
+  // dueAt：again/hardのみ有効。easyは無限先でDue除外
+  if (grade === 1 || grade === 2) {
+    rec.dueAt = now() + rec.intervalMs;
+  } else {
+    rec.dueAt = Infinity;
+  }
 
   saveAll();
 
-  // 既存の進捗加算（easyだけ進む、など）
+  // dailyは easy のみ進める（達成感）
   if (grade === 3) {
     ensureDaily();
     daily.goodCount = (daily.goodCount || 0) + 1;
@@ -720,26 +689,38 @@ function gradeCard(grade) {
   goNext();
 }
 
+function goNext() {
+  index++;
+  if (index >= cardsByMode.length) {
+    finishLoop();
+    return;
+  }
+  resetCardView();
+  render();
+}
+
 /*************************************************
  * Events
  *************************************************/
-if (homeDueBtn) homeDueBtn.addEventListener("click", () => startReviewDue(true));
-if (homeVideoBtn) homeVideoBtn.addEventListener("click", () => startVideoOrder(true));
+homeVideoBtn.addEventListener("click", () => startVideoOrder(true));
+homeWeakBtn.addEventListener("click", () => startWeak(true));
+homeDueAllBtn.addEventListener("click", () => startDueAll(true));
+homeDueBlockBtn.addEventListener("click", () => startDueBlock(true));
 
-if (backHomeBtn) backHomeBtn.addEventListener("click", showHome);
-if (videoBtn) videoBtn.addEventListener("click", () => startVideoOrder(false));
-if (reviewBtn) reviewBtn.addEventListener("click", () => startReviewDue(false));
-if (nextBtn) nextBtn.addEventListener("click", goNext);
+backHomeBtn.addEventListener("click", showHome);
+videoBtn.addEventListener("click", () => startVideoOrder(false));
+reviewBtn.addEventListener("click", () => startDueAll(false));
+nextBtn.addEventListener("click", goNext);
 
-if (g1) g1.addEventListener("click", () => gradeCard(1));
-if (g2) g2.addEventListener("click", () => gradeCard(2));
-if (g3) g3.addEventListener("click", () => gradeCard(3));
+g1.addEventListener("click", () => gradeCard(1));
+g2.addEventListener("click", () => gradeCard(2));
+g3.addEventListener("click", () => gradeCard(3));
 
-if (lv1Btn) lv1Btn.addEventListener("click", () => { prefs.level = 1; saveAll(); resetCardView(); render(); });
-if (lv2Btn) lv2Btn.addEventListener("click", () => { prefs.level = 2; saveAll(); resetCardView(); render(); });
-if (lv3Btn) lv3Btn.addEventListener("click", () => { prefs.level = 3; saveAll(); resetCardView(); render(); });
+lv1Btn.addEventListener("click", () => { prefs.level = 1; saveAll(); resetCardView(); render(); });
+lv2Btn.addEventListener("click", () => { prefs.level = 2; saveAll(); resetCardView(); render(); });
+lv3Btn.addEventListener("click", () => { prefs.level = 3; saveAll(); resetCardView(); render(); });
 
-if (cardEl) cardEl.addEventListener("click", () => {
+cardEl.addEventListener("click", () => {
   revealed = !revealed;
   showNote = revealed;
   render();
