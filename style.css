@@ -274,6 +274,69 @@ a{ color:inherit; }
   font-weight:800;
 }
 
+/* hint & explain */
+.hintButtons{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+}
+.hintBtn{
+  flex:1;
+  padding:8px 10px;
+  border:1px solid var(--blue);
+  border-radius:10px;
+  background:#fff;
+  color:var(--blue);
+  font-size:13px;
+  font-weight:700;
+}
+.hintArea{
+  margin-top:8px;
+  padding:10px 12px;
+  background:#fffaeb;
+  border:1px solid #ffd666;
+  border-radius:10px;
+  font-size:13px;
+  line-height:1.4;
+  white-space:pre-line;
+  color:#664d03;
+}
+
+.explainArea{
+  margin-top:12px;
+  padding:12px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+}
+.explainSection{
+  margin-bottom:12px;
+}
+.explainSection:last-child{
+  margin-bottom:0;
+}
+.explainLabel{
+  font-size:13px;
+  font-weight:900;
+  margin-bottom:6px;
+  color:var(--text);
+}
+.explainContent{
+  font-size:13px;
+  line-height:1.4;
+  color:var(--sub);
+}
+.similarsList{
+  margin:0;
+  padding-left:20px;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--sub);
+}
+.similarsList li{
+  margin-bottom:4px;
+}
+
 /* stats view */
 .statsGrid{
   display: grid;

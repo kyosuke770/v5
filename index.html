@@ -149,6 +149,13 @@
         <div id="statsText" class="stats"></div>
       </div>
 
+      <!-- ヒントボタン -->
+      <div id="hintButtons" class="hintButtons hidden">
+        <button id="hint1Btn" class="hintBtn">ヒント1</button>
+        <button id="hint2Btn" class="hintBtn">ヒント2</button>
+      </div>
+      <div id="hintArea" class="hintArea"></div>
+
       <div class="navRow">
         <button id="next" class="ghostBtn wide">次へ</button>
       </div>
@@ -158,6 +165,14 @@
         <button id="g1" class="grade g1">Again<br><span>5m</span></button>
         <button id="g2" class="grade g2">Hard<br><span>6h</span></button>
         <button id="g3" class="grade g3">Easy<br><span>12d</span></button>
+      </div>
+
+      <!-- 解説・類似表現エリア（回答後表示） -->
+      <div id="explainArea" class="explainArea hidden">
+        <div id="explainMeaning" class="explainSection"></div>
+        <div id="explainNuance" class="explainSection"></div>
+        <div id="explainGrammar" class="explainSection"></div>
+        <div id="similarsArea" class="explainSection"></div>
       </div>
     </main>
   </div>

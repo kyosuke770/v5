@@ -110,6 +110,17 @@ const lv1Btn = document.getElementById("lv1Btn");
 const lv2Btn = document.getElementById("lv2Btn");
 const lv3Btn = document.getElementById("lv3Btn");
 
+// ヒント・解説エリア
+const hintButtonsEl = document.getElementById("hintButtons");
+const hint1BtnEl = document.getElementById("hint1Btn");
+const hint2BtnEl = document.getElementById("hint2Btn");
+const hintAreaEl = document.getElementById("hintArea");
+const explainAreaEl = document.getElementById("explainArea");
+const explainMeaningEl = document.getElementById("explainMeaning");
+const explainNuanceEl = document.getElementById("explainNuance");
+const explainGrammarEl = document.getElementById("explainGrammar");
+const similarsAreaEl = document.getElementById("similarsArea");
+
 /*************************************************
  * Views
  *************************************************/
@@ -141,6 +152,9 @@ function showStats() {
 function resetCardView() {
   revealed = false;
   showNote = false;
+  hint1Shown = false;
+  hint2Shown = false;
+  if (hintAreaEl) hintAreaEl.textContent = "";
 }
 
 /*************************************************
@@ -178,6 +192,14 @@ function parseCSV(text) {
       const note = (cols[6] || "").trim();
       const scene = (cols[7] || "").trim();
 
+      // 拡張フィールド
+      const hint_1 = (cols[8] || "").trim();
+      const hint_2 = (cols[9] || "").trim();
+      const explain_meaning = (cols[10] || "").trim();
+      const explain_nuance = (cols[11] || "").trim();
+      const explain_grammar = (cols[12] || "").trim();
+      const similarsRaw = (cols[13] || "").trim();
+
       let slots = null;
       if (slotsRaw) {
         slots = slotsRaw.split("|").map(s => {
@@ -187,7 +209,17 @@ function parseCSV(text) {
         if (!slots.length) slots = null;
       }
 
-      return { no, jp, en, slots, video, lv, note, scene };
+      // 類似表現のパース
+      let similars = null;
+      if (similarsRaw) {
+        similars = similarsRaw.split("|").map(s => s.trim()).filter(Boolean);
+        if (!similars.length) similars = null;
+      }
+
+      return {
+        no, jp, en, slots, video, lv, note, scene,
+        hint_1, hint_2, explain_meaning, explain_nuance, explain_grammar, similars
+      };
     })
     .filter(c => Number.isFinite(c.no) && c.jp);
 }
@@ -633,6 +665,94 @@ function renderNote(card) {
   noteEl.textContent = (showNote && card.note) ? `💡 ${card.note}` : "";
 }
 
+/*************************************************
+ * ヒント・解説表示
+ *************************************************/
+let hint1Shown = false;
+let hint2Shown = false;
+
+function renderHints(card) {
+  if (!hintButtonsEl || !hintAreaEl) return;
+
+  // 回答前のみヒントボタン表示
+  if (!revealed && (card.hint_1 || card.hint_2)) {
+    hintButtonsEl.classList.remove("hidden");
+
+    // ヒント1ボタン
+    if (card.hint_1 && !hint1Shown) {
+      hint1BtnEl.classList.remove("hidden");
+    } else {
+      hint1BtnEl.classList.add("hidden");
+    }
+
+    // ヒント2ボタン
+    if (card.hint_2 && hint1Shown && !hint2Shown) {
+      hint2BtnEl.classList.remove("hidden");
+    } else {
+      hint2BtnEl.classList.add("hidden");
+    }
+  } else {
+    hintButtonsEl.classList.add("hidden");
+  }
+
+  // ヒント表示エリア
+  let hintText = "";
+  if (hint1Shown && card.hint_1) hintText += `💡 ${card.hint_1}\n`;
+  if (hint2Shown && card.hint_2) hintText += `💡💡 ${card.hint_2}\n`;
+  hintAreaEl.textContent = hintText.trim();
+}
+
+function renderExplain(card) {
+  if (!explainAreaEl) return;
+
+  // 回答後のみ表示
+  if (!revealed) {
+    explainAreaEl.classList.add("hidden");
+    return;
+  }
+
+  let hasContent = false;
+
+  // 意味
+  if (card.explain_meaning) {
+    explainMeaningEl.innerHTML = `<div class="explainLabel">💬 意味</div><div class="explainContent">${card.explain_meaning}</div>`;
+    hasContent = true;
+  } else {
+    explainMeaningEl.innerHTML = "";
+  }
+
+  // ニュアンス
+  if (card.explain_nuance) {
+    explainNuanceEl.innerHTML = `<div class="explainLabel">🎯 ニュアンス</div><div class="explainContent">${card.explain_nuance}</div>`;
+    hasContent = true;
+  } else {
+    explainNuanceEl.innerHTML = "";
+  }
+
+  // 文法
+  if (card.explain_grammar) {
+    explainGrammarEl.innerHTML = `<div class="explainLabel">📖 文法</div><div class="explainContent">${card.explain_grammar}</div>`;
+    hasContent = true;
+  } else {
+    explainGrammarEl.innerHTML = "";
+  }
+
+  // 類似表現
+  if (card.similars && card.similars.length > 0) {
+    const similarsList = card.similars.map(s => `<li>${s}</li>`).join("");
+    similarsAreaEl.innerHTML = `<div class="explainLabel">🔄 類似表現</div><ul class="similarsList">${similarsList}</ul>`;
+    hasContent = true;
+  } else {
+    similarsAreaEl.innerHTML = "";
+  }
+
+  if (hasContent) {
+    explainAreaEl.classList.remove("hidden");
+  } else {
+    explainAreaEl.classList.add("hidden");
+  }
+}
+
 function render() {
   if (!cardsByMode.length) return;
 
@@ -661,6 +781,8 @@ function render() {
   }
 
   renderNote(card);
+  renderHints(card);
+  renderExplain(card);
   renderProgress();
   renderDaily();
   renderLevelButtons();
@@ -790,6 +912,17 @@ if (lv3Btn) lv3Btn.addEventListener("click", () => { prefs.level = 3; saveAll();
 if (cardEl) cardEl.addEventListener("click", () => {
   revealed = !revealed;
   showNote = revealed;
+  render();
+});
+
+// ヒントボタン
+if (hint1BtnEl) hint1BtnEl.addEventListener("click", () => {
+  hint1Shown = true;
+  render();
+});
+
+if (hint2BtnEl) hint2BtnEl.addEventListener("click", () => {
+  hint2Shown = true;
   render();
 });
 
