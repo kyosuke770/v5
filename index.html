@@ -2,114 +2,123 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Instant English</title>
-  <link rel="stylesheet" href="./style.css?v=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Phrase Trainer</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <main class="app">
 
-  <!-- HOME -->
-  <div id="homeView">
-    <header class="topbar">
-      <div class="title">Instant English</div>
-      <div class="sub">iPhoneだけで回す瞬間英作文</div>
-    </header>
+    <!-- HOME -->
+    <section id="homeView">
+      <header class="header">
+        <h1>Phrase Trainer</h1>
+        <div class="sub">ブロック×レベルで進める / Due / 苦手</div>
+      </header>
 
-    <section class="cardBox">
-      <div class="rowBetween">
-        <div class="hLabel">今日の進捗</div>
-        <div id="dailyText" class="hValue">今日: 0 / 10</div>
-      </div>
-      <div class="barWrap">
-        <div id="dailyBar" class="bar"></div>
-      </div>
-    </section>
-
-    <section class="cardBox">
-      <div class="rowBetween">
-        <div class="hLabel">ブロック進捗</div>
-        <div id="progressText" class="hValue">進捗：Lv1 0 / 0</div>
-      </div>
-      <div class="barWrap">
-        <div id="progressBar" class="bar"></div>
-      </div>
-    </section>
-
-    <section class="homeActions">
-      <button id="homeDue" class="primaryBtn">復習（Due）</button>
-      <button id="homeVideo" class="ghostBtn">動画順モード</button>
-    </section>
-
-    <section class="cardBox">
-      <div class="hLabel">シーンで絞り込み</div>
-      <div id="scenes" class="chips"></div>
-    </section>
-
-    <section class="cardBox">
-      <div class="hLabel">ブロック一覧（動画ごと）</div>
-      <div id="blockTable"></div>
-    </section>
-
-    <footer class="footer">
-      <div class="hint">※ CSVを /data に追加するだけで増えます</div>
-    </footer>
-  </div>
-
-  <!-- STUDY -->
-  <div id="studyView" class="hidden">
-    <header class="studyTop">
-      <button id="backHome" class="iconBtn">←</button>
-      <div class="studyTitle">Study</div>
-      <div class="studyBtns">
-        <button id="review" class="ghostBtn small">Due</button>
-        <button id="videoOrder" class="ghostBtn small">動画順</button>
-      </div>
-    </header>
-
-    <section class="levelRow">
-      <button id="lv1Btn" class="lvBtnTop">Lv1</button>
-      <button id="lv2Btn" class="lvBtnTop">Lv2</button>
-      <button id="lv3Btn" class="lvBtnTop">Lv3</button>
-    </section>
-
-    <!-- ✅ Study中もブロック進捗を表示 -->
-    <section class="cardBox studyProgressBox">
-      <div class="rowBetween">
-        <div class="hLabel">ブロック進捗</div>
-        <div class="studyProgressRight">
-          <span id="studyModeTag" class="modeTag">通常</span>
-          <span id="studyProgressText" class="hValue">進捗：Lv1 0 / 0</span>
+      <!-- Daily -->
+      <div class="panel">
+        <div class="panelTitle">今日</div>
+        <div id="dailyText" class="muted"></div>
+        <div class="bar">
+          <div id="dailyBar" class="barFill"></div>
         </div>
       </div>
-      <div class="barWrap">
-        <div id="studyProgressBar" class="bar"></div>
+
+      <!-- Progress -->
+      <div class="panel">
+        <div class="panelTitle">進捗（選択中のブロック×レベル）</div>
+        <div id="progressText" class="muted"></div>
+        <div class="bar">
+          <div id="progressBar" class="barFill"></div>
+        </div>
+      </div>
+
+      <!-- Due / Weak -->
+      <div class="panel">
+        <div class="panelTitle">復習</div>
+        <div class="homeStats">
+          <div id="dueAllText" class="stats"></div>
+          <div id="dueBlockText" class="stats"></div>
+          <div id="weakText" class="stats"></div>
+        </div>
+
+        <div class="btnRow">
+          <button id="homeDueAll">Due（全体）</button>
+          <button id="homeDueBlock">Due（今のブロック）</button>
+          <button id="homeWeak">苦手だけ復習</button>
+        </div>
+      </div>
+
+      <!-- Video order -->
+      <div class="panel">
+        <div class="panelTitle">動画順モード</div>
+        <div class="muted">全カードを番号順に進める（ムラなし）</div>
+        <div class="btnRow">
+          <button id="homeVideo">動画順でやる</button>
+        </div>
+      </div>
+
+      <!-- Scenes -->
+      <div class="panel">
+        <div class="panelTitle">シーンで選ぶ（任意）</div>
+        <div id="scenes" class="chips"></div>
+      </div>
+
+      <!-- Blocks table -->
+      <div class="panel">
+        <div class="panelTitle">ブロック（30問単位）</div>
+        <div id="blockTable"></div>
+      </div>
+
+      <footer class="footer muted">
+        CSVは <code>/data</code> フォルダ内（例: <code>data/video01_001-030.csv</code>）に置く
+      </footer>
+    </section>
+
+
+    <!-- STUDY -->
+    <section id="studyView" class="hidden">
+      <header class="headerRow">
+        <button id="backHome" class="ghost">← Home</button>
+        <div class="headerRight">
+          <button id="videoOrder" class="ghost">動画順</button>
+          <button id="review" class="ghost">Due</button>
+          <button id="next" class="ghost">次へ</button>
+        </div>
+      </header>
+
+      <!-- Level buttons -->
+      <div class="levelRow">
+        <button id="lv1Btn" class="lv">Lv1</button>
+        <button id="lv2Btn" class="lv">Lv2</button>
+        <button id="lv3Btn" class="lv">Lv3</button>
+        <div id="loopText" class="stats loop"></div>
+      </div>
+
+      <!-- Card -->
+      <div id="card" class="card">
+        <div class="label">JP</div>
+        <div id="jp" class="jp"></div>
+
+        <div class="label">EN</div>
+        <div id="en" class="en muted">タップして答え</div>
+      </div>
+
+      <!-- Note / stats -->
+      <div id="noteText" class="note"></div>
+      <div id="statsText" class="stats"></div>
+
+      <!-- Grades -->
+      <div class="gradeRow">
+        <button id="g1" class="grade danger">again</button>
+        <button id="g2" class="grade warn">hard</button>
+        <button id="g3" class="grade ok">easy</button>
       </div>
     </section>
 
-    <main class="studyMain">
-      <div id="card" class="card">
-        <div class="jp" id="jp">CSV読み込み中…</div>
-        <div class="en" id="en"></div>
-      </div>
+  </main>
 
-      <div class="noteArea">
-        <div id="noteText" class="noteText"></div>
-        <div id="statsText" class="stats"></div>
-      </div>
-
-      <div class="navRow">
-        <button id="next" class="ghostBtn wide">次へ</button>
-      </div>
-
-      <!-- ✅ 3段階SRS -->
-      <div class="gradeRow gradeRow3">
-        <button id="g1" class="grade g1">Again<br><span>5m</span></button>
-        <button id="g2" class="grade g2">Hard<br><span>6h</span></button>
-        <button id="g3" class="grade g3">Easy<br><span>12d</span></button>
-      </div>
-    </main>
-  </div>
-
-  <script src="./app.js?v=1"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
