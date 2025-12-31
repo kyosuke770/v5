@@ -125,6 +125,11 @@ a{ color:inherit; }
   border-color:var(--blue);
   color:#fff;
 }
+.actionCard.highlight{
+  background:#f0f9ff;
+  border-color:#3b82f6;
+  border-width:2px;
+}
 .actionIcon{
   font-size:28px;
   margin-bottom:4px;

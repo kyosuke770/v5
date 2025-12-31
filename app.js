@@ -73,8 +73,11 @@ let currentAnswer = "";
 let currentSlotIndex = null; // スロット別トラッキング用
 
 // Session control: 1周目→Due周回（Easyになるまで）
-let sessionMode = "normal";      // "normal" | "due"
+let sessionMode = "normal";      // "normal" | "due" | "variation"
 let sessionDueSet = new Set();   // again/hard になったカード番号
+
+// Variation mode: 全スロットを順番に練習
+let variationSlotIndex = 0;      // 現在練習中のスロットインデックス
 
 /*************************************************
  * Videos meta (optional)
@@ -91,6 +94,7 @@ const statsView = document.getElementById("statsView");
 
 const homeDueBtn = document.getElementById("homeDue");
 const homeVideoBtn = document.getElementById("homeVideo");
+const homeVariationBtn = document.getElementById("homeVariation");
 const homeStatsBtn = document.getElementById("homeStats");
 const homeLv1Btn = document.getElementById("homeLv1");
 const homeLv2Btn = document.getElementById("homeLv2");
@@ -537,6 +541,26 @@ function startVideoOrder(goStudy=false) {
   if (goStudy) showStudy(); else render();
 }
 
+function startVariationMode(goStudy=false) {
+  sessionMode = "variation";
+  sessionDueSet = new Set();
+
+  // スロットを持つカードのみをフィルタ
+  cardsByMode = [...cards]
+    .filter(c => c.slots && c.slots.length > 0)
+    .sort((a,b)=>a.no-b.no);
+
+  if (!cardsByMode.length) {
+    alert("スロットを持つカードがありません");
+    return;
+  }
+
+  index = 0;
+  variationSlotIndex = 0;
+  resetCardView();
+  if (goStudy) showStudy(); else render();
+}
+
 /*************************************************
  * 優先度スコア計算（苦手カード優先）
  *************************************************/
@@ -698,8 +722,12 @@ function pickSlot(card) {
 
   let idx;
 
+  // バリエーションモード = 順番に全スロット練習
+  if (sessionMode === "variation") {
+    idx = variationSlotIndex % card.slots.length;
+  }
   // Lv1 = 固定（カード番号で固定化）
-  if (prefs.level === 1) {
+  else if (prefs.level === 1) {
     idx = (card.no % card.slots.length);
   }
   // Lv2/3 = スマート選択（苦手なスロット優先）
@@ -950,6 +978,24 @@ function handleEndOfRound() {
 }
 
 function goNext() {
+  // バリエーションモード: 全スロット練習してから次のカードへ
+  if (sessionMode === "variation") {
+    const card = cardsByMode[index];
+    if (card && card.slots && card.slots.length > 0) {
+      variationSlotIndex++;
+
+      // まだこのカードのスロットが残っている
+      if (variationSlotIndex < card.slots.length) {
+        resetCardView();
+        render();
+        return;
+      }
+
+      // このカードの全スロット完了 → 次のカードへ
+      variationSlotIndex = 0;
+    }
+  }
+
   index += 1;
   resetCardView();
 
@@ -1027,6 +1073,7 @@ function gradeCard(grade) {
  *************************************************/
 if (homeDueBtn) homeDueBtn.addEventListener("click", () => startReviewDue(true));
 if (homeVideoBtn) homeVideoBtn.addEventListener("click", () => startVideoOrder(true));
+if (homeVariationBtn) homeVariationBtn.addEventListener("click", () => startVariationMode(true));
 if (homeStatsBtn) homeStatsBtn.addEventListener("click", showStats);
 
 if (homeLv1Btn) homeLv1Btn.addEventListener("click", () => { prefs.level = 1; saveAll(); showHome(); });
