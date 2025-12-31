@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene
-181,それについて話しましょう。,Let's talk about that.,,1,1,話題に入る時。,daily
-182,今はその時間がありません。,I don't have time for that right now.,,1,1,今は対応不可。,daily
-183,後で改めて確認します。,I'll review it later.,,1,1,後で見直す。,work
-184,一旦保留にしましょう。,Let's put it on hold.,,1,1,判断を一時停止。,work
-185,少し調べてみます。,I'll look into it.,,1,1,調査する意思。,work
-186,それは問題ないと思います。,I think that's okay.,,1,1,問題ないとの判断。,daily
-187,その点は理解しています。,I understand that.,,1,1,相手の意図を理解。,daily
-188,念のため確認ですが…,Just to confirm...,,1,1,最終確認の前置き。,work
-189,それは別途対応します。,I'll handle that separately.,,1,1,別対応を示す。,work
-190,今すぐ対応します。,I'll take care of it now.,,1,1,即対応を示す。,work
-191,状況は把握しています。,I'm aware of the situation.,,1,1,現状認識を共有。,work
-192,それは想定していました。,I expected that.,,1,1,予測していた。,daily
-193,それは考慮済みです。,That's already taken into account.,,1,1,考慮済み。,work
-194,少し待ちましょう。,Let's wait a bit.,,1,1,短時間待機。,daily
-195,その件は任せてください。,Leave that to me.,,1,1,自分が引き受ける。,work
-196,後ほど共有します。,I'll share it later.,,1,1,後で共有。,work
-197,それは重要ではありません。,That's not important.,,1,1,重要度が低い。,daily
-198,その件は重要です。,That's important.,,1,1,重要度が高い。,work
-199,その通りだと思います。,I think that's right.,,1,1,同意を示す。,daily
-200,それは違うと思います。,I don't think that's right.,,1,1,やんわり否定。,daily
-201,もう少し詳しく教えてください。,Could you tell me more?,,1,1,詳細を求める。,daily
-202,確認次第連絡します。,I'll let you know once I confirm.,,1,1,確認後連絡。,work
-203,その件については後で。,We'll talk about that later.,,1,1,話題を後回し。,daily
-204,今はその必要はありません。,We don't need that right now.,,1,1,現時点で不要。,daily
-205,少し考える時間が必要です。,I need some time to think.,,1,1,検討時間が必要。,daily
-206,それは可能です。,That's possible.,,1,1,可能性あり。,daily
-207,それは難しいかもしれません。,That might be difficult.,,1,1,実現が難しい。,daily
-208,その方法で問題ありません。,That approach works.,,1,1,方針OK。,work
-209,今のところ問題ありません。,So far, so good.,,1,1,現状良好。,daily
-210,それで進めましょう。,Let's move forward with that.,,1,1,次に進む。,work
+no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+181,それについて話しましょう。,Let's talk about that.,,1,1,話題に入る時。,daily,talk を使う,about を使う,その話題について話そうと提案する,議論を始める時の自然な切り出し,Let's talk about は「〜について話そう」,Let's discuss that|Talk about it|Let's chat about that
+182,今はその時間がありません。,I don't have time for that right now.,,1,1,今は対応不可。,daily,time を使う,right now を使う,今は時間がないことを伝える,忙しさを理由に断る表現,I don't have time for は「〜する時間がない」,Too busy now|No time for that|Can't right now
+183,後で改めて確認します。,I'll review it later.,,1,1,後で見直す。,work,review を使う,later を使う,後で見直すことを約束する,今は無理だが後で対応する意思,review は「見直す・検討する」という動詞,I'll check it later|Review later|I'll look at it again
+184,一旦保留にしましょう。,Let's put it on hold.,,1,1,判断を一時停止。,work,on hold を使う,put を使う,一時保留にしようと提案する,決定を延期する表現,put on hold は「保留にする」という慣用表現,Let's pause that|Hold off for now|Postpone it
+185,少し調べてみます。,I'll look into it.,,1,1,調査する意思。,work,look into を使う,it を使う,調査することを約束する,詳しく調べる意思を示す,look into は「調査する」という句動詞,I'll investigate|I'll check it out|Let me research
+186,それは問題ないと思います。,I think that's okay.,,1,1,問題ないとの判断。,daily,okay を使う,I think を使う,おそらく問題ないと判断する,控えめな肯定の表現,I think + 節で意見を述べる,Should be fine|Probably okay|I think it's fine
+187,その点は理解しています。,I understand that.,,1,1,相手の意図を理解。,daily,understand を使う,that を使う,理解していることを伝える,相手の説明や意図を把握している,I understand は「理解している」,I get it|Understood|I see
+188,念のため確認ですが…,Just to confirm...,,1,1,最終確認の前置き。,work,confirm を使う,Just to を使う,確認のための前置き,ミス防止のための慎重な確認,Just to + 動詞で「〜するために」,To double-check|To verify|Making sure
+189,それは別途対応します。,I'll handle that separately.,,1,1,別対応を示す。,work,separately を使う,handle を使う,別件として対応することを伝える,他の案件と分けて処理する意思,separately は副詞で「別々に」,Deal with it separately|Handle it independently|Separate matter
+190,今すぐ対応します。,I'll take care of it now.,,1,1,即対応を示す。,work,now を使う,take care を使う,今すぐ処理することを約束する,即時対応を保証する表現,take care of は「対処する」という慣用表現,I'll do it now|Handle it immediately|Right away
+191,状況は把握しています。,I'm aware of the situation.,,1,1,現状認識を共有。,work,situation を使う,aware を使う,状況を理解していることを伝える,現状認識があることを示す,be aware of は「認識している」,I know the situation|I understand|I'm informed
+192,それは想定していました。,I expected that.,,1,1,予測していた。,daily,expected を使う,I で始まる,予測していたことを伝える,驚きではなく想定内であることを示す,expect は「予想する」という動詞,I saw that coming|Anticipated that|Not surprised
+193,それは考慮済みです。,That's already taken into account.,,1,1,考慮済み。,work,taken into account を使う,already を使う,既に考慮されていることを伝える,検討済みであることを示す,take into account は「考慮する」という慣用表現,Already considered|Factored in|Accounted for
+194,少し待ちましょう。,Let's wait a bit.,,1,1,短時間待機。,daily,wait を使う,a bit を使う,少し待とうと提案する,短時間の待機を提案,Let's + 動詞で提案,Hold on a moment|Wait a little|Give it some time
+195,その件は任せてください。,Leave that to me.,,1,1,自分が引き受ける。,work,Leave を使う,to me を使う,自分に任せてと引き受ける,責任を持って対応する意思,Leave it to me は「私に任せて」という慣用表現,I'll handle it|I've got it|Count on me
+196,後ほど共有します。,I'll share it later.,,1,1,後で共有。,work,share を使う,later を使う,後で共有することを約束する,今は無理だが後で情報提供する意思,share は「共有する」という動詞,I'll send it later|Share later|I'll let you know
+197,それは重要ではありません。,That's not important.,,1,1,重要度が低い。,daily,important を使う,not を使う,重要ではないことを伝える,優先度が低いことを示す,not important は「重要でない」,Not a priority|Not crucial|Doesn't matter much
+198,その件は重要です。,That's important.,,1,1,重要度が高い。,work,important を使う,That's を使う,重要であることを強調する,注目すべき事項であることを示す,important は形容詞で「重要な」,That's crucial|That matters|That's key
+199,その通りだと思います。,I think that's right.,,1,1,同意を示す。,daily,right を使う,I think を使う,正しいと思うと同意する,控えめな同意の表現,I think + 節で意見を述べる,I agree|Probably right|You're right
+200,それは違うと思います。,I don't think that's right.,,1,1,やんわり否定。,daily,right を使う,don't think を使う,正しくないと思うと柔らかく否定する,直接否定を避ける婉曲表現,I don't think は控えめな否定,I disagree|That might not be right|Not sure about that
+201,もう少し詳しく教えてください。,Could you tell me more?,,1,1,詳細を求める。,daily,more を使う,Could you を使う,もっと詳しく教えてほしいと依頼する,追加情報を求める丁寧な表現,Could you + 動詞で丁寧な依頼,Can you elaborate?|Tell me more|Give me details
+202,確認次第連絡します。,I'll let you know once I confirm.,,1,1,確認後連絡。,work,once を使う,confirm を使う,確認が取れたら連絡すると約束する,条件付きの約束を示す,once I confirm は「確認したら」という条件節,I'll update you|Let you know after|Once confirmed
+203,その件については後で。,We'll talk about that later.,,1,1,話題を後回し。,daily,later を使う,talk about を使う,その話題は後にしようと提案する,今は議論しない意思,We'll + 動詞で未来の予定,Discuss it later|Save it for later|Later on that
+204,今はその必要はありません。,We don't need that right now.,,1,1,現時点で不要。,daily,right now を使う,need を使う,今は必要ないことを伝える,タイミング的に不要であることを示す,We don't need は「必要ない」,Not needed now|No need currently|Can skip for now
+205,少し考える時間が必要です。,I need some time to think.,,1,1,検討時間が必要。,daily,think を使う,time を使う,考える時間が欲しいと伝える,即答できないことを示す,I need + 名詞で必要性を伝える,Need to think|Give me time|Let me consider
+206,それは可能です。,That's possible.,,1,1,可能性あり。,daily,possible を使う,That's を使う,実現可能であることを伝える,実行できる可能性を示す,possible は形容詞で「可能な」,That can be done|Doable|Feasible
+207,それは難しいかもしれません。,That might be difficult.,,1,1,実現が難しい。,daily,difficult を使う,might を使う,難しい可能性があると伝える,実現に課題があることを示す,might は「〜かもしれない」という推量,Could be hard|May be tough|Challenging
+208,その方法で問題ありません。,That approach works.,,1,1,方針OK。,work,approach を使う,works を使う,その方法で問題ないと承認する,提案を受け入れる表現,approach works は「方法が機能する」,That's fine|That method works|Good approach
+209,今のところ問題ありません。,So far so good.,,1,1,現状良好。,daily,So far を使う,good を使う,今のところ順調であることを伝える,現時点での評価を示す,So far, so good は慣用表現,Going well|No issues yet|All good so far
+210,それで進めましょう。,Let's move forward with that.,,1,1,次に進む。,work,move forward を使う,with that を使う,その方針で進めようと提案する,決定事項を実行に移す表現,move forward with は「〜を進める」,Let's proceed|Go ahead with that|Move on with that
