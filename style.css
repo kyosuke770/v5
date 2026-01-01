@@ -748,6 +748,45 @@ a{ color:inherit; }
   opacity: 0.7;
 }
 
+/* Learning Stats */
+.learningStats{
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.statsStreak,
+.statsToday{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.streakIcon,
+.todayIcon{
+  font-size: 18px;
+}
+
+.streakText,
+.todayStatsText{
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.statsDivider{
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* Daily Missions */
 .dailyMissions{
   background: var(--bg);

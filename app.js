@@ -6,6 +6,7 @@ const DAILY_KEY = "daily_levels_v2_3step";
 const PREF_KEY = "prefs_levels_v2_3step";
 const VISITED_KEY = "has_visited_v2";
 const MISSION_KEY = "daily_mission_v1";
+const STREAK_KEY = "learning_streak_v1";
 
 /*************************************************
  * Time
@@ -60,8 +61,24 @@ let srs = JSON.parse(localStorage.getItem(SRS_KEY) || "{}");
 let daily = JSON.parse(localStorage.getItem(DAILY_KEY) || "null") || {
   day: new Date().toDateString(),
   goodCount: 0,
-  goal: 10
+  goal: 10,
+  stats: {
+    uniqueCards: [],
+    grades: {
+      again: 0,
+      hard: 0,
+      easy: 0
+    }
+  }
 };
+
+// 既存データのマイグレーション（statsがない場合）
+if (!daily.stats) {
+  daily.stats = {
+    uniqueCards: [],
+    grades: { again: 0, hard: 0, easy: 0 }
+  };
+}
 
 let prefs = JSON.parse(localStorage.getItem(PREF_KEY) || "null") || {
   level: 1,
@@ -81,18 +98,32 @@ let dailyMission = JSON.parse(localStorage.getItem(MISSION_KEY) || "null") || {
   }
 };
 
+let streak = JSON.parse(localStorage.getItem(STREAK_KEY) || "null") || {
+  current: 0,
+  longest: 0,
+  lastCompletedDate: null
+};
+
 function saveAll() {
   localStorage.setItem(SRS_KEY, JSON.stringify(srs));
   localStorage.setItem(DAILY_KEY, JSON.stringify(daily));
   localStorage.setItem(PREF_KEY, JSON.stringify(prefs));
   localStorage.setItem(MISSION_KEY, JSON.stringify(dailyMission));
+  localStorage.setItem(STREAK_KEY, JSON.stringify(streak));
 }
 
 function ensureDaily() {
   const today = new Date().toDateString();
   if (daily.day !== today) {
+    // 前日の連続日数チェック
+    checkStreakOnDayChange(today);
+
     daily.day = today;
     daily.goodCount = 0;
+    daily.stats = {
+      uniqueCards: [],
+      grades: { again: 0, hard: 0, easy: 0 }
+    };
     saveAll();
   }
 
@@ -105,6 +136,47 @@ function ensureDaily() {
     };
     saveAll();
   }
+}
+
+/*************************************************
+ * Streak Management
+ *************************************************/
+function checkStreakOnDayChange(today) {
+  // 前日に全ミッション完了していなかった場合、連続記録をリセット
+  const yesterday = new Date(Date.parse(today) - DAY).toDateString();
+
+  if (streak.lastCompletedDate !== yesterday) {
+    // 連続記録が途切れた
+    streak.current = 0;
+    saveAll();
+  }
+}
+
+function updateStreakOnComplete() {
+  const today = new Date().toDateString();
+
+  // 今日すでに完了済みの場合は何もしない
+  if (streak.lastCompletedDate === today) {
+    return;
+  }
+
+  const yesterday = new Date(Date.now() - DAY).toDateString();
+
+  if (streak.lastCompletedDate === yesterday) {
+    // 前日も完了していた → 連続記録を伸ばす
+    streak.current++;
+  } else {
+    // 初回 or 途切れていた → 1日目
+    streak.current = 1;
+  }
+
+  // 最長記録を更新
+  if (streak.current > streak.longest) {
+    streak.longest = streak.current;
+  }
+
+  streak.lastCompletedDate = today;
+  saveAll();
 }
 
 /*************************************************
@@ -244,6 +316,7 @@ function showHome() {
   homeView.classList.remove("hidden");
   studyView.classList.add("hidden");
   statsView.classList.add("hidden");
+  renderLearningStats();
   renderDailyMissions();
   renderProgress();
   renderBlockTable();
@@ -725,7 +798,7 @@ function startNewBlockMode(goStudy=false) {
   prefs.block = nextBlock;
   saveAll();
 
-  sessionMode = "normal";
+  sessionMode = "newBlock";
   cardsByMode = getCardsByBlock(nextBlock);
   sessionDueSet = new Set();
 
@@ -825,6 +898,29 @@ function renderProgress() {
       tag.textContent = "通常";
       tag.classList.remove("due");
     }
+  }
+}
+
+function renderLearningStats() {
+  ensureDaily();
+
+  // 連続日数
+  const streakTextEl = document.getElementById("streakText");
+  if (streakTextEl) {
+    const current = streak.current || 0;
+    streakTextEl.textContent = `${current}日連続`;
+  }
+
+  // 今日の学習記録
+  const todayStatsTextEl = document.getElementById("todayStatsText");
+  if (todayStatsTextEl) {
+    const studiedCount = daily.stats.uniqueCards.length;
+    const totalGrades = daily.stats.grades.again + daily.stats.grades.hard + daily.stats.grades.easy;
+    const accuracyRate = totalGrades > 0
+      ? Math.round((daily.stats.grades.easy / totalGrades) * 100)
+      : 0;
+
+    todayStatsTextEl.textContent = `今日: ${studiedCount}問 (${totalGrades}回・${accuracyRate}%)`;
   }
 }
 
@@ -1174,6 +1270,34 @@ function goNext() {
 }
 
 /*************************************************
+ * All Missions Completed Check
+ *************************************************/
+function checkAllMissionsCompleted() {
+  ensureDaily();
+
+  // Due完了判定（Due=0件で自動完了）
+  const level = prefs.level;
+  const dueCount = cards.filter(c => {
+    const d = srs[c.no]?.[level]?.dueAt ?? Infinity;
+    return d <= now();
+  }).length;
+
+  if (dueCount === 0) {
+    dailyMission.completed.due = true;
+  }
+
+  // 3つ全て完了チェック
+  const allCompleted =
+    dailyMission.completed.due &&
+    dailyMission.completed.weak &&
+    dailyMission.completed.newBlock;
+
+  if (allCompleted) {
+    updateStreakOnComplete();
+  }
+}
+
+/*************************************************
  * Grade (3-step)
  * - normal: again/hard => Due追加, easy => クリア扱い(進捗UP)
  * - due: easy => Dueから外す, again/hard => 残る
@@ -1223,6 +1347,19 @@ function gradeCard(grade) {
     rec.dueAt = now() + rec.intervalMs;
   }
 
+  // 今日の学習記録を更新
+  ensureDaily();
+  if (!daily.stats.uniqueCards.includes(card.no)) {
+    daily.stats.uniqueCards.push(card.no);
+  }
+  if (grade === 1) {
+    daily.stats.grades.again++;
+  } else if (grade === 2) {
+    daily.stats.grades.hard++;
+  } else if (grade === 3) {
+    daily.stats.grades.easy++;
+  }
+
   saveAll();
 
   // DueSet管理（バリエーションモード以外）
@@ -1249,6 +1386,19 @@ function gradeCard(grade) {
       }
       saveAll();
     }
+  } else if (sessionMode === "newBlock") {
+    // 新ブロックモード: easy => 進捗+1
+    if (grade === 3) {
+      ensureDaily();
+      dailyMission.progress.newBlock++;
+
+      // ブロックサイズ取得して完了チェック
+      const blockSize = cardsByMode.length;
+      if (dailyMission.progress.newBlock >= blockSize) {
+        dailyMission.completed.newBlock = true;
+      }
+      saveAll();
+    }
   }
 
   // 既存の進捗加算（easyだけ進む、など）
@@ -1257,6 +1407,9 @@ function gradeCard(grade) {
     daily.goodCount = (daily.goodCount || 0) + 1;
     saveAll();
   }
+
+  // 全ミッション完了チェック
+  checkAllMissionsCompleted();
 
   goNext();
 }
