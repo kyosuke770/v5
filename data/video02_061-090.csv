@@ -1,0 +1,31 @@
+no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+61,今はその気分じゃない。,I'm not in the mood.,,2,2,気分が乗らない。,daily,mood を使う,not を使う,今はやる気がないことを伝える,感情的な拒否を示す表現,in the mood は「その気分」という慣用表現,I don't feel like it|Not feeling it|Not up for it
+62,今は気分が良くなりました。,I'm feeling better now.,,2,2,回復を示す。,daily,better を使う,now を使う,体調や気分が改善したことを伝える,安心させる表現,feeling better は現在進行形で状態改善,I'm doing better|I've recovered|Feeling good now
+63,少し圧倒されています。,I'm a bit overwhelmed.,,2,2,手に負えない感覚。,work,overwhelmed を使う,a bit を使う,多すぎて対応しきれないことを伝える,ストレス状態を示す,overwhelmed は「圧倒された」という形容詞,Too much to handle|Feeling swamped|It's a lot
+64,疲れてきました。,I'm getting tired.,,2,2,疲労の蓄積。,daily,tired を使う,getting を使う,徐々に疲れてきていることを伝える,現在進行形で変化を示す,get tired は「疲れる」という状態変化,I'm becoming tired|Feeling tired|Getting exhausted
+65,やる気が出ています。,I'm feeling motivated.,,2,2,意欲的な状態。,work,motivated を使う,feeling を使う,モチベーションが高いことを伝える,前向きな心理状態を示す,motivated は「やる気のある」という形容詞,I'm pumped|I'm energized|Feeling driven
+66,かなりのプレッシャーを感じています。,I'm under a lot of pressure.,,2,2,重圧を感じる。,work,pressure を使う,under を使う,大きなプレッシャーを感じていることを伝える,ストレス状況を説明,under pressure は「プレッシャー下にある」,Feeling pressured|Under stress|Lot of stress
+67,行き詰まっています。,I'm feeling stuck.,,2,2,停滞感。,work,stuck を使う,feeling を使う,前に進めない感覚を伝える,困難な状況を示す,stuck は「行き詰まった」という形容詞,I'm at a standstill|Can't move forward|Hitting a wall
+68,それにワクワクしています。,I'm excited about it.,,2,2,期待感。,daily,excited を使う,about it を使う,楽しみにしていることを伝える,ポジティブな期待を示す,excited about は「〜に興奮している」,I'm looking forward to it|I'm pumped|Can't wait
+69,それについて緊張しています。,I'm nervous about it.,,2,2,不安感。,daily,nervous を使う,about it を使う,不安や緊張を感じていることを伝える,心配な気持ちを示す,nervous about は「〜について不安な」,I'm anxious|I'm worried|Feeling uneasy
+70,ホッとしています。,I'm relieved.,,2,2,安堵感。,daily,relieved を使う,I'm を使う,心配事が解消されて安心したことを伝える,緊張からの解放を示す,relieved は「ほっとした」という形容詞,I feel better|That's a relief|Glad that's over
+71,イライラしています。,I'm frustrated.,,2,2,苛立ち。,work,frustrated を使う,I'm を使う,思い通りにいかず苛立っていることを伝える,ネガティブな感情を示す,frustrated は「いらだった」という形容詞,I'm annoyed|I'm irritated|Feeling frustrated
+72,それには満足しています。,I'm satisfied with that.,,2,2,満足感。,work,satisfied を使う,with that を使う,結果に満足していることを伝える,肯定的な評価を示す,satisfied with は「〜に満足している」,I'm happy with that|That's good enough|Content with that
+73,それには抵抗があります。,I'm not comfortable with it.,,2,2,違和感。,work,comfortable を使う,not を使う,その提案に違和感があることを伝える,丁寧な拒否や懸念を示す,not comfortable with は「〜に違和感がある」,I'm uneasy about it|It doesn't feel right|I have concerns
+74,それには自信があります。,I'm confident about it.,,2,2,確信。,work,confident を使う,about it を使う,自信を持っていることを伝える,ポジティブな確信を示す,confident about は「〜に自信がある」,I'm sure about it|I'm certain|Feeling confident
+75,今は確信が持てません。,I'm unsure right now.,,2,2,迷い。,daily,unsure を使う,right now を使う,現時点で確信が持てないことを伝える,判断の困難さを示す,unsure は「確信がない」という形容詞,I'm uncertain|I'm not sure|I'm in doubt
+76,楽観的な気分です。,I'm feeling optimistic.,,2,2,前向きな見通し。,work,optimistic を使う,feeling を使う,良い結果を期待していることを伝える,ポジティブな見通しを示す,optimistic は「楽観的な」という形容詞,I'm hopeful|Feeling positive|Looking on the bright side
+77,少し心配しています。,I'm a little concerned.,,2,2,懸念。,work,concerned を使う,a little を使う,少し心配していることを伝える,控えめな不安を示す,concerned は「心配している」という形容詞,I'm worried|I have concerns|Slightly worried
+78,精神的に疲れています。,I'm mentally exhausted.,,2,2,精神的疲労。,work,exhausted を使う,mentally を使う,精神的に疲れ切っていることを伝える,深刻な疲労状態を示す,mentally exhausted は「精神的に疲弊した」,Mentally drained|Burnt out|Mentally tired
+79,良い精神状態です。,I'm in a good headspace.,,2,2,心の余裕。,daily,headspace を使う,good を使う,精神的に良い状態にあることを伝える,前向きな心理状態を示す,headspace は「精神状態」という名詞,I'm in a good place|Mentally good|Good mindset
+80,まだ準備ができていません。,I'm not ready yet.,,2,2,未準備。,daily,ready を使う,yet を使う,まだ準備が整っていないことを伝える,時間が必要であることを示す,not ready yet は「まだ準備できていない」,Not prepared yet|Need more time|Still getting ready
+81,これはどうですか？,How about this?,,2,1,提案。,daily,How about を使う,this で指す,何かを提案する,カジュアルな提案表現,How about は「〜はどう？」という提案,What about this|How's this|What do you think about this
+82,これを試してみたらどうですか？,What if we try this?,,2,1,試行の提案。,work,What if を使う,try を使う,新しい方法を試すことを提案する,仮定的な提案表現,What if は「もし〜したら？」という仮定,How about trying this|Let's try this|Why don't we try this
+83,それで大丈夫ですか？,Does that work for you?,,2,1,都合確認。,daily,work for you を使う,Does で始める,相手の都合を確認する,丁寧な確認表現,work for you は「あなたにとって都合が良い」,Is that okay|Does that suit you|Is that fine with you
+84,やってみる気はありますか？,Are you up for it?,,2,1,意欲確認。,daily,up for it を使う,Are で始める,相手のやる気を確認する,カジュアルな誘い表現,up for は「〜する気がある」というイディオム,Interested in doing it|Are you willing|Want to give it a try
+85,興味はありますか？,Would you be interested?,,2,1,関心確認。,work,interested を使う,Would で丁寧に,相手の興味を丁寧に尋ねる,フォーマルな関心確認,Would you be は丁寧な依頼形,Are you interested|Does this interest you|Might you be interested
+86,一歩ずつ進めましょう。,Let's take it step by step.,,2,1,段階的進行。,work,step by step を使う,Let's で誘う,段階的に進めることを提案する,焦らずに進める提案,step by step は「一歩ずつ」というイディオム,Let's go step by step|One step at a time|Let's proceed gradually
+87,シンプルにいきましょう。,Let's keep it simple.,,2,1,簡素化の提案。,work,keep it simple を使う,Let's で誘う,複雑にせず簡単にすることを提案する,シンプルさを重視する提案,keep it は「〜を保つ」,Let's make it simple|Keep things simple|Let's not complicate it
+88,まずはこれに集中しましょう。,Let's focus on this first.,,2,1,優先順位。,work,focus on を使う,first で順序を示す,最初にこれに集中することを提案する,優先事項を明確にする,focus on は「〜に集中する」,Let's prioritize this|This should come first|Let's tackle this first
+89,様子を見てみましょう。,Let's see what happens.,,2,1,結果待ち。,daily,see what happens を使う,Let's で誘う,結果を待つことを提案する,柔軟な対応を示す表現,see what happens は「どうなるか見る」,Let's wait and see|Let's see how it goes|We'll see what happens
+90,一緒に考えましょう。,Let's figure it out together.,,2,1,共同解決。,work,figure out を使う,together で協力を示す,一緒に解決策を見つけることを提案する,協力的な姿勢を示す,figure out は「解決する」という句動詞,Let's solve it together|Let's work it out together|Let's tackle it together
