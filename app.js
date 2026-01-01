@@ -1176,16 +1176,11 @@ function render() {
     currentAnswer = card.en;
   }
 
-  // 表示
-  if (prefs.level === 3) {
-    enEl.textContent = revealed ? currentAnswer : "（タップで答え）";
+  // 表示（全レベル統一: タップして答え）
+  if (!revealed) {
+    enEl.textContent = "タップして答え";
   } else {
-    if (!revealed) {
-      if (card.en.includes("{x}")) enEl.textContent = card.en.replace("{x}", "___");
-      else enEl.textContent = "タップして答え";
-    } else {
-      enEl.textContent = currentAnswer;
-    }
+    enEl.textContent = currentAnswer;
   }
 
   renderNote(card);
