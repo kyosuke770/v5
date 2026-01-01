@@ -800,7 +800,9 @@ function startNewBlockMode(goStudy=false) {
 
   sessionMode = "newBlock";
   cardsByMode = getCardsByBlock(nextBlock);
-  sessionDueSet = new Set();
+
+  // 全問Easyになるまでループ
+  sessionDueSet = new Set(cardsByMode.map(c => c.no));
 
   index = 0;
   resetCardView();
@@ -1238,6 +1240,40 @@ function handleEndOfRound() {
       return;
     }
   }
+
+  // 苦手克服モード
+  if (sessionMode === "weak") {
+    if (sessionDueSet.size > 0) {
+      rebuildDueDeck();
+      alert(`苦手克服 残り ${cardsByMode.length}問。もう一周いくよ。`);
+      render();
+      return;
+    } else {
+      ensureDaily();
+      dailyMission.completed.weak = true;
+      saveAll();
+      alert("苦手克服完了！30問全てEasyになったよ！");
+      showHome();
+      return;
+    }
+  }
+
+  // 新ブロックモード
+  if (sessionMode === "newBlock") {
+    if (sessionDueSet.size > 0) {
+      rebuildDueDeck();
+      alert(`新ブロック 残り ${cardsByMode.length}問。もう一周いくよ。`);
+      render();
+      return;
+    } else {
+      ensureDaily();
+      dailyMission.completed.newBlock = true;
+      saveAll();
+      alert("新ブロック完了！全問Easyになったよ！");
+      showHome();
+      return;
+    }
+  }
 }
 
 function goNext() {
@@ -1362,43 +1398,29 @@ function gradeCard(grade) {
 
   saveAll();
 
-  // DueSet管理（バリエーションモード以外）
+  // DueSet管理（全モード共通）
   if (sessionMode === "normal") {
     // 1周目: again/hard => Due追加
     if (grade === 1 || grade === 2) {
       sessionDueSet.add(card.no);
     }
-  } else if (sessionMode === "due") {
-    // 2周目以降: easy => Dueから外す
+  } else if (sessionMode === "due" || sessionMode === "weak" || sessionMode === "newBlock") {
+    // 2周目以降: again/hard => DueSetに残す, easy => Dueから外す
     if (grade === 3) {
       sessionDueSet.delete(card.no);
     }
-  } else if (sessionMode === "weak") {
-    // 苦手モード: easy => 進捗+1 & Dueから外す
-    if (grade === 3) {
-      ensureDaily();
-      dailyMission.progress.weak++;
-      sessionDueSet.delete(card.no);
+  }
 
-      // 30問完了チェック
-      if (dailyMission.progress.weak >= 30) {
-        dailyMission.completed.weak = true;
-      }
-      saveAll();
-    }
+  // Progress更新（weak/newBlockモード）
+  if (sessionMode === "weak") {
+    ensureDaily();
+    dailyMission.progress.weak = 30 - sessionDueSet.size;
+    saveAll();
   } else if (sessionMode === "newBlock") {
-    // 新ブロックモード: easy => 進捗+1
-    if (grade === 3) {
-      ensureDaily();
-      dailyMission.progress.newBlock++;
-
-      // ブロックサイズ取得して完了チェック
-      const blockSize = cardsByMode.length;
-      if (dailyMission.progress.newBlock >= blockSize) {
-        dailyMission.completed.newBlock = true;
-      }
-      saveAll();
-    }
+    ensureDaily();
+    const initialSize = cardsByMode.length;
+    dailyMission.progress.newBlock = initialSize - sessionDueSet.size;
+    saveAll();
   }
 
   // 既存の進捗加算（easyだけ進む、など）
