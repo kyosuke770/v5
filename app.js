@@ -517,6 +517,7 @@ async function loadAllCSVs() {
 
       if (!text) {
         missBlock++;
+        console.log(`❌ Failed to load: ${file} (miss count: ${missBlock})`);
         if (missBlock >= MISS_LIMIT_BLOCK) break;
         continue;
       }
@@ -525,7 +526,10 @@ async function loadAllCSVs() {
       loadedAnyInThisVideo = true;
 
       const parsed = parseCSV(text);
-      if (parsed.length) cards.push(...parsed);
+      if (parsed.length) {
+        cards.push(...parsed);
+        console.log(`✅ Loaded: ${file} (${parsed.length} questions)`);
+      }
     }
 
     if (!loadedAnyInThisVideo) {
@@ -539,9 +543,11 @@ async function loadAllCSVs() {
   // If no CSV files found, use sample data
   if (!cards.length) {
     cards = SAMPLE_CARDS;
+    console.log("⚠️ No CSV files found, using sample data");
   }
 
   cards.sort((a, b) => a.no - b.no);
+  console.log(`📚 Total cards loaded: ${cards.length}`);
 
   // Change to "Preparing" message
   if (loadingMessage) {
