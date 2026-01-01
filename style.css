@@ -185,15 +185,34 @@ a{ color:inherit; }
 
 /* block table (grouped by video) */
 .videoSection{
-  margin:14px 0 18px;
-  padding:10px;
-  border:1px solid var(--line);
-  border-radius:12px;
+  margin:20px 0 24px;
+  padding:16px;
+  border:2px solid var(--line);
+  border-radius:16px;
   background:#fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-.videoHeader{ margin-bottom:8px; font-weight:800; font-size:13px; }
-.videoLink{ text-decoration:none; color:var(--blue); }
-.videoTitle{ color:var(--text); }
+.videoHeader{
+  margin-bottom:12px;
+  font-weight:800;
+  font-size:15px;
+  padding-bottom:8px;
+  border-bottom:2px solid var(--line);
+}
+.videoLink{
+  text-decoration:none;
+  color:var(--blue);
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+}
+.videoLink:hover{
+  text-decoration:underline;
+}
+.videoTitle{
+  color:var(--text);
+  font-weight:700;
+}
 
 .blockTbl{ width:100%; border-collapse:collapse; }
 .blockTbl td{ padding:0; }
