@@ -500,7 +500,7 @@ async function loadAllCSVs() {
   const MAX_VIDEO = 50;
   const MAX_BLOCK = 50;
   const MISS_LIMIT_VIDEO = 3; // 連続で動画が無い → 終了
-  const MISS_LIMIT_BLOCK = 2; // 連続でブロックが無い → 次の動画へ
+  const MISS_LIMIT_BLOCK = 15; // 連続でブロックが無い → 次の動画へ（video2が途中から始まる場合に対応）
 
   let missVideo = 0;
 
