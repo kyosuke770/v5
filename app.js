@@ -402,7 +402,7 @@ function parseCSV(text) {
       let slots = null;
       if (slotsRaw) {
         slots = slotsRaw.split("|").map(s => {
-          const [jpSlot, enSlot] = s.split("=");
+          const [enSlot, jpSlot] = s.split("=");  // データは「英語=日本語」の順
           return { jp: (jpSlot || "").trim(), en: (enSlot || "").trim() };
         }).filter(x => x.jp && x.en);
         if (!slots.length) slots = null;
