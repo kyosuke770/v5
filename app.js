@@ -4,6 +4,7 @@
 const SRS_KEY  = "srs_levels_v2_3step";
 const DAILY_KEY = "daily_levels_v2_3step";
 const PREF_KEY = "prefs_levels_v2_3step";
+const VISITED_KEY = "has_visited_v2";
 
 /*************************************************
  * Time
@@ -12,6 +13,27 @@ const MIN = 60 * 1000;
 const HOUR = 60 * MIN;
 const DAY = 24 * HOUR;
 const now = () => Date.now();
+
+/*************************************************
+ * Sample Data (for first-time users)
+ *************************************************/
+const SAMPLE_CARDS = [
+  { no: 1, jp: "おはようございます。", en: "Good morning.", slots: [], video: "sample", lv: 1, note: "朝の挨拶。", scene: "daily", hint_1: "morning を使う", hint_2: "Good を使う", explain_meaning: "朝の基本的な挨拶", explain_nuance: "フォーマルでもカジュアルでも使える万能挨拶", explain_grammar: "Good + 時間帯で挨拶", similars: "Hi|Hello|Morning" },
+  { no: 2, jp: "ありがとうございます。", en: "Thank you.", slots: [], video: "sample", lv: 1, note: "感謝の基本。", scene: "daily", hint_1: "thank を使う", hint_2: "Thank you", explain_meaning: "感謝を伝える最も基本的な表現", explain_nuance: "どんな場面でも使える", explain_grammar: "Thank you は定型表現", similars: "Thanks|I appreciate it|Cheers" },
+  { no: 3, jp: "すみません。", en: "Excuse me.", slots: [], video: "sample", lv: 1, note: "声をかける時。", scene: "daily", hint_1: "excuse を使う", hint_2: "me を使う", explain_meaning: "人に話しかける時の前置き", explain_nuance: "丁寧に注意を引く表現", explain_grammar: "Excuse me は慣用表現", similars: "Sorry|Pardon me|Sorry to bother you" },
+  { no: 4, jp: "わかりました。", en: "I understand.", slots: [], video: "sample", lv: 1, note: "理解を示す。", scene: "daily", hint_1: "understand を使う", hint_2: "I で始まる", explain_meaning: "理解したことを伝える", explain_nuance: "相手の話を受け止めたことを示す", explain_grammar: "I understand は現在形", similars: "I got it|I see|Got it" },
+  { no: 5, jp: "少々お待ちください。", en: "Just a moment, please.", slots: [], video: "sample", lv: 1, note: "待ってもらう時。", scene: "work", hint_1: "moment を使う", hint_2: "Just を使う", explain_meaning: "少し待ってほしいと丁寧に依頼する", explain_nuance: "ビジネスでも日常でも使える", explain_grammar: "Just a moment で「ちょっと待って」", similars: "One moment|Please wait|Hold on" },
+  { no: 6, jp: "手伝いましょうか？", en: "Can I help you?", slots: [], video: "sample", lv: 1, note: "手助けの申し出。", scene: "daily", hint_1: "help を使う", hint_2: "Can I を使う", explain_meaning: "手伝いを申し出る基本表現", explain_nuance: "親切な印象を与える", explain_grammar: "Can I + 動詞で申し出", similars: "Need any help?|May I help you?|Do you need help?" },
+  { no: 7, jp: "いいですね。", en: "Sounds good.", slots: [], video: "sample", lv: 1, note: "同意・賛成。", scene: "daily", hint_1: "sound を使う", hint_2: "good を使う", explain_meaning: "提案に同意する", explain_nuance: "カジュアルで前向きな返答", explain_grammar: "Sounds + 形容詞で印象", similars: "That works|Sounds great|I'm in" },
+  { no: 8, jp: "どういう意味ですか？", en: "What does that mean?", slots: [], video: "sample", lv: 1, note: "意味を聞く。", scene: "daily", hint_1: "mean を使う", hint_2: "What を使う", explain_meaning: "意味を尋ねる", explain_nuance: "理解できない時の素直な質問", explain_grammar: "What does ~ mean? で意味を聞く", similars: "What do you mean?|I don't get it|Can you explain?" },
+  { no: 9, jp: "後で連絡します。", en: "I'll contact you later.", slots: [], video: "sample", lv: 1, note: "後で連絡。", scene: "work", hint_1: "contact を使う", hint_2: "later を使う", explain_meaning: "後で連絡することを約束する", explain_nuance: "ビジネスでよく使う", explain_grammar: "I'll + 動詞 + later で後の約束", similars: "I'll get back to you|Talk to you later|I'll reach out later" },
+  { no: 10, jp: "確認させてください。", en: "Let me check.", slots: [], video: "sample", lv: 1, note: "確認する時。", scene: "work", hint_1: "check を使う", hint_2: "Let me を使う", explain_meaning: "確認させてほしいと伝える", explain_nuance: "丁寧で責任感のある対応", explain_grammar: "Let me + 動詞で許可を求める", similars: "I'll check|Let me verify|I'll look into it" },
+  { no: 11, jp: "大丈夫です。", en: "I'm fine.", slots: [], video: "sample", lv: 1, note: "問題ない時。", scene: "daily", hint_1: "fine を使う", hint_2: "I'm を使う", explain_meaning: "問題ないことを伝える", explain_nuance: "心配に対する安心の返答", explain_grammar: "I'm fine は状態を示す", similars: "I'm okay|I'm good|No worries" },
+  { no: 12, jp: "いい考えですね。", en: "That's a good idea.", slots: [], video: "sample", lv: 1, note: "提案を評価。", scene: "work", hint_1: "idea を使う", hint_2: "good を使う", explain_meaning: "提案を肯定的に評価する", explain_nuance: "相手のアイデアを認める", explain_grammar: "That's a + 形容詞 + 名詞", similars: "Good thinking|Great idea|Smart idea" },
+  { no: 13, jp: "もう一度お願いします。", en: "Could you say that again?", slots: [], video: "sample", lv: 1, note: "聞き返す時。", scene: "daily", hint_1: "again を使う", hint_2: "Could you を使う", explain_meaning: "もう一度言ってほしいと依頼する", explain_nuance: "丁寧な聞き返し", explain_grammar: "Could you + 動詞で丁寧な依頼", similars: "Pardon?|Come again?|Could you repeat that?" },
+  { no: 14, jp: "頑張ってください。", en: "Good luck.", slots: [], video: "sample", lv: 1, note: "応援する時。", scene: "daily", hint_1: "luck を使う", hint_2: "Good を使う", explain_meaning: "成功を祈る応援の言葉", explain_nuance: "別れ際や挑戦前に使う", explain_grammar: "Good luck は定型表現", similars: "Best of luck|You got this|Go for it" },
+  { no: 15, jp: "お疲れ様でした。", en: "Good job.", slots: [], video: "sample", lv: 1, note: "労いの言葉。", scene: "work", hint_1: "job を使う", hint_2: "Good を使う", explain_meaning: "仕事を終えた人を労う", explain_nuance: "努力を認める表現", explain_grammar: "Good job は褒め言葉", similars: "Well done|Nice work|Great effort" }
+];
 
 /*************************************************
  * 3段階SRS（あなたの設定）
@@ -157,6 +179,16 @@ function showStats() {
   studyView.classList.add("hidden");
   statsView.classList.remove("hidden");
   renderStats();
+}
+
+function showLanding() {
+  const landingView = document.getElementById("landingView");
+  if (!landingView) return;
+
+  homeView.classList.add("hidden");
+  studyView.classList.add("hidden");
+  statsView.classList.add("hidden");
+  landingView.classList.remove("hidden");
 }
 
 function resetCardView() {
@@ -345,9 +377,9 @@ async function loadAllCSVs() {
     }
   }
 
+  // If no CSV files found, use sample data
   if (!cards.length) {
-    alert("csvが1件も読み込めませんでした（ファイル名/場所/ヘッダを確認）");
-    return;
+    cards = SAMPLE_CARDS;
   }
 
   cards.sort((a, b) => a.no - b.no);
@@ -373,7 +405,13 @@ async function loadAllCSVs() {
   // Wait for fade out animation to complete
   await new Promise(resolve => setTimeout(resolve, 500));
 
-  showHome();
+  // Check if first visit
+  const hasVisited = localStorage.getItem(VISITED_KEY);
+  if (!hasVisited) {
+    showLanding();
+  } else {
+    showHome();
+  }
 }
 
 /*************************************************
@@ -1105,6 +1143,15 @@ function gradeCard(grade) {
 /*************************************************
  * Events
  *************************************************/
+// Landing page "Start Now" button
+const startNowBtn = document.getElementById("startNowBtn");
+if (startNowBtn) {
+  startNowBtn.addEventListener("click", () => {
+    localStorage.setItem(VISITED_KEY, "true");
+    showHome();
+  });
+}
+
 if (homeDueBtn) homeDueBtn.addEventListener("click", () => startReviewDue(true));
 if (homeVideoBtn) homeVideoBtn.addEventListener("click", () => startVideoOrder(true));
 if (homeVariationBtn) homeVariationBtn.addEventListener("click", () => startVariationMode(true));
