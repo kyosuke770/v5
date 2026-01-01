@@ -139,13 +139,9 @@ const homeView = document.getElementById("homeView");
 const studyView = document.getElementById("studyView");
 const statsView = document.getElementById("statsView");
 
-const homeDueBtn = document.getElementById("homeDue");
 const homeVideoBtn = document.getElementById("homeVideo");
 const homeVariationBtn = document.getElementById("homeVariation");
 const homeStatsBtn = document.getElementById("homeStats");
-const homeLv1Btn = document.getElementById("homeLv1");
-const homeLv2Btn = document.getElementById("homeLv2");
-const homeLv3Btn = document.getElementById("homeLv3");
 
 const backHomeBtn = document.getElementById("backHome");
 const videoBtn = document.getElementById("videoOrder");
@@ -249,12 +245,9 @@ function showHome() {
   studyView.classList.add("hidden");
   statsView.classList.add("hidden");
   renderDailyMissions();
-  renderDaily();
   renderProgress();
   renderBlockTable();
   renderSceneButtons();
-  renderHomeLevelButtons();
-  renderDueCount();
 }
 
 function showStudy() {
@@ -815,12 +808,6 @@ function renderProgress() {
   const text = `進捗：Lv${lv}  ${cleared} / ${total}`;
   const width = total ? `${Math.round((cleared / total) * 100)}%` : "0%";
 
-  // Home
-  const homeTextEl = document.getElementById("progressText");
-  const homeBarEl  = document.getElementById("progressBar");
-  if (homeTextEl) homeTextEl.textContent = text;
-  if (homeBarEl) homeBarEl.style.width = width;
-
   // Study
   const studyTextEl = document.getElementById("studyProgressText");
   const studyBarEl  = document.getElementById("studyProgressBar");
@@ -839,51 +826,6 @@ function renderProgress() {
       tag.classList.remove("due");
     }
   }
-}
-
-function renderDaily() {
-  ensureDaily();
-  const textEl = document.getElementById("dailyText");
-  const barEl  = document.getElementById("dailyBar");
-  if (!textEl || !barEl) return;
-
-  const done = daily.goodCount || 0;
-  const goal = daily.goal || 10;
-  textEl.textContent = `今日: ${Math.min(done, goal)} / ${goal}`;
-  barEl.style.width = goal ? `${Math.min(100, Math.round((done / goal) * 100))}%` : "0%";
-}
-
-function renderHomeLevelButtons() {
-  const level = prefs.level || 1;
-
-  // 現在のレベル表示
-  const currentLevelEl = document.getElementById("currentLevel");
-  if (currentLevelEl) {
-    currentLevelEl.textContent = `Lv${level}`;
-  }
-
-  // ボタンのactive状態
-  [homeLv1Btn, homeLv2Btn, homeLv3Btn].forEach((btn, idx) => {
-    if (!btn) return;
-    if (idx + 1 === level) {
-      btn.classList.add("active");
-    } else {
-      btn.classList.remove("active");
-    }
-  });
-}
-
-function renderDueCount() {
-  const dueCountEl = document.getElementById("dueCount");
-  if (!dueCountEl) return;
-
-  const level = prefs.level;
-  const dueCount = cards.filter(c => {
-    const d = srs[c.no]?.[level]?.dueAt ?? Infinity;
-    return d <= now();
-  }).length;
-
-  dueCountEl.textContent = `${dueCount}件`;
 }
 
 function renderDailyMissions() {
@@ -1153,7 +1095,6 @@ function render() {
   renderExplain(card);
   renderSlotProgress(card);
   renderProgress();
-  renderDaily();
   renderLevelButtons();
 }
 
@@ -1364,14 +1305,9 @@ if (missionNewBlockBtn) {
   });
 }
 
-if (homeDueBtn) homeDueBtn.addEventListener("click", () => startReviewDue(true));
 if (homeVideoBtn) homeVideoBtn.addEventListener("click", () => startVideoOrder(true));
 if (homeVariationBtn) homeVariationBtn.addEventListener("click", () => startVariationMode(true));
 if (homeStatsBtn) homeStatsBtn.addEventListener("click", showStats);
-
-if (homeLv1Btn) homeLv1Btn.addEventListener("click", () => { prefs.level = 1; saveAll(); showHome(); });
-if (homeLv2Btn) homeLv2Btn.addEventListener("click", () => { prefs.level = 2; saveAll(); showHome(); });
-if (homeLv3Btn) homeLv3Btn.addEventListener("click", () => { prefs.level = 3; saveAll(); showHome(); });
 
 if (backHomeBtn) backHomeBtn.addEventListener("click", showHome);
 
