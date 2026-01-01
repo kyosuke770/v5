@@ -431,7 +431,9 @@ function pad3(n){ return String(n).padStart(3, "0"); }
 
 async function fetchTextSafe(file) {
   try {
-    const res = await fetch(file, { cache: "no-store" });
+    // Add timestamp to bust cache
+    const url = file.includes('?') ? `${file}&_t=${Date.now()}` : `${file}?_t=${Date.now()}`;
+    const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) return null;
     const text = await res.text();
     const t = text.trim();
