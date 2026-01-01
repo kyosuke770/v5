@@ -1,14 +1,4 @@
 no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
-351,それは状況次第です。,That depends.,,2,1,確定的な答えを避ける。,daily,depends を使う,That だけで始まる,状況によって変わることを示す,条件次第であることを伝える控えめな返答,That depends は「それ次第」という短縮表現,It depends|Depends on the situation|It varies
-352,今なら理解できます。,It makes sense now.,,2,1,納得した時。,daily,sense を使う,now を使う,今は理解できたことを伝える,説明を受けて腑に落ちた時の表現,make sense は「意味が通る・理解できる」,I understand now|I get it now|That makes sense
-353,言いたいことは分かります。,I see what you mean.,,2,1,相手の意図を理解。,daily,mean を使う,what you mean,相手の言いたいことを理解したと伝える,共感や理解を示す丁寧な表現,see what you mean は「あなたの意図が分かる」,I understand your point|I get what you're saying|I see your point
-354,それは良い指摘ですね。,That's a good point.,,2,1,相手の意見を評価。,work,point を使う,good を使う,相手の指摘が的確だと認める,議論で相手の意見を尊重する表現,That's a good point は「良い指摘だ」という評価,Good observation|Valid point|You're right
-355,それは思いつきませんでした。,I hadn't thought of that.,,2,1,新しい視点に気づく。,daily,thought を使う,hadn't を使う,その視点を考えていなかったと認める,相手の意見を受けて視野が広がった時,hadn't thought は「考えていなかった」という過去完了,Didn't think of that|Never considered that|That's new to me
-356,なるほどですね。,Fair enough.,,2,1,納得して受け入れる。,daily,Fair を使う,enough を使う,相手の意見を妥当だと認める,完全同意ではないが受け入れる時の表現,Fair enough は「まあそうだね」という慣用表現,That's reasonable|I accept that|I can see that
-357,その通りです。,That's true.,,2,1,同意を示す。,daily,true を使う,That's で始まる,相手の発言が正しいと認める,シンプルで明確な同意の表現,That's true は「それは本当だ」という肯定,You're right|That's correct|True
-358,まさにその通り。,Exactly.,,2,1,完全同意。,daily,1語だけ,強い同意,完全に同意することを強調する,相手の発言を強く肯定する一言,Exactly は「まさに」という副詞,Precisely|Absolutely|That's right
-359,必ずしもそうとは限らない。,Not necessarily.,,2,1,部分的に否定。,work,necessarily を使う,Not で始まる,常にそうではないと指摘する,絶対的な主張を和らげる表現,Not necessarily は「必ずしも〜ない」,Not always|Not in all cases|Depends
-360,それはどうかな。,I'm not sure about that.,,2,1,疑問を示す。,daily,sure を使う,about that を使う,確信が持てないことを伝える,控えめに反対意見を示す表現,I'm not sure は「確信がない」という状態,I doubt that|I'm uncertain|I question that
 361,考えさせてください。,Let me think.,,2,1,時間が必要。,daily,think を使う,Let me を使う,少し考える時間が欲しいと伝える,即答できない時の定番表現,Let me + 動詞で許可を求める,Give me a moment|Let me consider|I need to think
 362,アイデアは理解できます。,I get your idea.,,2,1,相手の考えを理解。,work,idea を使う,get を使う,相手の考えを理解したことを伝える,get は understand のカジュアル表現,I get は「理解する」という口語表現,I understand your idea|I see your plan|I follow you
 363,それは面白いですね。,That's interesting.,,2,1,興味を示す。,daily,interesting を使う,That's で始まる,相手の話に興味があることを示す,ニュートラルな評価表現,That's interesting は「興味深い」という形容詞,That's intriguing|That's fascinating|Interesting point
@@ -29,3 +19,13 @@ no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,
 378,同じように感じます。,I feel the same way.,,2,1,同じ気持ち。,daily,feel を使う,same way を使う,相手と同じ感情を持っていると伝える,共感を示す表現,feel the same way は「同じように感じる」,I agree|I feel that too|Same here
 379,それには反対です。,I disagree with that.,,2,1,明確な反対。,work,disagree を使う,with that を使う,その意見に反対することを明言する,はっきりと反対を表明する,disagree with は「〜に反対する」,I don't agree|I oppose that|I think differently
 380,私は違う見方をしています。,I see it differently.,,2,1,異なる視点。,work,differently を使う,see を使う,異なる見方をしていることを伝える,対立を和らげる反対表現,see differently は「違う見方をする」,I have a different view|I see it another way|Different perspective
+381,それは私の優先事項ではありません。,That's not my priority.,,2,1,優先順位が低い。,work,priority を使う,not を使う,それを優先していないことを伝える,重要度が低いことを示す,priority は「優先事項」という名詞,Not my focus|Not important to me|Low on my list
+382,それで大丈夫です。,I'm fine with that.,,2,1,問題なく受け入れ。,daily,fine を使う,with that を使う,その提案に問題ないと伝える,同意や承認を示すカジュアル表現,I'm fine with は「〜で大丈夫」,That's okay|I'm good with that|No problem
+383,できればしたくありません。,I'd prefer not to.,,2,1,丁寧な拒否。,daily,prefer を使う,not to を使う,できれば避けたいと丁寧に伝える,直接的な拒否を避ける表現,I'd prefer は I would prefer の短縮形,I'd rather not|I'd like to avoid that|Not my preference
+384,どちらでも構いません。,I don't mind either way.,,2,1,どちらでもOK。,daily,mind を使う,either way を使う,どちらの選択肢でも問題ないと伝える,柔軟性を示す表現,either way は「どちらでも」,I'm fine either way|No preference|Up to you
+385,それで大丈夫です。,That works for me.,,2,1,都合が良い。,work,works を使う,for me を使う,その提案が自分に都合良いと伝える,スケジュールや計画の承認,work for は「〜にとって都合が良い」,That's good for me|That suits me|I'm available
+386,それで問題ありません。,I'm okay with it.,,2,1,承認を示す。,daily,okay を使う,with it を使う,その提案に問題ないと承認する,カジュアルな同意表現,be okay with は「〜で大丈夫」,I'm fine with it|That's alright|No issues
+387,むしろ待ちたいです。,I'd rather wait.,,2,1,待つことを選択。,work,rather を使う,wait を使う,待つ方を好むと伝える,別の選択肢を好む意思表示,I'd rather は「むしろ〜したい」,I prefer to wait|I'd like to wait|Better to wait
+388,それについて考えています。,I'm thinking about it.,,2,1,検討中。,daily,thinking を使う,about it を使う,現在検討中であることを伝える,決定までの猶予を示す,現在進行形で思考中を示す,I'm considering it|I'm mulling it over|Still thinking
+389,まだ決めているところです。,I'm still deciding.,,2,1,決定プロセス中。,work,deciding を使う,still を使う,まだ決定の途中であることを伝える,判断に時間がかかっていることを示す,現在進行形で進行中を強調,Still making up my mind|Haven't decided|In the process
+390,まだ決めていません。,I haven't decided yet.,,2,1,未決定。,daily,decided を使う,yet を使う,まだ決定していないことを明言する,決断までの時間を求める表現,haven't decided は現在完了の否定形,Not decided yet|Still undecided|No decision yet

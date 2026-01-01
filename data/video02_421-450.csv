@@ -1,14 +1,4 @@
 no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
-411,今はその気分じゃない。,I'm not in the mood.,,2,2,気分が乗らない。,daily,mood を使う,not を使う,今はやる気がないことを伝える,感情的な拒否を示す表現,in the mood は「その気分」という慣用表現,I don't feel like it|Not feeling it|Not up for it
-412,今は気分が良くなりました。,I'm feeling better now.,,2,2,回復を示す。,daily,better を使う,now を使う,体調や気分が改善したことを伝える,安心させる表現,feeling better は現在進行形で状態改善,I'm doing better|I've recovered|Feeling good now
-413,少し圧倒されています。,I'm a bit overwhelmed.,,2,2,手に負えない感覚。,work,overwhelmed を使う,a bit を使う,多すぎて対応しきれないことを伝える,ストレス状態を示す,overwhelmed は「圧倒された」という形容詞,Too much to handle|Feeling swamped|It's a lot
-414,疲れてきました。,I'm getting tired.,,2,2,疲労の蓄積。,daily,tired を使う,getting を使う,徐々に疲れてきていることを伝える,現在進行形で変化を示す,get tired は「疲れる」という状態変化,I'm becoming tired|Feeling tired|Getting exhausted
-415,やる気が出ています。,I'm feeling motivated.,,2,2,意欲的な状態。,work,motivated を使う,feeling を使う,モチベーションが高いことを伝える,前向きな心理状態を示す,motivated は「やる気のある」という形容詞,I'm pumped|I'm energized|Feeling driven
-416,かなりのプレッシャーを感じています。,I'm under a lot of pressure.,,2,2,重圧を感じる。,work,pressure を使う,under を使う,大きなプレッシャーを感じていることを伝える,ストレス状況を説明,under pressure は「プレッシャー下にある」,Feeling pressured|Under stress|Lot of stress
-417,行き詰まっています。,I'm feeling stuck.,,2,2,停滞感。,work,stuck を使う,feeling を使う,前に進めない感覚を伝える,困難な状況を示す,stuck は「行き詰まった」という形容詞,I'm at a standstill|Can't move forward|Hitting a wall
-418,それにワクワクしています。,I'm excited about it.,,2,2,期待感。,daily,excited を使う,about it を使う,楽しみにしていることを伝える,ポジティブな期待を示す,excited about は「〜に興奮している」,I'm looking forward to it|I'm pumped|Can't wait
-419,それについて緊張しています。,I'm nervous about it.,,2,2,不安感。,daily,nervous を使う,about it を使う,不安や緊張を感じていることを伝える,心配な気持ちを示す,nervous about は「〜について不安な」,I'm anxious|I'm worried|Feeling uneasy
-420,ホッとしています。,I'm relieved.,,2,2,安堵感。,daily,relieved を使う,I'm を使う,心配事が解消されて安心したことを伝える,緊張からの解放を示す,relieved は「ほっとした」という形容詞,I feel better|That's a relief|Glad that's over
 421,イライラしています。,I'm frustrated.,,2,2,苛立ち。,work,frustrated を使う,I'm を使う,思い通りにいかず苛立っていることを伝える,ネガティブな感情を示す,frustrated は「いらだった」という形容詞,I'm annoyed|I'm irritated|Feeling frustrated
 422,それには満足しています。,I'm satisfied with that.,,2,2,満足感。,work,satisfied を使う,with that を使う,結果に満足していることを伝える,肯定的な評価を示す,satisfied with は「〜に満足している」,I'm happy with that|That's good enough|Content with that
 423,それには抵抗があります。,I'm not comfortable with it.,,2,2,違和感。,work,comfortable を使う,not を使う,その提案に違和感があることを伝える,丁寧な拒否や懸念を示す,not comfortable with は「〜に違和感がある」,I'm uneasy about it|It doesn't feel right|I have concerns
@@ -29,3 +19,13 @@ no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,
 438,まずはこれに集中しましょう。,Let's focus on this first.,,2,1,優先順位。,work,focus on を使う,first で順序を示す,最初にこれに集中することを提案する,優先事項を明確にする,focus on は「〜に集中する」,Let's prioritize this|This should come first|Let's tackle this first
 439,様子を見てみましょう。,Let's see what happens.,,2,1,結果待ち。,daily,see what happens を使う,Let's で誘う,結果を待つことを提案する,柔軟な対応を示す表現,see what happens は「どうなるか見る」,Let's wait and see|Let's see how it goes|We'll see what happens
 440,一緒に考えましょう。,Let's figure it out together.,,2,1,共同解決。,work,figure out を使う,together で協力を示す,一緒に解決策を見つけることを提案する,協力的な姿勢を示す,figure out は「解決する」という句動詞,Let's solve it together|Let's work it out together|Let's tackle it together
+441,それを試してみませんか？,Why don't we give it a try?,,2,1,試行の誘い。,daily,Why don't we を使う,give it a try を使う,試してみることを提案する,柔らかい提案表現,Why don't we は「〜しませんか」,Let's give it a try|Shall we try it|How about trying it
+442,少し休憩しませんか？,Should we take a quick break?,,2,1,休憩提案。,work,Should we を使う,quick break を使う,短い休憩を提案する,タイミングを見た提案,Should we は「〜しましょうか」,Let's take a break|How about a short break|Want to take a breather
+443,別の方法を試しましょう。,Let's try a different approach.,,2,1,方向転換。,work,different approach を使う,try を使う,別のやり方を試すことを提案する,柔軟性を示す提案,approach は「方法・アプローチ」,Let's try another way|Let's take a different route|How about trying differently
+444,あなたに任せます。,I'll leave it up to you.,,2,1,委任。,work,leave it up to を使う,you で相手に委ねる,相手に決定を任せることを伝える,信頼を示す表現,leave it up to は「〜に任せる」,It's up to you|You decide|Your call
+445,後で話し合いましょう。,Let's discuss it later.,,2,1,延期提案。,work,discuss を使う,later で時間を示す,後で話し合うことを提案する,タイミングの調整,discuss は「話し合う」という動詞,Let's talk about it later|We'll discuss later|Save it for later
+446,もう一度やり直しませんか？,Should we start over?,,2,1,やり直し提案。,work,start over を使う,Should we で提案,最初からやり直すことを提案する,リセットの提案,start over は「やり直す」という句動詞,Let's start fresh|Shall we begin again|How about restarting
+447,一緒に行きませんか？,Want to come along?,,2,1,同行の誘い。,daily,come along を使う,Want to で誘う,一緒に行くことを誘う,カジュアルな誘い表現,come along は「一緒に来る」,Do you want to join|Would you like to come|Care to join me
+448,計画を立てましょう。,Let's make a plan.,,2,1,計画提案。,work,make a plan を使う,Let's で誘う,計画を作ることを提案する,準備の重要性を示す,make a plan は「計画を立てる」,Let's plan it out|Let's come up with a plan|We should plan this
+449,柔軟に対応しましょう。,Let's be flexible.,,2,1,柔軟性の提案。,work,flexible を使う,be で状態を示す,柔軟に対応することを提案する,適応力を重視する提案,flexible は「柔軟な」という形容詞,Let's stay flexible|Let's adapt|Let's keep our options open
+450,協力してやりましょう。,Let's work together on this.,,2,1,協力提案。,work,work together を使う,on this で対象を示す,協力して取り組むことを提案する,チームワークを重視する提案,work together は「協力する」,Let's collaborate|Let's team up|Let's do this together

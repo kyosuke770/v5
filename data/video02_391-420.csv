@@ -1,14 +1,4 @@
 no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
-381,それは私の優先事項ではありません。,That's not my priority.,,2,1,優先順位が低い。,work,priority を使う,not を使う,それを優先していないことを伝える,重要度が低いことを示す,priority は「優先事項」という名詞,Not my focus|Not important to me|Low on my list
-382,それで大丈夫です。,I'm fine with that.,,2,1,問題なく受け入れ。,daily,fine を使う,with that を使う,その提案に問題ないと伝える,同意や承認を示すカジュアル表現,I'm fine with は「〜で大丈夫」,That's okay|I'm good with that|No problem
-383,できればしたくありません。,I'd prefer not to.,,2,1,丁寧な拒否。,daily,prefer を使う,not to を使う,できれば避けたいと丁寧に伝える,直接的な拒否を避ける表現,I'd prefer は I would prefer の短縮形,I'd rather not|I'd like to avoid that|Not my preference
-384,どちらでも構いません。,I don't mind either way.,,2,1,どちらでもOK。,daily,mind を使う,either way を使う,どちらの選択肢でも問題ないと伝える,柔軟性を示す表現,either way は「どちらでも」,I'm fine either way|No preference|Up to you
-385,それで大丈夫です。,That works for me.,,2,1,都合が良い。,work,works を使う,for me を使う,その提案が自分に都合良いと伝える,スケジュールや計画の承認,work for は「〜にとって都合が良い」,That's good for me|That suits me|I'm available
-386,それで問題ありません。,I'm okay with it.,,2,1,承認を示す。,daily,okay を使う,with it を使う,その提案に問題ないと承認する,カジュアルな同意表現,be okay with は「〜で大丈夫」,I'm fine with it|That's alright|No issues
-387,むしろ待ちたいです。,I'd rather wait.,,2,1,待つことを選択。,work,rather を使う,wait を使う,待つ方を好むと伝える,別の選択肢を好む意思表示,I'd rather は「むしろ〜したい」,I prefer to wait|I'd like to wait|Better to wait
-388,それについて考えています。,I'm thinking about it.,,2,1,検討中。,daily,thinking を使う,about it を使う,現在検討中であることを伝える,決定までの猶予を示す,現在進行形で思考中を示す,I'm considering it|I'm mulling it over|Still thinking
-389,まだ決めているところです。,I'm still deciding.,,2,1,決定プロセス中。,work,deciding を使う,still を使う,まだ決定の途中であることを伝える,判断に時間がかかっていることを示す,現在進行形で進行中を強調,Still making up my mind|Haven't decided|In the process
-390,まだ決めていません。,I haven't decided yet.,,2,1,未決定。,daily,decided を使う,yet を使う,まだ決定していないことを明言する,決断までの時間を求める表現,haven't decided は現在完了の否定形,Not decided yet|Still undecided|No decision yet
 391,試してみます。,I'll give it a try.,,2,1,挑戦する意思。,work,try を使う,give it a を使う,試してみる意志を示す,前向きな姿勢を表現,give it a try は「試してみる」という慣用表現,I'll try it|I'll test it|Worth a try
 392,じっくり考えます。,I'll think it over.,,2,1,慎重に検討。,daily,think over を使う,I'll を使う,時間をかけて検討すると約束する,熟考する意思を示す,think over は「じっくり考える」という句動詞,I'll consider it|I'll reflect on it|I'll ponder it
 393,後で連絡します。,I'll get back to you.,,2,1,後で返答。,work,get back を使う,to you を使う,後で返答すると約束する,ビジネスでの定番表現,get back to は「返答する」という句動詞,I'll contact you|I'll follow up|I'll reach out
@@ -29,3 +19,13 @@ no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,
 408,もっと考えてみます。,I'll think about it more.,,2,1,さらに検討。,daily,more を使う,think about を使う,さらに深く考えると約束する,慎重な姿勢を示す,think about は「〜について考える」,I'll consider it further|I'll reflect more|I'll give it more thought
 409,進捗をお知らせします。,I'll give you an update.,,2,1,状況報告を約束。,work,update を使う,give を使う,進捗を報告すると約束する,情報共有の意志を示す,give an update は「最新情報を伝える」,I'll keep you posted|I'll update you|I'll inform you
 410,もう一度やってみます。,I'll try again.,,2,1,再挑戦。,daily,again を使う,try を使う,再度挑戦すると約束する,諦めない姿勢を示す,try again は「もう一度試す」,I'll retry|I'll give it another shot|I'll attempt again
+411,今はその気分じゃない。,I'm not in the mood.,,2,2,気分が乗らない。,daily,mood を使う,not を使う,今はやる気がないことを伝える,感情的な拒否を示す表現,in the mood は「その気分」という慣用表現,I don't feel like it|Not feeling it|Not up for it
+412,今は気分が良くなりました。,I'm feeling better now.,,2,2,回復を示す。,daily,better を使う,now を使う,体調や気分が改善したことを伝える,安心させる表現,feeling better は現在進行形で状態改善,I'm doing better|I've recovered|Feeling good now
+413,少し圧倒されています。,I'm a bit overwhelmed.,,2,2,手に負えない感覚。,work,overwhelmed を使う,a bit を使う,多すぎて対応しきれないことを伝える,ストレス状態を示す,overwhelmed は「圧倒された」という形容詞,Too much to handle|Feeling swamped|It's a lot
+414,疲れてきました。,I'm getting tired.,,2,2,疲労の蓄積。,daily,tired を使う,getting を使う,徐々に疲れてきていることを伝える,現在進行形で変化を示す,get tired は「疲れる」という状態変化,I'm becoming tired|Feeling tired|Getting exhausted
+415,やる気が出ています。,I'm feeling motivated.,,2,2,意欲的な状態。,work,motivated を使う,feeling を使う,モチベーションが高いことを伝える,前向きな心理状態を示す,motivated は「やる気のある」という形容詞,I'm pumped|I'm energized|Feeling driven
+416,かなりのプレッシャーを感じています。,I'm under a lot of pressure.,,2,2,重圧を感じる。,work,pressure を使う,under を使う,大きなプレッシャーを感じていることを伝える,ストレス状況を説明,under pressure は「プレッシャー下にある」,Feeling pressured|Under stress|Lot of stress
+417,行き詰まっています。,I'm feeling stuck.,,2,2,停滞感。,work,stuck を使う,feeling を使う,前に進めない感覚を伝える,困難な状況を示す,stuck は「行き詰まった」という形容詞,I'm at a standstill|Can't move forward|Hitting a wall
+418,それにワクワクしています。,I'm excited about it.,,2,2,期待感。,daily,excited を使う,about it を使う,楽しみにしていることを伝える,ポジティブな期待を示す,excited about は「〜に興奮している」,I'm looking forward to it|I'm pumped|Can't wait
+419,それについて緊張しています。,I'm nervous about it.,,2,2,不安感。,daily,nervous を使う,about it を使う,不安や緊張を感じていることを伝える,心配な気持ちを示す,nervous about は「〜について不安な」,I'm anxious|I'm worried|Feeling uneasy
+420,ホッとしています。,I'm relieved.,,2,2,安堵感。,daily,relieved を使う,I'm を使う,心配事が解消されて安心したことを伝える,緊張からの解放を示す,relieved は「ほっとした」という形容詞,I feel better|That's a relief|Glad that's over
