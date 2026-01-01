@@ -5,6 +5,7 @@ const SRS_KEY  = "srs_levels_v2_3step";
 const DAILY_KEY = "daily_levels_v2_3step";
 const PREF_KEY = "prefs_levels_v2_3step";
 const VISITED_KEY = "has_visited_v2";
+const MISSION_KEY = "daily_mission_v1";
 
 /*************************************************
  * Time
@@ -67,10 +68,24 @@ let prefs = JSON.parse(localStorage.getItem(PREF_KEY) || "null") || {
   block: 1
 };
 
+let dailyMission = JSON.parse(localStorage.getItem(MISSION_KEY) || "null") || {
+  date: new Date().toDateString(),
+  completed: {
+    due: false,
+    weak: false,
+    newBlock: false
+  },
+  progress: {
+    weak: 0,
+    newBlock: 0
+  }
+};
+
 function saveAll() {
   localStorage.setItem(SRS_KEY, JSON.stringify(srs));
   localStorage.setItem(DAILY_KEY, JSON.stringify(daily));
   localStorage.setItem(PREF_KEY, JSON.stringify(prefs));
+  localStorage.setItem(MISSION_KEY, JSON.stringify(dailyMission));
 }
 
 function ensureDaily() {
@@ -78,6 +93,16 @@ function ensureDaily() {
   if (daily.day !== today) {
     daily.day = today;
     daily.goodCount = 0;
+    saveAll();
+  }
+
+  // デイリーミッションも日付チェック
+  if (dailyMission.date !== today) {
+    dailyMission = {
+      date: today,
+      completed: { due: false, weak: false, newBlock: false },
+      progress: { weak: 0, newBlock: 0 }
+    };
     saveAll();
   }
 }
@@ -152,12 +177,78 @@ const explainGrammarEl = document.getElementById("explainGrammar");
 const similarsAreaEl = document.getElementById("similarsArea");
 
 /*************************************************
+ * Daily Missions: 苦手問題30問抽出
+ *************************************************/
+function getWeakCards30() {
+  const currentLevel = prefs.level;
+
+  // 全カードにスコアを付与
+  const scored = cards.map(card => {
+    const rec = srs[card.no]?.[currentLevel];
+    let score = 0;
+
+    if (!rec) {
+      // 未学習: 基本スコア 10
+      score = 10;
+    } else {
+      // ========== 最終評価 ==========
+      if (rec.lastGrade === 1) score += 100;      // Again: 超重要
+      else if (rec.lastGrade === 2) score += 50;  // Hard: 重要
+      else if (rec.lastGrade === 3) score += 5;   // Easy: 復習候補
+
+      // ========== 失敗率 ==========
+      const attempts = rec.attempts || 1;
+      const againCount = rec.againCount || 0;
+      const hardCount = rec.hardCount || 0;
+      const failRate = (againCount + hardCount) / attempts;
+      score += failRate * 30;
+
+      // ========== 挑戦回数 ==========
+      // 何度やっても苦手 = スコア高
+      if (attempts >= 5 && rec.lastGrade < 3) {
+        score += 20;
+      }
+
+      // ========== 最終学習日 ==========
+      // 長期間放置されている = 復習必要
+      if (rec.lastStudied) {
+        const daysSince = (now() - rec.lastStudied) / DAY;
+        if (daysSince > 14) score += 15;
+        else if (daysSince > 7) score += 10;
+      }
+    }
+
+    return { ...card, weakScore: score };
+  });
+
+  // スコア降順でソート → 上位30問
+  return scored
+    .sort((a, b) => b.weakScore - a.weakScore)
+    .slice(0, 30);
+}
+
+// 次の未学習ブロックを取得
+function getNextUnstudiedBlock() {
+  const maxBlock = getMaxBlock();
+  const currentLevel = prefs.level;
+
+  for (let b = 1; b <= maxBlock; b++) {
+    const blockCards = getCardsByBlock(b);
+    const hasUnstudied = blockCards.some(c => !srs[c.no]?.[currentLevel]);
+    if (hasUnstudied) return b;
+  }
+
+  return 1; // フォールバック
+}
+
+/*************************************************
  * Views
  *************************************************/
 function showHome() {
   homeView.classList.remove("hidden");
   studyView.classList.add("hidden");
   statsView.classList.add("hidden");
+  renderDailyMissions();
   renderDaily();
   renderProgress();
   renderBlockTable();
@@ -620,6 +711,36 @@ function startVariationMode(goStudy=false) {
   if (goStudy) showStudy(); else render();
 }
 
+// 苦手克服モード（30問）
+function startWeakMode(goStudy=false) {
+  sessionMode = "weak";
+
+  // 苦手問題30問を取得
+  cardsByMode = getWeakCards30();
+
+  // 全問Easyになるまでループ
+  sessionDueSet = new Set(cardsByMode.map(c => c.no));
+
+  index = 0;
+  resetCardView();
+  if (goStudy) showStudy(); else render();
+}
+
+// 新ブロックモード
+function startNewBlockMode(goStudy=false) {
+  const nextBlock = getNextUnstudiedBlock();
+  prefs.block = nextBlock;
+  saveAll();
+
+  sessionMode = "normal";
+  cardsByMode = getCardsByBlock(nextBlock);
+  sessionDueSet = new Set();
+
+  index = 0;
+  resetCardView();
+  if (goStudy) showStudy(); else render();
+}
+
 /*************************************************
  * 優先度スコア計算（苦手カード優先）
  *************************************************/
@@ -763,6 +884,52 @@ function renderDueCount() {
   }).length;
 
   dueCountEl.textContent = `${dueCount}件`;
+}
+
+function renderDailyMissions() {
+  ensureDaily();
+
+  // Due件数
+  const level = prefs.level;
+  const dueCount = cards.filter(c => {
+    const d = srs[c.no]?.[level]?.dueAt ?? Infinity;
+    return d <= now();
+  }).length;
+
+  // 次の未学習ブロック
+  const nextBlock = getNextUnstudiedBlock();
+
+  // UI更新
+  const dueCardEl = document.getElementById("missionDue");
+  const weakCardEl = document.getElementById("missionWeak");
+  const newBlockCardEl = document.getElementById("missionNewBlock");
+
+  const dueCountEl = document.getElementById("missionDueCount");
+  const weakCountEl = document.getElementById("missionWeakCount");
+  const newBlockCountEl = document.getElementById("missionNewBlockCount");
+
+  // Due
+  if (dueCountEl) dueCountEl.textContent = `${dueCount}件`;
+  if (dueCardEl) {
+    if (dueCount === 0) {
+      dueCardEl.classList.add("completed");
+    } else {
+      dueCardEl.classList.remove("completed");
+    }
+  }
+
+  // 苦手克服
+  if (weakCountEl) weakCountEl.textContent = `${dailyMission.progress.weak}/30`;
+  if (weakCardEl) {
+    if (dailyMission.completed.weak) {
+      weakCardEl.classList.add("completed");
+    } else {
+      weakCardEl.classList.remove("completed");
+    }
+  }
+
+  // 新ブロック
+  if (newBlockCountEl) newBlockCountEl.textContent = `ブロック${nextBlock}`;
 }
 
 /*************************************************
@@ -1128,6 +1295,19 @@ function gradeCard(grade) {
     if (grade === 3) {
       sessionDueSet.delete(card.no);
     }
+  } else if (sessionMode === "weak") {
+    // 苦手モード: easy => 進捗+1 & Dueから外す
+    if (grade === 3) {
+      ensureDaily();
+      dailyMission.progress.weak++;
+      sessionDueSet.delete(card.no);
+
+      // 30問完了チェック
+      if (dailyMission.progress.weak >= 30) {
+        dailyMission.completed.weak = true;
+      }
+      saveAll();
+    }
   }
 
   // 既存の進捗加算（easyだけ進む、など）
@@ -1149,6 +1329,38 @@ if (startNowBtn) {
   startNowBtn.addEventListener("click", () => {
     localStorage.setItem(VISITED_KEY, "true");
     showHome();
+  });
+}
+
+// Daily Mission buttons
+const missionDueBtn = document.getElementById("missionDueBtn");
+const missionWeakBtn = document.getElementById("missionWeakBtn");
+const missionNewBlockBtn = document.getElementById("missionNewBlockBtn");
+
+if (missionDueBtn) {
+  missionDueBtn.addEventListener("click", () => {
+    const level = prefs.level;
+    const dueCount = cards.filter(c => {
+      const d = srs[c.no]?.[level]?.dueAt ?? Infinity;
+      return d <= now();
+    }).length;
+    if (dueCount > 0) {
+      startReviewDue(true);
+    }
+  });
+}
+
+if (missionWeakBtn) {
+  missionWeakBtn.addEventListener("click", () => {
+    if (!dailyMission.completed.weak) {
+      startWeakMode(true);
+    }
+  });
+}
+
+if (missionNewBlockBtn) {
+  missionNewBlockBtn.addEventListener("click", () => {
+    startNewBlockMode(true);
   });
 }
 

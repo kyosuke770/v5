@@ -748,6 +748,93 @@ a{ color:inherit; }
   opacity: 0.7;
 }
 
+/* Daily Missions */
+.dailyMissions{
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.missionsHeader{
+  margin-bottom: 16px;
+}
+
+.missionsTitle{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.missionCard{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.missionCard:last-child{
+  margin-bottom: 0;
+}
+
+.missionCard.completed{
+  background: #f0f9ff;
+  border-color: #3b82f6;
+  opacity: 0.7;
+}
+
+.missionIcon{
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.missionContent{
+  flex: 1;
+}
+
+.missionTitle{
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.missionCount{
+  font-size: 13px;
+  color: var(--sub);
+  font-weight: 500;
+}
+
+.missionBtn{
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.missionBtn:active{
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.missionCard.completed .missionBtn{
+  background: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
 /* small screens */
 @media (max-width: 380px){
   .row{ grid-template-columns: 78px 1fr 1fr 1fr; }

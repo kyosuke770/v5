@@ -75,6 +75,40 @@
       <div class="lastUpdated">2025-12-31 15:20</div>
     </header>
 
+    <!-- 今日やること -->
+    <section class="dailyMissions">
+      <div class="missionsHeader">
+        <h2 class="missionsTitle">📅 今日やること</h2>
+      </div>
+
+      <div class="missionCard" id="missionDue">
+        <div class="missionIcon">✅</div>
+        <div class="missionContent">
+          <div class="missionTitle">復習（Due）</div>
+          <div class="missionCount" id="missionDueCount">0件</div>
+        </div>
+        <button class="missionBtn" id="missionDueBtn">始める</button>
+      </div>
+
+      <div class="missionCard" id="missionWeak">
+        <div class="missionIcon">🔥</div>
+        <div class="missionContent">
+          <div class="missionTitle">苦手克服</div>
+          <div class="missionCount" id="missionWeakCount">0/30</div>
+        </div>
+        <button class="missionBtn" id="missionWeakBtn">始める</button>
+      </div>
+
+      <div class="missionCard" id="missionNewBlock">
+        <div class="missionIcon">🆕</div>
+        <div class="missionContent">
+          <div class="missionTitle">新しいブロック</div>
+          <div class="missionCount" id="missionNewBlockCount">ブロック1 (0/30)</div>
+        </div>
+        <button class="missionBtn" id="missionNewBlockBtn">始める</button>
+      </div>
+    </section>
+
     <section class="cardBox">
       <div class="rowBetween">
         <div class="hLabel">今日の進捗</div>
