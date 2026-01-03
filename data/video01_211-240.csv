@@ -9,16 +9,16 @@ no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explai
 218,その点は後で話しましょう。,Let's discuss that later.,1,1,話題を後回し。,work,discuss を使う,later を使う,その話題は後で話そうと提案する,今は議論しない意思,Let's + 動詞で提案,Talk about it later|Save that discussion|Later on that
 219,その件は把握しています。,I'm aware of it.,1,1,認識済み。,work,aware を使う,of it を使う,知っていることを伝える,情報共有済みを示す,be aware of は「認識している」,I know|I'm informed|Already aware
 220,少し時間が必要です。,I need a bit more time.,1,1,時間が必要。,daily,time を使う,a bit more を使う,もう少し時間が欲しいと伝える,完了に時間がかかることを示す,I need + 名詞で必要性を伝える,Need more time|Give me time|A little longer
-221,もう少しで{x}。,I'm almost {x}.,1,2,定番の進捗表現。,daily,almost を使う,{x}は状態を示す単語,完了まであと少しという進捗を伝える,90%くらい完了している時に使う,almost は副詞で「ほぼ」,Nearly done|Just about ready|Almost finished
-222,{x}してもいいですか？,Can I {x}?,1,2,許可を求める基本形。,daily,Can I を使う,{x}は動詞,何かをする許可を求める基本パターン,日常的な許可依頼の表現,Can I + 動詞の原形で許可を求める,May I ~?|Could I ~?|Is it okay if I ~?
-223,少し{x}ありますか？,Do you have {x}?,1,2,会話の切り出し。,work,Do you have を使う,{x}は時間を示す単語,少し時間をもらえるか尋ねる,話しかける前の丁寧な確認,Do you have + 名詞で所有確認,Got a minute?|Have time?|Free for a moment?
-224,それは{x}次第です。,It depends on {x}.,1,2,条件付き判断。,work,depends on を使う,{x}は条件,状況や条件によって変わることを表す,確定的な答えを避ける表現,depend on + 名詞で「〜に依存する」,Depends on the situation|It varies|Based on ~
-225,後で{x}します。,I'll {x} later.,1,2,後回し対応。,work,later を使う,{x}は動詞,後で対応することを約束する,今は無理だが後で実行する意思,I'll + 動詞 + later で後の約束,Do it later|Handle it later|Take care of it later
-226,{x}してくれてありがとう。,Thanks for {x}.,1,2,行為への感謝。,daily,Thanks for を使う,{x}は動名詞,具体的な行為に対する感謝,相手の行動を評価する表現,Thanks for + 動名詞で感謝,Thank you for ~|Appreciate your ~|Thanks for doing ~
-227,それは{x}ですね。,That's {x}.,1,2,短い評価表現。,daily,That's を使う,{x}は形容詞,短く評価を述べる表現,シンプルな感想や判断,That's + 形容詞で評価,That's good|That's okay|That's great
-228,私が{x}します。,I'll {x}.,1,2,引き受け表現。,work,I'll を使う,{x}は動詞句,自分が対応すると宣言する,責任を持って処理する意思,I'll + 動詞で未来の約束,I'll do it|I'll manage|I'll deal with it
-229,{x}する必要があります。,We need to {x}.,1,2,必要性を伝える。,work,need to を使う,{x}は動詞,何かをする必要性を伝える,行動を促す表現,We need to + 動詞で必要性,Must ~|Have to ~|Should ~
-230,もう一度{x}してください。,Please {x} again.,1,2,再依頼。,work,again を使う,{x}は動詞,もう一度やってほしいと依頼する,繰り返しを求める丁寧な表現,Please + 動詞 + again で再依頼,Could you ~ again?|Do it once more|Repeat please
+221,もう少しでdone。,I'm almost 終わり.,1,2,定番の進捗表現。,daily,almost を使う,{x}は状態を示す単語,完了まであと少しという進捗を伝える,90%くらい完了している時に使う,almost は副詞で「ほぼ」,Nearly done|Just about ready|Almost finished
+222,ask somethingしてもいいですか？,Can I 一つ聞く?,1,2,許可を求める基本形。,daily,Can I を使う,{x}は動詞,何かをする許可を求める基本パターン,日常的な許可依頼の表現,Can I + 動詞の原形で許可を求める,May I ~?|Could I ~?|Is it okay if I ~?
+223,少しa minuteありますか？,Do you have 時間?,1,2,会話の切り出し。,work,Do you have を使う,{x}は時間を示す単語,少し時間をもらえるか尋ねる,話しかける前の丁寧な確認,Do you have + 名詞で所有確認,Got a minute?|Have time?|Free for a moment?
+224,それはthe situation次第です。,It depends on 状況.,1,2,条件付き判断。,work,depends on を使う,{x}は条件,状況や条件によって変わることを表す,確定的な答えを避ける表現,depend on + 名詞で「〜に依存する」,Depends on the situation|It varies|Based on ~
+225,後でcheckします。,I'll 確認する later.,1,2,後回し対応。,work,later を使う,{x}は動詞,後で対応することを約束する,今は無理だが後で実行する意思,I'll + 動詞 + later で後の約束,Do it later|Handle it later|Take care of it later
+226,waitingしてくれてありがとう。,Thanks for 待ってくれて.,1,2,行為への感謝。,daily,Thanks for を使う,{x}は動名詞,具体的な行為に対する感謝,相手の行動を評価する表現,Thanks for + 動名詞で感謝,Thank you for ~|Appreciate your ~|Thanks for doing ~
+227,それはfineですね。,That's 問題ない.,1,2,短い評価表現。,daily,That's を使う,{x}は形容詞,短く評価を述べる表現,シンプルな感想や判断,That's + 形容詞で評価,That's good|That's okay|That's great
+228,私がhandle itします。,I'll 対応する.,1,2,引き受け表現。,work,I'll を使う,{x}は動詞句,自分が対応すると宣言する,責任を持って処理する意思,I'll + 動詞で未来の約束,I'll do it|I'll manage|I'll deal with it
+229,fix thisする必要があります。,We need to 修正する.,1,2,必要性を伝える。,work,need to を使う,{x}は動詞,何かをする必要性を伝える,行動を促す表現,We need to + 動詞で必要性,Must ~|Have to ~|Should ~
+230,もう一度checkしてください。,Please 確認 again.,1,2,再依頼。,work,again を使う,{x}は動詞,もう一度やってほしいと依頼する,繰り返しを求める丁寧な表現,Please + 動詞 + again で再依頼,Could you ~ again?|Do it once more|Repeat please
 231,それは良い方向です。,That's a good sign.,1,1,ポジティブ評価。,daily,sign を使う,good を使う,良い兆候だと評価する,前向きな進展を示す表現,sign は「兆候・サイン」という名詞,Good news|Positive sign|Looking good
 232,少し違和感があります。,Something feels off.,1,1,違和感を表す。,daily,feels を使う,off を使う,何か変だと感じることを伝える,直感的な違和感を表現,feel off は「しっくりこない」という慣用表現,Something's wrong|Doesn't feel right|Something's strange
 233,その点は重要です。,That point is important.,1,1,重要点を強調。,work,point を使う,important を使う,その点が重要だと強調する,注目すべき事項を示す,point is important は「点が重要」,Key point|That matters|Important aspect

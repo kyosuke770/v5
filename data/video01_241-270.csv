@@ -9,16 +9,16 @@ no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explai
 248,状況は改善しています。,The situation is improving.,1,1,良くなっている。,work,improving を使う,situation を使う,状況が良い方向に向かっていることを報告する,進行形で継続的な改善を示す,現在進行形で「改善中」,Getting better|Things are improving|Situation's getting better
 249,今はそれで十分です。,That's sufficient for now.,1,1,一旦十分。,daily,sufficient を使う,for now を使う,とりあえず十分だと判断する,一区切りつけることを示す,sufficient は formal な「十分な」,That's enough for now|Good for now|That'll do
 250,対応は完了しました。,The task is complete.,1,1,完了報告。,work,complete を使う,task を使う,タスクが完了したことを報告する,現在完了で完了済みを強調,is complete は「完了した」という状態,It's done|Task finished|All done
-251,{x}してもらえますか？,Could you {x}?,1,2,丁寧な依頼。,work,Could you を使う,{x}は動詞,丁寧に何かを依頼する基本パターン,Can you より丁寧な表現,Could you + 動詞で丁寧な依頼,Can you ~?|Would you ~?|Would you mind ~ing?
-252,もう少し{x}が必要です。,We need a bit more {x}.,1,2,不足を伝える。,work,a bit more を使う,{x}は名詞,もう少し必要だと伝える,完全に不足ではなく少し足りない,We need + 名詞で必要性,Need more ~|Could use more ~|A little more ~ needed
-253,後で{x}を共有します。,I'll share {x} later.,1,2,後で共有。,work,share を使う,{x}は名詞,後で情報を共有すると約束する,今は無理だが後で提供する意思,I'll + 動詞 + later で後の約束,Send ~ later|Share it later|I'll provide ~ later
-254,{x}について話しましょう。,Let's talk about {x}.,1,2,話題指定。,work,talk about を使う,{x}は名詞,特定の話題について話そうと提案する,議論したい対象を明示,Let's + 動詞で提案,Discuss ~|Let's go over ~|Talk over ~
-255,{x}で大丈夫です。,{x} works for me.,1,2,条件付き同意。,daily,works for me を使う,{x}は名詞,その条件で問題ないと同意する,個人的に受け入れ可能な時,works for me は「私には問題ない」,~ is fine with me|~ suits me|I'm okay with ~
-256,少し{x}すぎます。,It's a bit too {x}.,1,2,程度を表す。,daily,too を使う,{x}は形容詞,程度が過ぎていることを伝える,適切な範囲を超えている時,too + 形容詞で「〜すぎる」,A little too ~|Somewhat too ~|Slightly too ~
-257,{x}かもしれません。,It might be {x}.,1,2,可能性表現。,daily,might be を使う,{x}は名詞または形容詞,可能性があることを示す,確信はないが懸念を共有,might は「〜かもしれない」という推量,Could be ~|Maybe it's ~|Possibly ~
-258,まず{x}しましょう。,Let's {x} first.,1,2,最初の行動。,work,first を使う,{x}は動詞,最初にやるべきことを提案する,優先順位を示す表現,Let's + 動詞 + first で順序,First, let's ~|Start with ~ing|Begin by ~ing
-259,{x}する予定です。,We're planning to {x}.,1,2,予定表現。,work,planning to を使う,{x}は動詞,予定していることを伝える,計画段階であることを示す,be planning to + 動詞で予定,We plan to ~|We're going to ~|Intend to ~
-260,少し{x}してください。,Please {x} a bit.,1,2,軽い依頼。,daily,a bit を使う,{x}は動詞,少しだけやってほしいと依頼する,控えめな依頼の表現,Please + 動詞 + a bit で軽い依頼,Could you ~ a little?|~ slightly please|~ just a bit
+251,check thisしてもらえますか？,Could you これ確認?,1,2,丁寧な依頼。,work,Could you を使う,{x}は動詞,丁寧に何かを依頼する基本パターン,Can you より丁寧な表現,Could you + 動詞で丁寧な依頼,Can you ~?|Would you ~?|Would you mind ~ing?
+252,もう少しtimeが必要です。,We need a bit more 時間.,1,2,不足を伝える。,work,a bit more を使う,{x}は名詞,もう少し必要だと伝える,完全に不足ではなく少し足りない,We need + 名詞で必要性,Need more ~|Could use more ~|A little more ~ needed
+253,後でthe detailsを共有します。,I'll share 詳細 later.,1,2,後で共有。,work,share を使う,{x}は名詞,後で情報を共有すると約束する,今は無理だが後で提供する意思,I'll + 動詞 + later で後の約束,Send ~ later|Share it later|I'll provide ~ later
+254,this issueについて話しましょう。,Let's talk about この問題.,1,2,話題指定。,work,talk about を使う,{x}は名詞,特定の話題について話そうと提案する,議論したい対象を明示,Let's + 動詞で提案,Discuss ~|Let's go over ~|Talk over ~
+255,that planで大丈夫です。,その案 works for me.,1,2,条件付き同意。,daily,works for me を使う,{x}は名詞,その条件で問題ないと同意する,個人的に受け入れ可能な時,works for me は「私には問題ない」,~ is fine with me|~ suits me|I'm okay with ~
+256,少しearlyすぎます。,It's a bit too 早い.,1,2,程度を表す。,daily,too を使う,{x}は形容詞,程度が過ぎていることを伝える,適切な範囲を超えている時,too + 形容詞で「〜すぎる」,A little too ~|Somewhat too ~|Slightly too ~
+257,a mistakeかもしれません。,It might be ミス.,1,2,可能性表現。,daily,might be を使う,{x}は名詞または形容詞,可能性があることを示す,確信はないが懸念を共有,might は「〜かもしれない」という推量,Could be ~|Maybe it's ~|Possibly ~
+258,まずconfirmしましょう。,Let's 確認 first.,1,2,最初の行動。,work,first を使う,{x}は動詞,最初にやるべきことを提案する,優先順位を示す表現,Let's + 動詞 + first で順序,First
+259,move forwardする予定です。,We're planning to 進める.,1,2,予定表現。,work,planning to を使う,{x}は動詞,予定していることを伝える,計画段階であることを示す,be planning to + 動詞で予定,We plan to ~|We're going to ~|Intend to ~
+260,少しwaitしてください。,Please 待つ a bit.,1,2,軽い依頼。,daily,a bit を使う,{x}は動詞,少しだけやってほしいと依頼する,控えめな依頼の表現,Please + 動詞 + a bit で軽い依頼,Could you ~ a little?|~ slightly please|~ just a bit
 261,今は話せません。,I can't talk right now.,1,1,今は不可。,daily,right now を使う,can't を使う,今は話せないことを伝える,忙しさや状況を理由に断る,can't + 動詞で不可能を示す,Not available now|Can't chat now|Busy right now
 262,後ほど対応します。,I'll handle it shortly.,1,1,すぐ後で。,work,shortly を使う,handle を使う,間もなく対応することを約束する,soon より短い時間のニュアンス,shortly は副詞で「すぐに」,I'll do it soon|Handle it right away|Shortly after
 263,その点は問題ありません。,That point is fine.,1,1,問題なし。,work,point を使う,fine を使う,その点については問題ないと伝える,特定の点に対する評価,point is fine は「点が良い」,That's okay|No issue there|That part's fine
@@ -28,4 +28,4 @@ no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explai
 267,今はその余地がありません。,There's no room for that right now.,1,1,余地がない。,work,room を使う,right now を使う,現時点で余地がないことを伝える,キャパシティや時間がない状態,room は比喩的に「余地」を意味,No space for that|No capacity|Can't fit that in
 268,一旦ここまでにしましょう。,Let's call it here for now.,1,1,ここで区切る。,daily,call it を使う,for now を使う,ここで一区切りつけようと提案する,一時的な終了を示す,call it は「終わりにする」という慣用表現,Let's stop here|That's enough for now|Let's pause here
 269,その方向で進めます。,We'll proceed in that direction.,1,1,方針決定。,work,proceed を使う,direction を使う,その方針で進めることを決定する,決定事項を実行に移す表現,proceed in that direction は「その方向に進む」,Move forward with that|Go that way|Follow that path
-270,問題なければ続けましょう。,If there's no issue,,1,1,継続確認。,work,issue を使う,continue を使う,問題がなければ続行しようと提案する,条件付きの継続を示す,If there's no + 名詞で条件,If all's good, continue|Unless there's a problem|If everything's fine
+270,問題なければ続けましょう。,If there's no issue,,1,1,継続確認。,work,issue を使う,continue を使う,問題がなければ続行しようと提案する,条件付きの継続を示す,If there's no + 名詞で条件

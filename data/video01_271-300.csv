@@ -9,16 +9,16 @@ no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explai
 278,時間が許せば…,If time allows...,1,1,条件付き前置き。,work,allows を使う,If を使う,時間があればという条件を示す,実現可能性に条件をつける前置き,if time allows は「時間が許せば」,If there's time|Time permitting|If we have time
 279,それについては同意します。,I agree with that.,1,1,明確な同意。,daily,agree を使う,with that を使う,その件について同意することを明言する,明確な同意の表明,agree with は「〜に同意する」,I agree|I'm with you on that|I concur
 280,一旦ここで終わりましょう。,Let's wrap it up here.,1,1,終了の合図。,daily,wrap up を使う,here を使う,ここで終わりにしようと提案する,作業や会議の終了を提案,wrap up は「終わりにする」という句動詞,Let's call it|Let's finish here|Let's end here
-281,{x}しても大丈夫です。,It's okay to {x}.,1,2,許可表現。,daily,okay to を使う,{x}は動詞,何かをする許可を与える,相手の行動を承認する表現,It's okay to + 動詞で許可,It's fine to ~|You can ~|Feel free to ~
-282,念のため{x}します。,I'll {x} just in case.,1,2,保険行動。,work,just in case を使う,{x}は動詞,念のため行動することを伝える,予防的な対応を示す,just in case は「念のため」という慣用表現,I'll ~ to be safe|~ just to be sure|~ for safety
-283,{x}する必要はありません。,There's no need to {x}.,1,2,不要を伝える。,daily,no need を使う,{x}は動詞,何かをする必要がないと伝える,相手を安心させる表現,There's no need to + 動詞で不要,You don't need to ~|No need for ~|Don't have to ~
-284,まず{x}から始めましょう。,Let's start with {x}.,1,2,開始点を示す。,work,start with を使う,{x}は名詞,最初に取り組むことを提案する,優先順位を示す表現,start with + 名詞で開始点,Begin with ~|Let's kick off with ~|Start by ~ing
-285,{x}で問題ありません。,{x} is fine.,1,2,方法承認。,work,is fine を使う,{x}は名詞,その方法で問題ないと承認する,提案を受け入れる表現,is fine は「問題ない」という状態,~ works|~ is okay|~ sounds good
-286,少し{x}すぎます。,It's a bit too {x}.,1,2,程度表現。,daily,too を使う,{x}は形容詞,程度が過ぎていることを伝える,適切な範囲を超えている時,too + 形容詞で「〜すぎる」,A little too ~|Somewhat too ~|Slightly excessive
-287,{x}かもしれません。,It could be {x}.,1,2,可能性表現。,daily,could be を使う,{x}は名詞または形容詞,可能性があることを示す,might より少し確信度が高い,could be は「〜かもしれない」,Might be ~|Could possibly be ~|Maybe it's ~
-288,一度{x}してみましょう。,Let's try {x}.,1,2,試行提案。,work,try を使う,{x}は名詞または動詞,試してみようと提案する,実験的なアプローチを提案,Let's try + 名詞/動名詞で試行,Let's give ~ a try|Try ~ing|Let's attempt ~
-289,{x}について確認します。,I'll check {x}.,1,2,対象確認。,work,check を使う,{x}は名詞,特定の事項を確認すると約束する,焦点を明確にした確認,check + 名詞で確認対象,I'll verify ~|I'll look into ~|I'll confirm ~
-290,{x}する時間があります。,We have time to {x}.,1,2,余裕を示す。,work,have time を使う,{x}は動詞,時間的余裕があることを伝える,対応可能であることを示す,have time to + 動詞で時間の余裕,There's time to ~|We can ~|Time to ~
+281,waitしても大丈夫です。,It's okay to 待つ.,1,2,許可表現。,daily,okay to を使う,{x}は動詞,何かをする許可を与える,相手の行動を承認する表現,It's okay to + 動詞で許可,It's fine to ~|You can ~|Feel free to ~
+282,念のためcheck againします。,I'll 再確認 just in case.,1,2,保険行動。,work,just in case を使う,{x}は動詞,念のため行動することを伝える,予防的な対応を示す,just in case は「念のため」という慣用表現,I'll ~ to be safe|~ just to be sure|~ for safety
+283,rushする必要はありません。,There's no need to 急ぐ.,1,2,不要を伝える。,daily,no need を使う,{x}は動詞,何かをする必要がないと伝える,相手を安心させる表現,There's no need to + 動詞で不要,You don't need to ~|No need for ~|Don't have to ~
+284,まずthis partから始めましょう。,Let's start with この部分.,1,2,開始点を示す。,work,start with を使う,{x}は名詞,最初に取り組むことを提案する,優先順位を示す表現,start with + 名詞で開始点,Begin with ~|Let's kick off with ~|Start by ~ing
+285,that approachで問題ありません。,その方法 is fine.,1,2,方法承認。,work,is fine を使う,{x}は名詞,その方法で問題ないと承認する,提案を受け入れる表現,is fine は「問題ない」という状態,~ works|~ is okay|~ sounds good
+286,少しmuchすぎます。,It's a bit too 多い.,1,2,程度表現。,daily,too を使う,{x}は形容詞,程度が過ぎていることを伝える,適切な範囲を超えている時,too + 形容詞で「〜すぎる」,A little too ~|Somewhat too ~|Slightly excessive
+287,a problemかもしれません。,It could be 問題.,1,2,可能性表現。,daily,could be を使う,{x}は名詞または形容詞,可能性があることを示す,might より少し確信度が高い,could be は「〜かもしれない」,Might be ~|Could possibly be ~|Maybe it's ~
+288,一度this wayしてみましょう。,Let's try この方法.,1,2,試行提案。,work,try を使う,{x}は名詞または動詞,試してみようと提案する,実験的なアプローチを提案,Let's try + 名詞/動名詞で試行,Let's give ~ a try|Try ~ing|Let's attempt ~
+289,the detailsについて確認します。,I'll check 詳細.,1,2,対象確認。,work,check を使う,{x}は名詞,特定の事項を確認すると約束する,焦点を明確にした確認,check + 名詞で確認対象,I'll verify ~|I'll look into ~|I'll confirm ~
+290,discussする時間があります。,We have time to 話し合う.,1,2,余裕を示す。,work,have time を使う,{x}は動詞,時間的余裕があることを伝える,対応可能であることを示す,have time to + 動詞で時間の余裕,There's time to ~|We can ~|Time to ~
 291,とりあえず落ち着こう。,Take a breath.,1,3,感情リセット。,daily,breath を使う,Take を使う,深呼吸して落ち着こうと促す,感情的な時に冷静さを取り戻す表現,take a breath は「一息つく」という慣用表現,Calm down|Cool off|Relax
 292,それは本質じゃない。,That's beside the point.,1,3,論点ずらしを防ぐ。,work,beside を使う,point を使う,本質から外れていることを指摘する,議論の焦点を戻す表現,beside the point は「論点から外れた」という慣用表現,That's not the issue|That's irrelevant|Off topic
 293,話が噛み合っていない。,We're not on the same page.,1,3,認識ズレ。,work,same page を使う,not を使う,認識が一致していないことを指摘する,コミュニケーションのズレを示す,on the same page は「同じ理解」という慣用表現,We're misaligned|We misunderstand|Different wavelengths

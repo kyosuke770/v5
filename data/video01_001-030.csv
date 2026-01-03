@@ -1,31 +1,31 @@
 no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
 1,すぐに終わらせますね。,I'll be quick.,1,1,相手を待たせずに手短に済ませる時。,work,「quick」を使う,「早く」は fast より quick,すぐに手短に済ませることを約束する表現,ビジネスでも日常でも使える丁寧な言い方,I'll be quick は I will be quick の短縮形,I'll be right back|I won't take long|This will be fast
-2,もう少しで{x}。,I'm almost {x}.,1,2,almost は完了直前の定番。,daily,「ほぼ」を意味する単語,almost を使う,完了まであと少しという状態を表す,進捗が90%くらいの時に使う。相手を安心させる効果あり,almost は副詞で動詞や形容詞の前に置く,I'm nearly done|Just about done|Almost there
+2,もう少しで終わりです。,I'm almost done.,1,2,almost は完了直前の定番。,daily,「ほぼ」を意味する単語,almost を使う,完了まであと少しという状態を表す,進捗が90%くらいの時に使う。相手を安心させる効果あり,almost は副詞で動詞や形容詞の前に置く,I'm nearly done|Just about done|Almost there
 3,お待たせしました。,Sorry for the wait.,1,1,フォーマルなら Thank you for waiting.,service,待たせたことへの謝罪,Sorry を使う,相手を待たせたことを謝る表現,カジュアルな謝罪。Thank you for waiting の方がフォーマル,Sorry for + 名詞（動名詞）の形,Thank you for waiting|Apologies for the delay|Sorry to keep you waiting
 4,今向かっています。,I'm on my way.,1,1,移動中であることを伝える表現。,daily,道の上にいる,on my way で「向かっている」,現在移動中で目的地に向かっていることを伝える,到着予定を伝える時の定番フレーズ,on my way は現在進行形 I'm と一緒に使う,I'm coming|I'll be there soon|On my way now
 5,少し遅れます。,I'm running late.,1,1,約束に遅れる時の定番。,daily,run を使う,late は「遅い」,予定より遅れていることを伝える,running を使うことで「遅刻しそう」というニュアンス,run late で慣用表現。be late より切迫感がある,I'll be late|Sorry I'm late|Running behind schedule
 6,ゆっくりどうぞ。,Take your time.,1,1,相手を急かさない時。,daily,time を使う,Take で始まる,相手に急がなくていいと伝える優しい表現,プレッシャーを与えず、リラックスしてもらう意図,Take your time は命令形だが丁寧な表現,No rush|No hurry|There's no need to rush
-7,少し{x}ありますか？,Do you have {x}?,1,2,会話の切り出しに使う。,work,Do you have で始める,a minute は「1分」だが実際はもっと短い,相手の時間を少しもらえるか尋ねる表現,a minute や a second は文字通りの時間ではなく「少しの時間」,Do you have + 名詞で「〜ありますか」,Got a minute?|Do you have a moment?|Can I have a second?
-8,{x}もいいですか？,Can I {x}?,1,2,許可を求める基本表現。,daily,Can I で許可を求める,May I よりカジュアル,何かをする許可を求める基本パターン,Can I は日常的、May I はフォーマル,Can I + 動詞の原形で許可を求める,May I ~?|Is it OK if I ~?|Mind if I ~?
-9,ご遠慮なく{x}ください。,Feel free to {x}.,1,2,相手に安心感を与える。,service,Feel free で「自由に」,遠慮しないで,相手に気兼ねなく行動してもらう表現,歓迎の気持ちを込めた親切な言い方,Feel free to + 動詞の原形,Don't hesitate to ~|Please ~|You're welcome to ~
+7,少し時間ありますか？,Do you have a minute?,1,2,会話の切り出しに使う。,work,Do you have で始める,a minute は「1分」だが実際はもっと短い,相手の時間を少しもらえるか尋ねる表現,a minute や a second は文字通りの時間ではなく「少しの時間」,Do you have + 名詞で「〜ありますか」,Got a minute?|Do you have a moment?|Can I have a second?
+8,一つ聞いてもいいですか？,Can I ask something?,1,2,許可を求める基本表現。,daily,Can I で許可を求める,May I よりカジュアル,何かをする許可を求める基本パターン,Can I は日常的、May I はフォーマル,Can I + 動詞の原形で許可を求める,May I ~?|Is it OK if I ~?|Mind if I ~?
+9,ご遠慮なく聞いてください。,Feel free to ask.,1,2,相手に安心感を与える。,service,Feel free で「自由に」,遠慮しないで,相手に気兼ねなく行動してもらう表現,歓迎の気持ちを込めた親切な言い方,Feel free to + 動詞の原形,Don't hesitate to ~|Please ~|You're welcome to ~
 10,どうしたんですか？,What happened?,1,1,様子がおかしい時に。,daily,What を使う,過去形 happened,何が起こったのか尋ねる表現,相手の様子がおかしい時や、状況を知りたい時,What happened? は過去形を使う,What's wrong?|What's the matter?|Is something wrong?
-11,{x}次第ですね。,It depends on {x}.,1,2,状況による時の定番。,daily,depend を使う,depends on で「〜次第」,状況や条件によって変わることを表す,確定的な答えを避ける時に便利,depend on + 名詞で「〜に依存する」,That depends|It varies|It's up to ~
+11,天気次第ですね。,It depends on the weather.,1,2,状況による時の定番。,daily,depend を使う,depends on で「〜次第」,状況や条件によって変わることを表す,確定的な答えを避ける時に便利,depend on + 名詞で「〜に依存する」,That depends|It varies|It's up to ~
 12,納得です。,That makes sense.,1,1,理解した時の相槌。,work,make sense で「納得」,That を主語にする,相手の説明が論理的で理解できたことを示す,同意と理解を同時に表現する便利なフレーズ,make sense は「意味をなす」という慣用表現,I see|I understand|That's reasonable
 13,それなら納得です。,Fair enough.,1,1,妥協や同意の表現。,work,Fair を使う,2語だけの短い表現,完全には賛成ではないが受け入れるニュアンス,妥協や譲歩を含んだ同意。That makes sense より軽い,Fair は「公平な」が原義だが、ここでは「まあいいか」,I can accept that|OK then|That works
 14,一理ありますね。,You have a point.,1,1,相手の意見を認める。,work,point を使う,have a point で「一理ある」,相手の主張に説得力があることを認める,完全同意ではないが、妥当性を認める表現,have a point は「正しい点がある」という意味,You're right|That's true|Good point
-15,そうだと{x}。,I {x} so.,1,2,控えめな同意。,daily,I think so より控えめ,suppose か guess を使う,確信は弱いが同意する表現,I think so より自信がない時に使う。謙虚な印象,suppose と guess はほぼ同じだが suppose の方がやや丁寧,I think so|Probably|Maybe
-16,あまり{x}ないです。,I'd rather not {x}.,1,2,やんわり断る。,daily,rather を使う,I'd は I would の短縮,何かをしたくないことを丁寧に伝える,直接的な拒否より柔らかい断り方,would rather not + 動詞の原形,I don't want to|I prefer not to|I'd prefer to skip
-17,私が{x}よ。,I'll {x}.,1,2,引き受ける時。,work,I'll で引き受ける,I will の短縮形,自分が責任を持って対応することを表明,積極的に引き受ける意思を示す,I'll は未来形で「私がやります」,Let me ~|I can ~|I've got it
-18,{x}ありがとうございます。,Thanks for {x}.,1,2,丁寧な感謝。,work,Thanks for の後に名詞,Thank you より少しカジュアル,具体的な行為に対する感謝,ビジネスでも使えるが Thank you の方がフォーマル,Thanks for + 名詞/動名詞,Thank you for ~|I appreciate ~|Much appreciated
-19,{x}感謝します。,I appreciate {x}.,1,2,よりフォーマル。,work,appreciate を使う,Thanks より丁寧,深い感謝を表現するフォーマルな言い方,ビジネスや目上の人に使う。Thanks より重みがある,appreciate + 名詞/動名詞で感謝を表す,Thank you very much|I'm grateful for ~|Many thanks
+15,そうだと思います。,I suppose so.,1,2,控えめな同意。,daily,I think so より控えめ,suppose か guess を使う,確信は弱いが同意する表現,I think so より自信がない時に使う。謙虚な印象,suppose と guess はほぼ同じだが suppose の方がやや丁寧,I think so|Probably|Maybe
+16,あまり言いたくないです。,I'd rather not say.,1,2,やんわり断る。,daily,rather を使う,I'd は I would の短縮,何かをしたくないことを丁寧に伝える,直接的な拒否より柔らかい断り方,would rather not + 動詞の原形,I don't want to|I prefer not to|I'd prefer to skip
+17,私がやりますよ。,I'll handle it.,1,2,引き受ける時。,work,I'll で引き受ける,I will の短縮形,自分が責任を持って対応することを表明,積極的に引き受ける意思を示す,I'll は未来形で「私がやります」,Let me ~|I can ~|I've got it
+18,ご理解ありがとうございます。,Thanks for understanding.,1,2,丁寧な感謝。,work,Thanks for の後に名詞,Thank you より少しカジュアル,具体的な行為に対する感謝,ビジネスでも使えるが Thank you の方がフォーマル,Thanks for + 名詞/動名詞,Thank you for ~|I appreciate ~|Much appreciated
+19,お気持ち感謝します。,I appreciate the offer.,1,2,よりフォーマル。,work,appreciate を使う,Thanks より丁寧,深い感謝を表現するフォーマルな言い方,ビジネスや目上の人に使う。Thanks より重みがある,appreciate + 名詞/動名詞で感謝を表す,Thank you very much|I'm grateful for ~|Many thanks
 20,気にしないで。,No worries.,1,1,謝罪への返答。,daily,worry を使う,複数形 worries,相手の謝罪を軽く受け流す表現,「大丈夫だよ」という安心感を与える,No worries はカジュアルな口語表現,No problem|Don't worry about it|It's fine
 21,うっかり忘れてました。,It slipped my mind.,1,1,うっかり忘れた。,daily,slip を使う,mind は「心」,うっかり忘れてしまったことを伝える,故意ではなく、記憶から抜け落ちたニュアンス,slip は「滑る」で、記憶から滑り落ちたイメージ,I forgot|I totally forgot|It escaped me
 22,予想外でした。,I didn't see that coming.,1,1,完全に想定外。,daily,see を使う,過去形 didn't,全く予想していなかったことを表す,驚きや意外性を強調する表現,see ~ coming で「〜を予見する」,That was unexpected|I wasn't expecting that|What a surprise
-23,{x}を見ましょう。,Let's see {x}.,1,2,経過観察。,work,Let's see で提案,様子を見る,結果を待って見極めようという提案,即断せず経過を観察する慎重なアプローチ,Let's see + 疑問詞節,Let's wait and see|We'll see|Time will tell
+23,様子を見ましょう。,Let's see how it goes.,1,2,経過観察。,work,Let's see で提案,様子を見る,結果を待って見極めようという提案,即断せず経過を観察する慎重なアプローチ,Let's see + 疑問詞節,Let's wait and see|We'll see|Time will tell
 24,また連絡します。,Let's keep in touch.,1,1,別れ際の挨拶。,daily,keep in touch で「連絡を取り合う」,touch は「接触」,今後も連絡を取り合おうという挨拶,関係を継続したい意思を示す友好的な表現,keep in touch は慣用表現,Stay in touch|Talk to you soon|We'll be in touch
-25,また{x}で。,I'll catch you {x}.,1,2,カジュアルな別れ。,daily,catch を使う,you を catch する,またすぐ会おうというカジュアルな別れの挨拶,友人同士で使う砕けた表現,catch you は「また会おう」という意味のスラング,See you later|Talk to you soon|Catch you later
+25,また後でで。,I'll catch you later.,1,2,カジュアルな別れ。,daily,catch を使う,you を catch する,またすぐ会おうというカジュアルな別れの挨拶,友人同士で使う砕けた表現,catch you は「また会おう」という意味のスラング,See you later|Talk to you soon|Catch you later
 26,お先にどうぞ。,Please go ahead.,1,1,順番を譲る。,service,go ahead で「先にどうぞ」,Please で丁寧に,相手に先に行ってもらう時の表現,親切で丁寧な譲り方,go ahead は「先に進む」という意味,After you|You first|Go on ahead
-27,{x}でしょう。,You must be {x}.,1,2,相手の状態推測。,daily,must で推測,must be で「〜に違いない」,相手の状態を推測して共感を示す,確信度の高い推測。相手への気遣いを表現,must + be + 形容詞で強い推測,You seem ~|You look ~|I bet you're ~
+27,お疲れでしょう。,You must be tired.,1,2,相手の状態推測。,daily,must で推測,must be で「〜に違いない」,相手の状態を推測して共感を示す,確信度の高い推測。相手への気遣いを表現,must + be + 形容詞で強い推測,You seem ~|You look ~|I bet you're ~
 28,大丈夫ですか？,Is everything all right?,1,1,体調や状況確認。,daily,everything を使う,all right で「大丈夫」,相手の状態や状況を心配して尋ねる,気遣いを示す一般的な表現,Is + 主語 + all right? の疑問文,Are you OK?|Is everything OK?|Are you all right?
-29,{x}もらえますか？,Could you {x}?,1,2,丁寧な依頼。,work,Could you で丁寧に,Can you より丁寧,相手に何かをお願いする丁寧な表現,ビジネスでよく使う。Can you よりフォーマル,Could you + 動詞の原形,Can you ~?|Would you mind ~ing?|Would you ~?
-30,残念ながら{x}です。,I'm afraid {x}.,1,2,断りのクッション。,service,I'm afraid で始める,afraid は「恐れる」,悪い知らせや断りを柔らかく伝える,直接的な否定を避けるクッション言葉,I'm afraid (that) + 節,Unfortunately|I'm sorry but|Regrettably
+29,説明もらえますか？,Could you explain?,1,2,丁寧な依頼。,work,Could you で丁寧に,Can you より丁寧,相手に何かをお願いする丁寧な表現,ビジネスでよく使う。Can you よりフォーマル,Could you + 動詞の原形,Can you ~?|Would you mind ~ing?|Would you ~?
+30,残念ながらそうですです。,I'm afraid so.,1,2,断りのクッション。,service,I'm afraid で始める,afraid は「恐れる」,悪い知らせや断りを柔らかく伝える,直接的な否定を避けるクッション言葉,I'm afraid (that) + 節,Unfortunately|I'm sorry but|Regrettably
