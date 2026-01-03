@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
-361,考えさせてください。,Let me think.,,2,1,時間が必要。,daily,think を使う,Let me を使う,少し考える時間が欲しいと伝える,即答できない時の定番表現,Let me + 動詞で許可を求める,Give me a moment|Let me consider|I need to think
-362,アイデアは理解できます。,I get your idea.,,2,1,相手の考えを理解。,work,idea を使う,get を使う,相手の考えを理解したことを伝える,get は understand のカジュアル表現,I get は「理解する」という口語表現,I understand your idea|I see your plan|I follow you
-363,それは面白いですね。,That's interesting.,,2,1,興味を示す。,daily,interesting を使う,That's で始まる,相手の話に興味があることを示す,ニュートラルな評価表現,That's interesting は「興味深い」という形容詞,That's intriguing|That's fascinating|Interesting point
-364,その気持ち分かります。,I can relate to that.,,2,1,共感を示す。,daily,relate を使う,to that を使う,同じ経験や感情を共有できると伝える,相手の気持ちに寄り添う表現,relate to は「共感する・関連づける」という句動詞,I understand that feeling|I feel the same|I've been there
-365,それは妥当ですね。,That sounds reasonable.,,2,1,理にかなっている。,work,reasonable を使う,sounds を使う,提案が理にかなっていると評価する,理性的な判断を示す表現,sound + 形容詞で「〜に思える」,That seems fair|That makes sense|That's logical
-366,あなたの言いたいことは分かります。,I see your point.,,2,1,相手の視点を理解。,daily,point を使う,your を使う,相手の主張を理解したことを伝える,議論で相手を尊重する表現,see your point は「あなたの論点が分かる」,I understand your perspective|I get your point|I follow you
-367,そういう見方もありますね。,That's one way to look at it.,,2,1,別の視点を認める。,work,look at を使う,one way を使う,他の見方もあると暗示しつつ認める,完全同意ではないが視点を認める表現,one way to look at it は「一つの見方」,One perspective|That's a viewpoint|One interpretation
-368,多分そうですね。,I guess so.,,2,1,控えめな同意。,daily,guess を使う,so を使う,確信はないが同意する,あまり強くない同意の表現,I guess は「たぶん」という推量,I suppose so|Probably|Maybe so
-369,そうは思いません。,I don't think so.,,2,1,否定的な意見。,daily,think を使う,don't を使う,そうは思わないと否定する,丁寧な反対意見の表明,I don't think は否定的意見の控えめな表現,I disagree|I doubt it|Not really
-370,その可能性はあります。,That's possible.,,2,1,可能性を認める。,work,possible を使う,That's で始まる,起こりうることを認める,確定ではないが否定もしない表現,possible は「可能な」という形容詞,It's possible|Could be|Maybe
-371,試す価値はあると思います。,I think it's worth trying.,,2,1,前向きな評価。,work,worth を使う,trying を使う,試してみる価値があると提案する,リスクを取る価値を認める表現,worth + 動名詞で「〜する価値がある」,Worth a shot|Worth considering|Worth the effort
-372,私の視点から言うと、,From my perspective,,,2,1,自分の見方を前置き。,work,perspective を使う,From を使う,自分の視点であることを明示する,客観性を持たせる前置き表現,from my perspective は「私の視点では」,In my view|From my angle|From where I stand
-373,私の経験では、,In my experience,,,2,1,経験に基づく意見。,work,experience を使う,In を使う,過去の経験から述べることを示す,説得力を持たせる前置き,in my experience は「私の経験では」,Based on my experience|From what I've seen|In my case
-374,私はそう考える傾向があります。,I tend to think that,,2,1,一般的な考え方。,work,tend to を使う,think を使う,普段そう考えることが多いと伝える,習慣的な思考パターンを示す,tend to + 動詞で「〜する傾向がある」,I usually think|I'm inclined to think|I generally believe
-375,その方向に傾いています。,I'm leaning toward that.,,2,1,選択肢に傾く。,work,leaning を使う,toward を使う,その選択肢に傾いていることを示す,まだ確定ではないが方向性を示す,lean toward は「〜に傾く」という句動詞,I'm favoring that|I'm considering that|Leaning that way
-376,そのアイデアは受け入れられます。,I'm open to that idea.,,2,1,柔軟な姿勢。,work,open to を使う,idea を使う,その提案を受け入れる用意があると伝える,前向きで柔軟な態度を示す,be open to は「〜を受け入れる」,I'm receptive to that|I'm willing to consider|I'm flexible
-377,まだ納得していません。,I'm not convinced yet.,,2,1,疑問を保留。,work,convinced を使う,yet を使う,まだ完全には納得していないと伝える,慎重な姿勢を示す表現,not convinced は「納得していない」,I'm not sure yet|I have doubts|I'm skeptical
-378,同じように感じます。,I feel the same way.,,2,1,同じ気持ち。,daily,feel を使う,same way を使う,相手と同じ感情を持っていると伝える,共感を示す表現,feel the same way は「同じように感じる」,I agree|I feel that too|Same here
-379,それには反対です。,I disagree with that.,,2,1,明確な反対。,work,disagree を使う,with that を使う,その意見に反対することを明言する,はっきりと反対を表明する,disagree with は「〜に反対する」,I don't agree|I oppose that|I think differently
-380,私は違う見方をしています。,I see it differently.,,2,1,異なる視点。,work,differently を使う,see を使う,異なる見方をしていることを伝える,対立を和らげる反対表現,see differently は「違う見方をする」,I have a different view|I see it another way|Different perspective
-381,それは私の優先事項ではありません。,That's not my priority.,,2,1,優先順位が低い。,work,priority を使う,not を使う,それを優先していないことを伝える,重要度が低いことを示す,priority は「優先事項」という名詞,Not my focus|Not important to me|Low on my list
-382,それで大丈夫です。,I'm fine with that.,,2,1,問題なく受け入れ。,daily,fine を使う,with that を使う,その提案に問題ないと伝える,同意や承認を示すカジュアル表現,I'm fine with は「〜で大丈夫」,That's okay|I'm good with that|No problem
-383,できればしたくありません。,I'd prefer not to.,,2,1,丁寧な拒否。,daily,prefer を使う,not to を使う,できれば避けたいと丁寧に伝える,直接的な拒否を避ける表現,I'd prefer は I would prefer の短縮形,I'd rather not|I'd like to avoid that|Not my preference
-384,どちらでも構いません。,I don't mind either way.,,2,1,どちらでもOK。,daily,mind を使う,either way を使う,どちらの選択肢でも問題ないと伝える,柔軟性を示す表現,either way は「どちらでも」,I'm fine either way|No preference|Up to you
-385,それで大丈夫です。,That works for me.,,2,1,都合が良い。,work,works を使う,for me を使う,その提案が自分に都合良いと伝える,スケジュールや計画の承認,work for は「〜にとって都合が良い」,That's good for me|That suits me|I'm available
-386,それで問題ありません。,I'm okay with it.,,2,1,承認を示す。,daily,okay を使う,with it を使う,その提案に問題ないと承認する,カジュアルな同意表現,be okay with は「〜で大丈夫」,I'm fine with it|That's alright|No issues
-387,むしろ待ちたいです。,I'd rather wait.,,2,1,待つことを選択。,work,rather を使う,wait を使う,待つ方を好むと伝える,別の選択肢を好む意思表示,I'd rather は「むしろ〜したい」,I prefer to wait|I'd like to wait|Better to wait
-388,それについて考えています。,I'm thinking about it.,,2,1,検討中。,daily,thinking を使う,about it を使う,現在検討中であることを伝える,決定までの猶予を示す,現在進行形で思考中を示す,I'm considering it|I'm mulling it over|Still thinking
-389,まだ決めているところです。,I'm still deciding.,,2,1,決定プロセス中。,work,deciding を使う,still を使う,まだ決定の途中であることを伝える,判断に時間がかかっていることを示す,現在進行形で進行中を強調,Still making up my mind|Haven't decided|In the process
-390,まだ決めていません。,I haven't decided yet.,,2,1,未決定。,daily,decided を使う,yet を使う,まだ決定していないことを明言する,決断までの時間を求める表現,haven't decided は現在完了の否定形,Not decided yet|Still undecided|No decision yet
+no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+361,考えさせてください。,Let me think.,2,1,時間が必要。,daily,think を使う,Let me を使う,少し考える時間が欲しいと伝える,即答できない時の定番表現,Let me + 動詞で許可を求める,Give me a moment|Let me consider|I need to think
+362,アイデアは理解できます。,I get your idea.,2,1,相手の考えを理解。,work,idea を使う,get を使う,相手の考えを理解したことを伝える,get は understand のカジュアル表現,I get は「理解する」という口語表現,I understand your idea|I see your plan|I follow you
+363,それは面白いですね。,That's interesting.,2,1,興味を示す。,daily,interesting を使う,That's で始まる,相手の話に興味があることを示す,ニュートラルな評価表現,That's interesting は「興味深い」という形容詞,That's intriguing|That's fascinating|Interesting point
+364,その気持ち分かります。,I can relate to that.,2,1,共感を示す。,daily,relate を使う,to that を使う,同じ経験や感情を共有できると伝える,相手の気持ちに寄り添う表現,relate to は「共感する・関連づける」という句動詞,I understand that feeling|I feel the same|I've been there
+365,それは妥当ですね。,That sounds reasonable.,2,1,理にかなっている。,work,reasonable を使う,sounds を使う,提案が理にかなっていると評価する,理性的な判断を示す表現,sound + 形容詞で「〜に思える」,That seems fair|That makes sense|That's logical
+366,あなたの言いたいことは分かります。,I see your point.,2,1,相手の視点を理解。,daily,point を使う,your を使う,相手の主張を理解したことを伝える,議論で相手を尊重する表現,see your point は「あなたの論点が分かる」,I understand your perspective|I get your point|I follow you
+367,そういう見方もありますね。,That's one way to look at it.,2,1,別の視点を認める。,work,look at を使う,one way を使う,他の見方もあると暗示しつつ認める,完全同意ではないが視点を認める表現,one way to look at it は「一つの見方」,One perspective|That's a viewpoint|One interpretation
+368,多分そうですね。,I guess so.,2,1,控えめな同意。,daily,guess を使う,so を使う,確信はないが同意する,あまり強くない同意の表現,I guess は「たぶん」という推量,I suppose so|Probably|Maybe so
+369,そうは思いません。,I don't think so.,2,1,否定的な意見。,daily,think を使う,don't を使う,そうは思わないと否定する,丁寧な反対意見の表明,I don't think は否定的意見の控えめな表現,I disagree|I doubt it|Not really
+370,その可能性はあります。,That's possible.,2,1,可能性を認める。,work,possible を使う,That's で始まる,起こりうることを認める,確定ではないが否定もしない表現,possible は「可能な」という形容詞,It's possible|Could be|Maybe
+371,試す価値はあると思います。,I think it's worth trying.,2,1,前向きな評価。,work,worth を使う,trying を使う,試してみる価値があると提案する,リスクを取る価値を認める表現,worth + 動名詞で「〜する価値がある」,Worth a shot|Worth considering|Worth the effort
+372,私の視点から言うと、,From my perspective,,2,1,自分の見方を前置き。,work,perspective を使う,From を使う,自分の視点であることを明示する,客観性を持たせる前置き表現,from my perspective は「私の視点では」,In my view|From my angle|From where I stand
+373,私の経験では、,In my experience,,2,1,経験に基づく意見。,work,experience を使う,In を使う,過去の経験から述べることを示す,説得力を持たせる前置き,in my experience は「私の経験では」,Based on my experience|From what I've seen|In my case
+374,私はそう考える傾向があります。,I tend to think that,2,1,一般的な考え方。,work,tend to を使う,think を使う,普段そう考えることが多いと伝える,習慣的な思考パターンを示す,tend to + 動詞で「〜する傾向がある」,I usually think|I'm inclined to think|I generally believe
+375,その方向に傾いています。,I'm leaning toward that.,2,1,選択肢に傾く。,work,leaning を使う,toward を使う,その選択肢に傾いていることを示す,まだ確定ではないが方向性を示す,lean toward は「〜に傾く」という句動詞,I'm favoring that|I'm considering that|Leaning that way
+376,そのアイデアは受け入れられます。,I'm open to that idea.,2,1,柔軟な姿勢。,work,open to を使う,idea を使う,その提案を受け入れる用意があると伝える,前向きで柔軟な態度を示す,be open to は「〜を受け入れる」,I'm receptive to that|I'm willing to consider|I'm flexible
+377,まだ納得していません。,I'm not convinced yet.,2,1,疑問を保留。,work,convinced を使う,yet を使う,まだ完全には納得していないと伝える,慎重な姿勢を示す表現,not convinced は「納得していない」,I'm not sure yet|I have doubts|I'm skeptical
+378,同じように感じます。,I feel the same way.,2,1,同じ気持ち。,daily,feel を使う,same way を使う,相手と同じ感情を持っていると伝える,共感を示す表現,feel the same way は「同じように感じる」,I agree|I feel that too|Same here
+379,それには反対です。,I disagree with that.,2,1,明確な反対。,work,disagree を使う,with that を使う,その意見に反対することを明言する,はっきりと反対を表明する,disagree with は「〜に反対する」,I don't agree|I oppose that|I think differently
+380,私は違う見方をしています。,I see it differently.,2,1,異なる視点。,work,differently を使う,see を使う,異なる見方をしていることを伝える,対立を和らげる反対表現,see differently は「違う見方をする」,I have a different view|I see it another way|Different perspective
+381,それは私の優先事項ではありません。,That's not my priority.,2,1,優先順位が低い。,work,priority を使う,not を使う,それを優先していないことを伝える,重要度が低いことを示す,priority は「優先事項」という名詞,Not my focus|Not important to me|Low on my list
+382,それで大丈夫です。,I'm fine with that.,2,1,問題なく受け入れ。,daily,fine を使う,with that を使う,その提案に問題ないと伝える,同意や承認を示すカジュアル表現,I'm fine with は「〜で大丈夫」,That's okay|I'm good with that|No problem
+383,できればしたくありません。,I'd prefer not to.,2,1,丁寧な拒否。,daily,prefer を使う,not to を使う,できれば避けたいと丁寧に伝える,直接的な拒否を避ける表現,I'd prefer は I would prefer の短縮形,I'd rather not|I'd like to avoid that|Not my preference
+384,どちらでも構いません。,I don't mind either way.,2,1,どちらでもOK。,daily,mind を使う,either way を使う,どちらの選択肢でも問題ないと伝える,柔軟性を示す表現,either way は「どちらでも」,I'm fine either way|No preference|Up to you
+385,それで大丈夫です。,That works for me.,2,1,都合が良い。,work,works を使う,for me を使う,その提案が自分に都合良いと伝える,スケジュールや計画の承認,work for は「〜にとって都合が良い」,That's good for me|That suits me|I'm available
+386,それで問題ありません。,I'm okay with it.,2,1,承認を示す。,daily,okay を使う,with it を使う,その提案に問題ないと承認する,カジュアルな同意表現,be okay with は「〜で大丈夫」,I'm fine with it|That's alright|No issues
+387,むしろ待ちたいです。,I'd rather wait.,2,1,待つことを選択。,work,rather を使う,wait を使う,待つ方を好むと伝える,別の選択肢を好む意思表示,I'd rather は「むしろ〜したい」,I prefer to wait|I'd like to wait|Better to wait
+388,それについて考えています。,I'm thinking about it.,2,1,検討中。,daily,thinking を使う,about it を使う,現在検討中であることを伝える,決定までの猶予を示す,現在進行形で思考中を示す,I'm considering it|I'm mulling it over|Still thinking
+389,まだ決めているところです。,I'm still deciding.,2,1,決定プロセス中。,work,deciding を使う,still を使う,まだ決定の途中であることを伝える,判断に時間がかかっていることを示す,現在進行形で進行中を強調,Still making up my mind|Haven't decided|In the process
+390,まだ決めていません。,I haven't decided yet.,2,1,未決定。,daily,decided を使う,yet を使う,まだ決定していないことを明言する,決断までの時間を求める表現,haven't decided は現在完了の否定形,Not decided yet|Still undecided|No decision yet

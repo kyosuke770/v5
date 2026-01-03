@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
-271,今はそれで十分です。,That's enough for now.,,1,1,一旦区切る時。,daily,enough を使う,for now を使う,とりあえず十分だと伝える,一区切りつけることを示す,enough は形容詞で「十分な」,That's good for now|That'll do|Sufficient for now
-272,問題は解決しました。,The problem is solved.,,1,1,完全解決。,work,solved を使う,is を使う,問題が完全に解決したことを報告する,現在形で解決済みの状態を示す,is solved は受動態で「解決された」,It's fixed|Problem resolved|All sorted
-273,それは気にしなくていいです。,You don't need to worry about that.,,1,1,安心させる。,daily,worry を使う,don't need to を使う,心配不要だと安心させる,相手の懸念を取り除く表現,don't need to + 動詞で不要,No need to worry|Don't worry about it|That's fine
-274,そのままで大丈夫です。,You can leave it as it is.,,1,1,変更不要。,work,leave を使う,as it is を使う,現状のままで問題ないと伝える,変更の必要がないことを示す,leave it as it is は「そのままにする」という慣用表現,Keep it as is|No changes needed|It's fine as is
-275,今は特にありません。,Nothing in particular.,,1,1,特にない時。,daily,particular を使う,Nothing を使う,特筆すべきことがないと伝える,質問への簡潔な返答,in particular は「特に」という慣用表現,Nothing special|Not really|Nothing much
-276,確認は完了しています。,The check is complete.,,1,1,確認完了。,work,complete を使う,check を使う,確認作業が完了したことを報告する,現在形で完了済みの状態,is complete は「完了した」という状態,Check's done|Verification complete|All checked
-277,それは良い結果です。,That's a good outcome.,,1,1,結果を評価。,work,outcome を使う,good を使う,結果が良好だと評価する,成果を肯定的に評価する表現,outcome は「結果・成果」という名詞,Good result|Positive outcome|That worked out well
-278,時間が許せば…,If time allows...,,1,1,条件付き前置き。,work,allows を使う,If を使う,時間があればという条件を示す,実現可能性に条件をつける前置き,if time allows は「時間が許せば」,If there's time|Time permitting|If we have time
-279,それについては同意します。,I agree with that.,,1,1,明確な同意。,daily,agree を使う,with that を使う,その件について同意することを明言する,明確な同意の表明,agree with は「〜に同意する」,I agree|I'm with you on that|I concur
-280,一旦ここで終わりましょう。,Let's wrap it up here.,,1,1,終了の合図。,daily,wrap up を使う,here を使う,ここで終わりにしようと提案する,作業や会議の終了を提案,wrap up は「終わりにする」という句動詞,Let's call it|Let's finish here|Let's end here
-281,{x}しても大丈夫です。,It's okay to {x}.,wait=待つ|leave=帰る|skip it=飛ばす,1,2,許可表現。,daily,okay to を使う,{x}は動詞,何かをする許可を与える,相手の行動を承認する表現,It's okay to + 動詞で許可,It's fine to ~|You can ~|Feel free to ~
-282,念のため{x}します。,I'll {x} just in case.,check again=再確認|save it=保存する,1,2,保険行動。,work,just in case を使う,{x}は動詞,念のため行動することを伝える,予防的な対応を示す,just in case は「念のため」という慣用表現,I'll ~ to be safe|~ just to be sure|~ for safety
-283,{x}する必要はありません。,There's no need to {x}.,rush=急ぐ|worry=心配する,1,2,不要を伝える。,daily,no need を使う,{x}は動詞,何かをする必要がないと伝える,相手を安心させる表現,There's no need to + 動詞で不要,You don't need to ~|No need for ~|Don't have to ~
-284,まず{x}から始めましょう。,Let's start with {x}.,this part=この部分|the basics=基本,1,2,開始点を示す。,work,start with を使う,{x}は名詞,最初に取り組むことを提案する,優先順位を示す表現,start with + 名詞で開始点,Begin with ~|Let's kick off with ~|Start by ~ing
-285,{x}で問題ありません。,{x} is fine.,that approach=その方法|this plan=この案,1,2,方法承認。,work,is fine を使う,{x}は名詞,その方法で問題ないと承認する,提案を受け入れる表現,is fine は「問題ない」という状態,~ works|~ is okay|~ sounds good
-286,少し{x}すぎます。,It's a bit too {x}.,much=多い|complicated=複雑,1,2,程度表現。,daily,too を使う,{x}は形容詞,程度が過ぎていることを伝える,適切な範囲を超えている時,too + 形容詞で「〜すぎる」,A little too ~|Somewhat too ~|Slightly excessive
-287,{x}かもしれません。,It could be {x}.,a problem=問題|useful=役立つ,1,2,可能性表現。,daily,could be を使う,{x}は名詞または形容詞,可能性があることを示す,might より少し確信度が高い,could be は「〜かもしれない」,Might be ~|Could possibly be ~|Maybe it's ~
-288,一度{x}してみましょう。,Let's try {x}.,this way=この方法|again=もう一度,1,2,試行提案。,work,try を使う,{x}は名詞または動詞,試してみようと提案する,実験的なアプローチを提案,Let's try + 名詞/動名詞で試行,Let's give ~ a try|Try ~ing|Let's attempt ~
-289,{x}について確認します。,I'll check {x}.,the details=詳細|that point=その点,1,2,対象確認。,work,check を使う,{x}は名詞,特定の事項を確認すると約束する,焦点を明確にした確認,check + 名詞で確認対象,I'll verify ~|I'll look into ~|I'll confirm ~
-290,{x}する時間があります。,We have time to {x}.,discuss=話し合う|review=見直す,1,2,余裕を示す。,work,have time を使う,{x}は動詞,時間的余裕があることを伝える,対応可能であることを示す,have time to + 動詞で時間の余裕,There's time to ~|We can ~|Time to ~
-291,とりあえず落ち着こう。,Take a breath.,,1,3,感情リセット。,daily,breath を使う,Take を使う,深呼吸して落ち着こうと促す,感情的な時に冷静さを取り戻す表現,take a breath は「一息つく」という慣用表現,Calm down|Cool off|Relax
-292,それは本質じゃない。,That's beside the point.,,1,3,論点ずらしを防ぐ。,work,beside を使う,point を使う,本質から外れていることを指摘する,議論の焦点を戻す表現,beside the point は「論点から外れた」という慣用表現,That's not the issue|That's irrelevant|Off topic
-293,話が噛み合っていない。,We're not on the same page.,,1,3,認識ズレ。,work,same page を使う,not を使う,認識が一致していないことを指摘する,コミュニケーションのズレを示す,on the same page は「同じ理解」という慣用表現,We're misaligned|We misunderstand|Different wavelengths
-294,一旦整理しよう。,Let's regroup.,,1,3,立て直し。,work,regroup を使う,Let's を使う,一旦整理し直そうと提案する,混乱から立て直す意思,regroup は「再編成する」という動詞,Let's reorganize|Let's reset|Let's sort this out
-295,ここが分かれ目だ。,This is the turning point.,,1,3,重要局面。,daily,turning point を使う,This is を使う,重要な転換点であることを示す,決定的な瞬間を強調,turning point は「転機」という名詞,This is critical|Key moment|Crucial point
-296,今日はここまでにしましょう。,Let's call it a day.,,1,1,一日の終わり。,daily,call it を使う,a day を使う,今日はこれで終わりにしようと提案する,一日の作業を終える時の定番表現,call it a day は「切り上げる」という慣用表現,Let's wrap up|That's enough for today|Let's finish up
-297,また明日続けましょう。,Let's continue tomorrow.,,1,1,継続の約束。,daily,continue を使う,tomorrow を使う,明日続きをやろうと約束する,作業の継続を翌日に延期,continue は「続ける」という動詞,Resume tomorrow|Pick it up tomorrow|Carry on tomorrow
-298,よくやりました。,Well done.,,1,1,労い。,daily,2語のフレーズ,done を使う,よくやったと褒める,成果を認める簡潔な表現,Well done は定型の称賛表現,Good job|Great work|Nice job
-299,いい進み具合です。,We're making good progress.,,1,1,進捗評価。,work,progress を使う,making を使う,順調に進んでいることを評価する,進捗状況を肯定的に評価,make progress は「進歩する」という慣用表現,Going well|Good pace|Coming along nicely
-300,これで完了です。,That's all for now.,,1,1,完全終了。,daily,all を使う,for now を使う,とりあえずこれで全部だと伝える,一区切りの終了を示す,That's all for now は定型表現,That's it|We're done|All finished
+no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+271,今はそれで十分です。,That's enough for now.,1,1,一旦区切る時。,daily,enough を使う,for now を使う,とりあえず十分だと伝える,一区切りつけることを示す,enough は形容詞で「十分な」,That's good for now|That'll do|Sufficient for now
+272,問題は解決しました。,The problem is solved.,1,1,完全解決。,work,solved を使う,is を使う,問題が完全に解決したことを報告する,現在形で解決済みの状態を示す,is solved は受動態で「解決された」,It's fixed|Problem resolved|All sorted
+273,それは気にしなくていいです。,You don't need to worry about that.,1,1,安心させる。,daily,worry を使う,don't need to を使う,心配不要だと安心させる,相手の懸念を取り除く表現,don't need to + 動詞で不要,No need to worry|Don't worry about it|That's fine
+274,そのままで大丈夫です。,You can leave it as it is.,1,1,変更不要。,work,leave を使う,as it is を使う,現状のままで問題ないと伝える,変更の必要がないことを示す,leave it as it is は「そのままにする」という慣用表現,Keep it as is|No changes needed|It's fine as is
+275,今は特にありません。,Nothing in particular.,1,1,特にない時。,daily,particular を使う,Nothing を使う,特筆すべきことがないと伝える,質問への簡潔な返答,in particular は「特に」という慣用表現,Nothing special|Not really|Nothing much
+276,確認は完了しています。,The check is complete.,1,1,確認完了。,work,complete を使う,check を使う,確認作業が完了したことを報告する,現在形で完了済みの状態,is complete は「完了した」という状態,Check's done|Verification complete|All checked
+277,それは良い結果です。,That's a good outcome.,1,1,結果を評価。,work,outcome を使う,good を使う,結果が良好だと評価する,成果を肯定的に評価する表現,outcome は「結果・成果」という名詞,Good result|Positive outcome|That worked out well
+278,時間が許せば…,If time allows...,1,1,条件付き前置き。,work,allows を使う,If を使う,時間があればという条件を示す,実現可能性に条件をつける前置き,if time allows は「時間が許せば」,If there's time|Time permitting|If we have time
+279,それについては同意します。,I agree with that.,1,1,明確な同意。,daily,agree を使う,with that を使う,その件について同意することを明言する,明確な同意の表明,agree with は「〜に同意する」,I agree|I'm with you on that|I concur
+280,一旦ここで終わりましょう。,Let's wrap it up here.,1,1,終了の合図。,daily,wrap up を使う,here を使う,ここで終わりにしようと提案する,作業や会議の終了を提案,wrap up は「終わりにする」という句動詞,Let's call it|Let's finish here|Let's end here
+281,{x}しても大丈夫です。,It's okay to {x}.,1,2,許可表現。,daily,okay to を使う,{x}は動詞,何かをする許可を与える,相手の行動を承認する表現,It's okay to + 動詞で許可,It's fine to ~|You can ~|Feel free to ~
+282,念のため{x}します。,I'll {x} just in case.,1,2,保険行動。,work,just in case を使う,{x}は動詞,念のため行動することを伝える,予防的な対応を示す,just in case は「念のため」という慣用表現,I'll ~ to be safe|~ just to be sure|~ for safety
+283,{x}する必要はありません。,There's no need to {x}.,1,2,不要を伝える。,daily,no need を使う,{x}は動詞,何かをする必要がないと伝える,相手を安心させる表現,There's no need to + 動詞で不要,You don't need to ~|No need for ~|Don't have to ~
+284,まず{x}から始めましょう。,Let's start with {x}.,1,2,開始点を示す。,work,start with を使う,{x}は名詞,最初に取り組むことを提案する,優先順位を示す表現,start with + 名詞で開始点,Begin with ~|Let's kick off with ~|Start by ~ing
+285,{x}で問題ありません。,{x} is fine.,1,2,方法承認。,work,is fine を使う,{x}は名詞,その方法で問題ないと承認する,提案を受け入れる表現,is fine は「問題ない」という状態,~ works|~ is okay|~ sounds good
+286,少し{x}すぎます。,It's a bit too {x}.,1,2,程度表現。,daily,too を使う,{x}は形容詞,程度が過ぎていることを伝える,適切な範囲を超えている時,too + 形容詞で「〜すぎる」,A little too ~|Somewhat too ~|Slightly excessive
+287,{x}かもしれません。,It could be {x}.,1,2,可能性表現。,daily,could be を使う,{x}は名詞または形容詞,可能性があることを示す,might より少し確信度が高い,could be は「〜かもしれない」,Might be ~|Could possibly be ~|Maybe it's ~
+288,一度{x}してみましょう。,Let's try {x}.,1,2,試行提案。,work,try を使う,{x}は名詞または動詞,試してみようと提案する,実験的なアプローチを提案,Let's try + 名詞/動名詞で試行,Let's give ~ a try|Try ~ing|Let's attempt ~
+289,{x}について確認します。,I'll check {x}.,1,2,対象確認。,work,check を使う,{x}は名詞,特定の事項を確認すると約束する,焦点を明確にした確認,check + 名詞で確認対象,I'll verify ~|I'll look into ~|I'll confirm ~
+290,{x}する時間があります。,We have time to {x}.,1,2,余裕を示す。,work,have time を使う,{x}は動詞,時間的余裕があることを伝える,対応可能であることを示す,have time to + 動詞で時間の余裕,There's time to ~|We can ~|Time to ~
+291,とりあえず落ち着こう。,Take a breath.,1,3,感情リセット。,daily,breath を使う,Take を使う,深呼吸して落ち着こうと促す,感情的な時に冷静さを取り戻す表現,take a breath は「一息つく」という慣用表現,Calm down|Cool off|Relax
+292,それは本質じゃない。,That's beside the point.,1,3,論点ずらしを防ぐ。,work,beside を使う,point を使う,本質から外れていることを指摘する,議論の焦点を戻す表現,beside the point は「論点から外れた」という慣用表現,That's not the issue|That's irrelevant|Off topic
+293,話が噛み合っていない。,We're not on the same page.,1,3,認識ズレ。,work,same page を使う,not を使う,認識が一致していないことを指摘する,コミュニケーションのズレを示す,on the same page は「同じ理解」という慣用表現,We're misaligned|We misunderstand|Different wavelengths
+294,一旦整理しよう。,Let's regroup.,1,3,立て直し。,work,regroup を使う,Let's を使う,一旦整理し直そうと提案する,混乱から立て直す意思,regroup は「再編成する」という動詞,Let's reorganize|Let's reset|Let's sort this out
+295,ここが分かれ目だ。,This is the turning point.,1,3,重要局面。,daily,turning point を使う,This is を使う,重要な転換点であることを示す,決定的な瞬間を強調,turning point は「転機」という名詞,This is critical|Key moment|Crucial point
+296,今日はここまでにしましょう。,Let's call it a day.,1,1,一日の終わり。,daily,call it を使う,a day を使う,今日はこれで終わりにしようと提案する,一日の作業を終える時の定番表現,call it a day は「切り上げる」という慣用表現,Let's wrap up|That's enough for today|Let's finish up
+297,また明日続けましょう。,Let's continue tomorrow.,1,1,継続の約束。,daily,continue を使う,tomorrow を使う,明日続きをやろうと約束する,作業の継続を翌日に延期,continue は「続ける」という動詞,Resume tomorrow|Pick it up tomorrow|Carry on tomorrow
+298,よくやりました。,Well done.,1,1,労い。,daily,2語のフレーズ,done を使う,よくやったと褒める,成果を認める簡潔な表現,Well done は定型の称賛表現,Good job|Great work|Nice job
+299,いい進み具合です。,We're making good progress.,1,1,進捗評価。,work,progress を使う,making を使う,順調に進んでいることを評価する,進捗状況を肯定的に評価,make progress は「進歩する」という慣用表現,Going well|Good pace|Coming along nicely
+300,これで完了です。,That's all for now.,1,1,完全終了。,daily,all を使う,for now を使う,とりあえずこれで全部だと伝える,一区切りの終了を示す,That's all for now は定型表現,That's it|We're done|All finished

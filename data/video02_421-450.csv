@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
-421,イライラしています。,I'm frustrated.,,2,2,苛立ち。,work,frustrated を使う,I'm を使う,思い通りにいかず苛立っていることを伝える,ネガティブな感情を示す,frustrated は「いらだった」という形容詞,I'm annoyed|I'm irritated|Feeling frustrated
-422,それには満足しています。,I'm satisfied with that.,,2,2,満足感。,work,satisfied を使う,with that を使う,結果に満足していることを伝える,肯定的な評価を示す,satisfied with は「〜に満足している」,I'm happy with that|That's good enough|Content with that
-423,それには抵抗があります。,I'm not comfortable with it.,,2,2,違和感。,work,comfortable を使う,not を使う,その提案に違和感があることを伝える,丁寧な拒否や懸念を示す,not comfortable with は「〜に違和感がある」,I'm uneasy about it|It doesn't feel right|I have concerns
-424,それには自信があります。,I'm confident about it.,,2,2,確信。,work,confident を使う,about it を使う,自信を持っていることを伝える,ポジティブな確信を示す,confident about は「〜に自信がある」,I'm sure about it|I'm certain|Feeling confident
-425,今は確信が持てません。,I'm unsure right now.,,2,2,迷い。,daily,unsure を使う,right now を使う,現時点で確信が持てないことを伝える,判断の困難さを示す,unsure は「確信がない」という形容詞,I'm uncertain|I'm not sure|I'm in doubt
-426,楽観的な気分です。,I'm feeling optimistic.,,2,2,前向きな見通し。,work,optimistic を使う,feeling を使う,良い結果を期待していることを伝える,ポジティブな見通しを示す,optimistic は「楽観的な」という形容詞,I'm hopeful|Feeling positive|Looking on the bright side
-427,少し心配しています。,I'm a little concerned.,,2,2,懸念。,work,concerned を使う,a little を使う,少し心配していることを伝える,控えめな不安を示す,concerned は「心配している」という形容詞,I'm worried|I have concerns|Slightly worried
-428,精神的に疲れています。,I'm mentally exhausted.,,2,2,精神的疲労。,work,exhausted を使う,mentally を使う,精神的に疲れ切っていることを伝える,深刻な疲労状態を示す,mentally exhausted は「精神的に疲弊した」,Mentally drained|Burnt out|Mentally tired
-429,良い精神状態です。,I'm in a good headspace.,,2,2,心の余裕。,daily,headspace を使う,good を使う,精神的に良い状態にあることを伝える,前向きな心理状態を示す,headspace は「精神状態」という名詞,I'm in a good place|Mentally good|Good mindset
-430,まだ準備ができていません。,I'm not ready yet.,,2,2,未準備。,daily,ready を使う,yet を使う,まだ準備が整っていないことを伝える,時間が必要であることを示す,not ready yet は「まだ準備できていない」,Not prepared yet|Need more time|Still getting ready
-431,これはどうですか？,How about this?,,2,1,提案。,daily,How about を使う,this で指す,何かを提案する,カジュアルな提案表現,How about は「〜はどう？」という提案,What about this|How's this|What do you think about this
-432,これを試してみたらどうですか？,What if we try this?,,2,1,試行の提案。,work,What if を使う,try を使う,新しい方法を試すことを提案する,仮定的な提案表現,What if は「もし〜したら？」という仮定,How about trying this|Let's try this|Why don't we try this
-433,それで大丈夫ですか？,Does that work for you?,,2,1,都合確認。,daily,work for you を使う,Does で始める,相手の都合を確認する,丁寧な確認表現,work for you は「あなたにとって都合が良い」,Is that okay|Does that suit you|Is that fine with you
-434,やってみる気はありますか？,Are you up for it?,,2,1,意欲確認。,daily,up for it を使う,Are で始める,相手のやる気を確認する,カジュアルな誘い表現,up for は「〜する気がある」というイディオム,Interested in doing it|Are you willing|Want to give it a try
-435,興味はありますか？,Would you be interested?,,2,1,関心確認。,work,interested を使う,Would で丁寧に,相手の興味を丁寧に尋ねる,フォーマルな関心確認,Would you be は丁寧な依頼形,Are you interested|Does this interest you|Might you be interested
-436,一歩ずつ進めましょう。,Let's take it step by step.,,2,1,段階的進行。,work,step by step を使う,Let's で誘う,段階的に進めることを提案する,焦らずに進める提案,step by step は「一歩ずつ」というイディオム,Let's go step by step|One step at a time|Let's proceed gradually
-437,シンプルにいきましょう。,Let's keep it simple.,,2,1,簡素化の提案。,work,keep it simple を使う,Let's で誘う,複雑にせず簡単にすることを提案する,シンプルさを重視する提案,keep it は「〜を保つ」,Let's make it simple|Keep things simple|Let's not complicate it
-438,まずはこれに集中しましょう。,Let's focus on this first.,,2,1,優先順位。,work,focus on を使う,first で順序を示す,最初にこれに集中することを提案する,優先事項を明確にする,focus on は「〜に集中する」,Let's prioritize this|This should come first|Let's tackle this first
-439,様子を見てみましょう。,Let's see what happens.,,2,1,結果待ち。,daily,see what happens を使う,Let's で誘う,結果を待つことを提案する,柔軟な対応を示す表現,see what happens は「どうなるか見る」,Let's wait and see|Let's see how it goes|We'll see what happens
-440,一緒に考えましょう。,Let's figure it out together.,,2,1,共同解決。,work,figure out を使う,together で協力を示す,一緒に解決策を見つけることを提案する,協力的な姿勢を示す,figure out は「解決する」という句動詞,Let's solve it together|Let's work it out together|Let's tackle it together
-441,それを試してみませんか？,Why don't we give it a try?,,2,1,試行の誘い。,daily,Why don't we を使う,give it a try を使う,試してみることを提案する,柔らかい提案表現,Why don't we は「〜しませんか」,Let's give it a try|Shall we try it|How about trying it
-442,少し休憩しませんか？,Should we take a quick break?,,2,1,休憩提案。,work,Should we を使う,quick break を使う,短い休憩を提案する,タイミングを見た提案,Should we は「〜しましょうか」,Let's take a break|How about a short break|Want to take a breather
-443,別の方法を試しましょう。,Let's try a different approach.,,2,1,方向転換。,work,different approach を使う,try を使う,別のやり方を試すことを提案する,柔軟性を示す提案,approach は「方法・アプローチ」,Let's try another way|Let's take a different route|How about trying differently
-444,あなたに任せます。,I'll leave it up to you.,,2,1,委任。,work,leave it up to を使う,you で相手に委ねる,相手に決定を任せることを伝える,信頼を示す表現,leave it up to は「〜に任せる」,It's up to you|You decide|Your call
-445,後で話し合いましょう。,Let's discuss it later.,,2,1,延期提案。,work,discuss を使う,later で時間を示す,後で話し合うことを提案する,タイミングの調整,discuss は「話し合う」という動詞,Let's talk about it later|We'll discuss later|Save it for later
-446,もう一度やり直しませんか？,Should we start over?,,2,1,やり直し提案。,work,start over を使う,Should we で提案,最初からやり直すことを提案する,リセットの提案,start over は「やり直す」という句動詞,Let's start fresh|Shall we begin again|How about restarting
-447,一緒に行きませんか？,Want to come along?,,2,1,同行の誘い。,daily,come along を使う,Want to で誘う,一緒に行くことを誘う,カジュアルな誘い表現,come along は「一緒に来る」,Do you want to join|Would you like to come|Care to join me
-448,計画を立てましょう。,Let's make a plan.,,2,1,計画提案。,work,make a plan を使う,Let's で誘う,計画を作ることを提案する,準備の重要性を示す,make a plan は「計画を立てる」,Let's plan it out|Let's come up with a plan|We should plan this
-449,柔軟に対応しましょう。,Let's be flexible.,,2,1,柔軟性の提案。,work,flexible を使う,be で状態を示す,柔軟に対応することを提案する,適応力を重視する提案,flexible は「柔軟な」という形容詞,Let's stay flexible|Let's adapt|Let's keep our options open
-450,協力してやりましょう。,Let's work together on this.,,2,1,協力提案。,work,work together を使う,on this で対象を示す,協力して取り組むことを提案する,チームワークを重視する提案,work together は「協力する」,Let's collaborate|Let's team up|Let's do this together
+no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+421,イライラしています。,I'm frustrated.,2,2,苛立ち。,work,frustrated を使う,I'm を使う,思い通りにいかず苛立っていることを伝える,ネガティブな感情を示す,frustrated は「いらだった」という形容詞,I'm annoyed|I'm irritated|Feeling frustrated
+422,それには満足しています。,I'm satisfied with that.,2,2,満足感。,work,satisfied を使う,with that を使う,結果に満足していることを伝える,肯定的な評価を示す,satisfied with は「〜に満足している」,I'm happy with that|That's good enough|Content with that
+423,それには抵抗があります。,I'm not comfortable with it.,2,2,違和感。,work,comfortable を使う,not を使う,その提案に違和感があることを伝える,丁寧な拒否や懸念を示す,not comfortable with は「〜に違和感がある」,I'm uneasy about it|It doesn't feel right|I have concerns
+424,それには自信があります。,I'm confident about it.,2,2,確信。,work,confident を使う,about it を使う,自信を持っていることを伝える,ポジティブな確信を示す,confident about は「〜に自信がある」,I'm sure about it|I'm certain|Feeling confident
+425,今は確信が持てません。,I'm unsure right now.,2,2,迷い。,daily,unsure を使う,right now を使う,現時点で確信が持てないことを伝える,判断の困難さを示す,unsure は「確信がない」という形容詞,I'm uncertain|I'm not sure|I'm in doubt
+426,楽観的な気分です。,I'm feeling optimistic.,2,2,前向きな見通し。,work,optimistic を使う,feeling を使う,良い結果を期待していることを伝える,ポジティブな見通しを示す,optimistic は「楽観的な」という形容詞,I'm hopeful|Feeling positive|Looking on the bright side
+427,少し心配しています。,I'm a little concerned.,2,2,懸念。,work,concerned を使う,a little を使う,少し心配していることを伝える,控えめな不安を示す,concerned は「心配している」という形容詞,I'm worried|I have concerns|Slightly worried
+428,精神的に疲れています。,I'm mentally exhausted.,2,2,精神的疲労。,work,exhausted を使う,mentally を使う,精神的に疲れ切っていることを伝える,深刻な疲労状態を示す,mentally exhausted は「精神的に疲弊した」,Mentally drained|Burnt out|Mentally tired
+429,良い精神状態です。,I'm in a good headspace.,2,2,心の余裕。,daily,headspace を使う,good を使う,精神的に良い状態にあることを伝える,前向きな心理状態を示す,headspace は「精神状態」という名詞,I'm in a good place|Mentally good|Good mindset
+430,まだ準備ができていません。,I'm not ready yet.,2,2,未準備。,daily,ready を使う,yet を使う,まだ準備が整っていないことを伝える,時間が必要であることを示す,not ready yet は「まだ準備できていない」,Not prepared yet|Need more time|Still getting ready
+431,これはどうですか？,How about this?,2,1,提案。,daily,How about を使う,this で指す,何かを提案する,カジュアルな提案表現,How about は「〜はどう？」という提案,What about this|How's this|What do you think about this
+432,これを試してみたらどうですか？,What if we try this?,2,1,試行の提案。,work,What if を使う,try を使う,新しい方法を試すことを提案する,仮定的な提案表現,What if は「もし〜したら？」という仮定,How about trying this|Let's try this|Why don't we try this
+433,それで大丈夫ですか？,Does that work for you?,2,1,都合確認。,daily,work for you を使う,Does で始める,相手の都合を確認する,丁寧な確認表現,work for you は「あなたにとって都合が良い」,Is that okay|Does that suit you|Is that fine with you
+434,やってみる気はありますか？,Are you up for it?,2,1,意欲確認。,daily,up for it を使う,Are で始める,相手のやる気を確認する,カジュアルな誘い表現,up for は「〜する気がある」というイディオム,Interested in doing it|Are you willing|Want to give it a try
+435,興味はありますか？,Would you be interested?,2,1,関心確認。,work,interested を使う,Would で丁寧に,相手の興味を丁寧に尋ねる,フォーマルな関心確認,Would you be は丁寧な依頼形,Are you interested|Does this interest you|Might you be interested
+436,一歩ずつ進めましょう。,Let's take it step by step.,2,1,段階的進行。,work,step by step を使う,Let's で誘う,段階的に進めることを提案する,焦らずに進める提案,step by step は「一歩ずつ」というイディオム,Let's go step by step|One step at a time|Let's proceed gradually
+437,シンプルにいきましょう。,Let's keep it simple.,2,1,簡素化の提案。,work,keep it simple を使う,Let's で誘う,複雑にせず簡単にすることを提案する,シンプルさを重視する提案,keep it は「〜を保つ」,Let's make it simple|Keep things simple|Let's not complicate it
+438,まずはこれに集中しましょう。,Let's focus on this first.,2,1,優先順位。,work,focus on を使う,first で順序を示す,最初にこれに集中することを提案する,優先事項を明確にする,focus on は「〜に集中する」,Let's prioritize this|This should come first|Let's tackle this first
+439,様子を見てみましょう。,Let's see what happens.,2,1,結果待ち。,daily,see what happens を使う,Let's で誘う,結果を待つことを提案する,柔軟な対応を示す表現,see what happens は「どうなるか見る」,Let's wait and see|Let's see how it goes|We'll see what happens
+440,一緒に考えましょう。,Let's figure it out together.,2,1,共同解決。,work,figure out を使う,together で協力を示す,一緒に解決策を見つけることを提案する,協力的な姿勢を示す,figure out は「解決する」という句動詞,Let's solve it together|Let's work it out together|Let's tackle it together
+441,それを試してみませんか？,Why don't we give it a try?,2,1,試行の誘い。,daily,Why don't we を使う,give it a try を使う,試してみることを提案する,柔らかい提案表現,Why don't we は「〜しませんか」,Let's give it a try|Shall we try it|How about trying it
+442,少し休憩しませんか？,Should we take a quick break?,2,1,休憩提案。,work,Should we を使う,quick break を使う,短い休憩を提案する,タイミングを見た提案,Should we は「〜しましょうか」,Let's take a break|How about a short break|Want to take a breather
+443,別の方法を試しましょう。,Let's try a different approach.,2,1,方向転換。,work,different approach を使う,try を使う,別のやり方を試すことを提案する,柔軟性を示す提案,approach は「方法・アプローチ」,Let's try another way|Let's take a different route|How about trying differently
+444,あなたに任せます。,I'll leave it up to you.,2,1,委任。,work,leave it up to を使う,you で相手に委ねる,相手に決定を任せることを伝える,信頼を示す表現,leave it up to は「〜に任せる」,It's up to you|You decide|Your call
+445,後で話し合いましょう。,Let's discuss it later.,2,1,延期提案。,work,discuss を使う,later で時間を示す,後で話し合うことを提案する,タイミングの調整,discuss は「話し合う」という動詞,Let's talk about it later|We'll discuss later|Save it for later
+446,もう一度やり直しませんか？,Should we start over?,2,1,やり直し提案。,work,start over を使う,Should we で提案,最初からやり直すことを提案する,リセットの提案,start over は「やり直す」という句動詞,Let's start fresh|Shall we begin again|How about restarting
+447,一緒に行きませんか？,Want to come along?,2,1,同行の誘い。,daily,come along を使う,Want to で誘う,一緒に行くことを誘う,カジュアルな誘い表現,come along は「一緒に来る」,Do you want to join|Would you like to come|Care to join me
+448,計画を立てましょう。,Let's make a plan.,2,1,計画提案。,work,make a plan を使う,Let's で誘う,計画を作ることを提案する,準備の重要性を示す,make a plan は「計画を立てる」,Let's plan it out|Let's come up with a plan|We should plan this
+449,柔軟に対応しましょう。,Let's be flexible.,2,1,柔軟性の提案。,work,flexible を使う,be で状態を示す,柔軟に対応することを提案する,適応力を重視する提案,flexible は「柔軟な」という形容詞,Let's stay flexible|Let's adapt|Let's keep our options open
+450,協力してやりましょう。,Let's work together on this.,2,1,協力提案。,work,work together を使う,on this で対象を示す,協力して取り組むことを提案する,チームワークを重視する提案,work together は「協力する」,Let's collaborate|Let's team up|Let's do this together

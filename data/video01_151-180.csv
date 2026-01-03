@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
-151,今はその話はやめましょう。,Let's not talk about that now.,,1,1,今は触れたくない話題。,daily,not を使う,Let's で始める,今はその話題を避けようと提案する,デリケートな話題を避ける丁寧な表現,Let's not + 動詞で否定の提案,Let's avoid that topic|Not now|Let's change the subject
-152,それは後で決めましょう。,Let's decide that later.,,1,1,判断を後回しにする。,work,later を使う,decide を使う,決定を後回しにしようと提案する,即断を避ける慎重なアプローチ,Let's + 動詞で提案,We'll decide later|Let's think about it later|Decision can wait
-153,念のためメモしておきます。,I'll make a note just in case.,,1,1,忘れ防止のため。,work,note を使う,just in case を使う,念のため記録することを伝える,忘れないよう慎重に対応する姿勢,make a note は「メモする」という慣用表現,I'll write it down|I'll note that|Let me jot that down
-154,少し修正が必要です。,It needs a bit of fixing.,,1,1,軽い修正が必要。,work,fixing を使う,a bit を使う,軽い修正が必要だと伝える,大きな問題ではないが改善の余地あり,need fixing は「修正が必要」という表現,Needs some adjustment|Requires a small fix|Minor corrections needed
-155,もう少し時間がかかります。,It will take a bit more time.,,1,1,完了まで時間が必要。,daily,take を使う,a bit more を使う,予定より時間が必要だと伝える,完了時期を後ろ倒しする説明,take time は「時間がかかる」という慣用表現,Need more time|Will take longer|A bit more time needed
-156,今は対応できません。,I can't handle it right now.,,1,1,今は無理な時。,work,handle を使う,right now を使う,今は処理できないことを伝える,現在のキャパシティを超えていることを示す,can't handle は「対応できない」,Can't do it now|Not available right now|Can't deal with it now
-157,別の案を検討しましょう。,Let's consider another option.,,1,1,代替案を検討。,work,option を使う,consider を使う,別の選択肢を考えようと提案する,柔軟な問題解決の姿勢,consider は「検討する」という動詞,Let's look at alternatives|Try another approach|Explore other options
-158,その点について確認します。,I'll check on that.,,1,1,特定点を確認。,work,check を使う,that を使う,その件を調べることを約束する,特定の事項に焦点を当てた確認,check on は「確認する」という句動詞,I'll verify that|Let me check|I'll look into that
-159,誤解があったようです。,There seems to be a misunderstanding.,,1,1,認識のズレを指摘。,work,misunderstanding を使う,seems を使う,誤解があることを柔らかく指摘する,直接的な批判を避ける丁寧な表現,There seems to be で柔らかく指摘,There's a misunderstanding|I think there's confusion|We misunderstood each other
-160,一旦ここで止めましょう。,Let's stop here for now.,,1,1,作業や議論を中断。,work,stop を使う,for now を使う,一旦中断しようと提案する,区切りの良いところで休憩する提案,for now は「とりあえず」という意味,Let's take a break|That's enough for now|Let's pause here
-161,それは想定内です。,That's expected.,,1,1,予想通りである。,work,expected を使う,That's を使う,予想通りの結果だと伝える,驚きではなく計画通りであることを示す,expected は「予想された」という過去分詞,That's what we expected|As expected|No surprise
-162,想定外でした。,That was unexpected.,,1,1,予想外の出来事。,daily,unexpected を使う,was を使う,予想していなかったことを伝える,驚きや意外性を表現する,unexpected は形容詞で「予想外の」,Didn't see that coming|Surprising|Not what I expected
-163,問題が解決しました。,The issue has been resolved.,,1,1,トラブル解消。,work,resolved を使う,has been を使う,問題が解決したことを報告する,完了形で解決済みを強調,has been resolved は現在完了の受動態,It's fixed|Problem solved|Issue is resolved
-164,もう一度説明します。,Let me explain again.,,1,1,再説明する。,daily,explain を使う,again を使う,もう一度説明し直すと伝える,理解を確実にするための配慮,Let me + 動詞で「させてください」,I'll explain once more|Let me clarify|I'll go over it again
-165,その必要はないですね。,We don't need that.,,1,1,不要だと判断。,work,need を使う,don't を使う,不要であることを伝える,無駄を省く判断を示す,We don't need は「必要ない」という否定,Not necessary|We can skip that|No need for that
-166,確認が取れました。,I've confirmed it.,,1,1,事実確認完了。,work,confirmed を使う,I've を使う,確認作業が完了したことを報告する,現在完了形で完了を示す,confirm は「確認する」という動詞,Confirmed|I checked it|Verification complete
-167,少し様子を見ましょう。,Let's wait and see.,,1,1,状況観察。,daily,wait and see を使う,Let's を使う,状況を見守ろうと提案する,即断せず経過を観察する慎重な姿勢,wait and see は「様子を見る」という慣用表現,Let's see how it goes|Give it time|Let's monitor
-168,それは後ほど。,That can wait.,,1,1,今は不要。,daily,wait を使う,can を使う,後回しにできることを伝える,優先度が低いことを示す,can wait は「待てる」という意味,Later is fine|No rush|That's not urgent
-169,その件は把握しています。,I'm aware of that.,,1,1,認識済み。,work,aware を使う,of that を使う,既に知っていることを伝える,情報共有済みであることを示す,be aware of は「認識している」という慣用表現,I know|I'm informed|Already aware
-170,問題ありませんでした。,There was no issue.,,1,1,結果的に問題なし。,work,issue を使う,no を使う,問題がなかったことを報告する,懸念が杞憂だったことを伝える,There was は過去形で過去の状態,No problem occurred|Everything was fine|All clear
-171,今はその余裕がありません。,I don't have the bandwidth right now.,,1,1,余力がない。,work,bandwidth を使う,right now を使う,キャパシティがないことを伝える,bandwidth は比喩的に「余力」を意味する,bandwidth は IT 用語から転じた表現,No capacity now|Too busy|Don't have time for that
-172,一旦整理しましょう。,Let's sort this out.,,1,1,状況整理。,work,sort out を使う,this を使う,状況を整理しようと提案する,混乱を解消する意図,sort out は「整理する」という句動詞,Let's organize|Let's clarify|Get this straight
-173,その点は重要です。,That's an important point.,,1,1,要点を強調。,work,important を使う,point を使う,重要な点であることを強調する,注目すべき事項を示す,important point は「重要な点」,That's key|That matters|Critical point
-174,少し待ってもらえますか？,Could you wait a moment?,,1,1,短時間待ってもらう。,daily,wait を使う,Could you を使う,少し待ってもらうよう丁寧に依頼する,Can you より丁寧な依頼,Could you + 動詞で丁寧な依頼,Can you hold on?|Just a moment|Wait a second please
-175,今すぐでなくて大丈夫です。,It doesn't have to be right now.,,1,1,急ぎでない。,daily,right now を使う,doesn't have to を使う,今すぐでなくてもいいと伝える,急ぎではないことを安心させる表現,doesn't have to は「〜する必要はない」,Not urgent|No rush|Can be later
-176,それは私の責任です。,That's my responsibility.,,1,1,責任を取る。,work,responsibility を使う,my を使う,自分の責任であることを認める,責任の所在を明確にする表現,responsibility は「責任」という名詞,That's on me|My job|I'm responsible
-177,もう一度やり直しましょう。,Let's try again.,,1,1,再挑戦。,daily,try again を使う,Let's を使う,もう一度挑戦しようと提案する,失敗を気にせず再チャレンジする姿勢,try again は「もう一度試す」という慣用表現,Let's give it another shot|One more time|Let's redo it
-178,その方法で行きましょう。,Let's go with that.,,1,1,方針決定。,work,go with を使う,that を使う,その方法を選択しようと決める,提案を受け入れて決定する表現,go with は「〜を選ぶ」という句動詞,Let's do that|That works|Let's choose that
-179,問題があるかもしれません。,There might be an issue.,,1,1,潜在的問題。,work,might を使う,issue を使う,問題の可能性を示唆する,確信はないが懸念を共有,might は「〜かもしれない」という推量,Could be a problem|Possible issue|May have a problem
-180,それで進めてください。,Please proceed with that.,,1,1,その方針で進行。,work,proceed を使う,with that を使う,その方針で進めてほしいと依頼する,決定事項の実行を指示,proceed は「進める」という動詞,Go ahead with that|Move forward|Continue with that
+no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+151,今はその話はやめましょう。,Let's not talk about that now.,1,1,今は触れたくない話題。,daily,not を使う,Let's で始める,今はその話題を避けようと提案する,デリケートな話題を避ける丁寧な表現,Let's not + 動詞で否定の提案,Let's avoid that topic|Not now|Let's change the subject
+152,それは後で決めましょう。,Let's decide that later.,1,1,判断を後回しにする。,work,later を使う,decide を使う,決定を後回しにしようと提案する,即断を避ける慎重なアプローチ,Let's + 動詞で提案,We'll decide later|Let's think about it later|Decision can wait
+153,念のためメモしておきます。,I'll make a note just in case.,1,1,忘れ防止のため。,work,note を使う,just in case を使う,念のため記録することを伝える,忘れないよう慎重に対応する姿勢,make a note は「メモする」という慣用表現,I'll write it down|I'll note that|Let me jot that down
+154,少し修正が必要です。,It needs a bit of fixing.,1,1,軽い修正が必要。,work,fixing を使う,a bit を使う,軽い修正が必要だと伝える,大きな問題ではないが改善の余地あり,need fixing は「修正が必要」という表現,Needs some adjustment|Requires a small fix|Minor corrections needed
+155,もう少し時間がかかります。,It will take a bit more time.,1,1,完了まで時間が必要。,daily,take を使う,a bit more を使う,予定より時間が必要だと伝える,完了時期を後ろ倒しする説明,take time は「時間がかかる」という慣用表現,Need more time|Will take longer|A bit more time needed
+156,今は対応できません。,I can't handle it right now.,1,1,今は無理な時。,work,handle を使う,right now を使う,今は処理できないことを伝える,現在のキャパシティを超えていることを示す,can't handle は「対応できない」,Can't do it now|Not available right now|Can't deal with it now
+157,別の案を検討しましょう。,Let's consider another option.,1,1,代替案を検討。,work,option を使う,consider を使う,別の選択肢を考えようと提案する,柔軟な問題解決の姿勢,consider は「検討する」という動詞,Let's look at alternatives|Try another approach|Explore other options
+158,その点について確認します。,I'll check on that.,1,1,特定点を確認。,work,check を使う,that を使う,その件を調べることを約束する,特定の事項に焦点を当てた確認,check on は「確認する」という句動詞,I'll verify that|Let me check|I'll look into that
+159,誤解があったようです。,There seems to be a misunderstanding.,1,1,認識のズレを指摘。,work,misunderstanding を使う,seems を使う,誤解があることを柔らかく指摘する,直接的な批判を避ける丁寧な表現,There seems to be で柔らかく指摘,There's a misunderstanding|I think there's confusion|We misunderstood each other
+160,一旦ここで止めましょう。,Let's stop here for now.,1,1,作業や議論を中断。,work,stop を使う,for now を使う,一旦中断しようと提案する,区切りの良いところで休憩する提案,for now は「とりあえず」という意味,Let's take a break|That's enough for now|Let's pause here
+161,それは想定内です。,That's expected.,1,1,予想通りである。,work,expected を使う,That's を使う,予想通りの結果だと伝える,驚きではなく計画通りであることを示す,expected は「予想された」という過去分詞,That's what we expected|As expected|No surprise
+162,想定外でした。,That was unexpected.,1,1,予想外の出来事。,daily,unexpected を使う,was を使う,予想していなかったことを伝える,驚きや意外性を表現する,unexpected は形容詞で「予想外の」,Didn't see that coming|Surprising|Not what I expected
+163,問題が解決しました。,The issue has been resolved.,1,1,トラブル解消。,work,resolved を使う,has been を使う,問題が解決したことを報告する,完了形で解決済みを強調,has been resolved は現在完了の受動態,It's fixed|Problem solved|Issue is resolved
+164,もう一度説明します。,Let me explain again.,1,1,再説明する。,daily,explain を使う,again を使う,もう一度説明し直すと伝える,理解を確実にするための配慮,Let me + 動詞で「させてください」,I'll explain once more|Let me clarify|I'll go over it again
+165,その必要はないですね。,We don't need that.,1,1,不要だと判断。,work,need を使う,don't を使う,不要であることを伝える,無駄を省く判断を示す,We don't need は「必要ない」という否定,Not necessary|We can skip that|No need for that
+166,確認が取れました。,I've confirmed it.,1,1,事実確認完了。,work,confirmed を使う,I've を使う,確認作業が完了したことを報告する,現在完了形で完了を示す,confirm は「確認する」という動詞,Confirmed|I checked it|Verification complete
+167,少し様子を見ましょう。,Let's wait and see.,1,1,状況観察。,daily,wait and see を使う,Let's を使う,状況を見守ろうと提案する,即断せず経過を観察する慎重な姿勢,wait and see は「様子を見る」という慣用表現,Let's see how it goes|Give it time|Let's monitor
+168,それは後ほど。,That can wait.,1,1,今は不要。,daily,wait を使う,can を使う,後回しにできることを伝える,優先度が低いことを示す,can wait は「待てる」という意味,Later is fine|No rush|That's not urgent
+169,その件は把握しています。,I'm aware of that.,1,1,認識済み。,work,aware を使う,of that を使う,既に知っていることを伝える,情報共有済みであることを示す,be aware of は「認識している」という慣用表現,I know|I'm informed|Already aware
+170,問題ありませんでした。,There was no issue.,1,1,結果的に問題なし。,work,issue を使う,no を使う,問題がなかったことを報告する,懸念が杞憂だったことを伝える,There was は過去形で過去の状態,No problem occurred|Everything was fine|All clear
+171,今はその余裕がありません。,I don't have the bandwidth right now.,1,1,余力がない。,work,bandwidth を使う,right now を使う,キャパシティがないことを伝える,bandwidth は比喩的に「余力」を意味する,bandwidth は IT 用語から転じた表現,No capacity now|Too busy|Don't have time for that
+172,一旦整理しましょう。,Let's sort this out.,1,1,状況整理。,work,sort out を使う,this を使う,状況を整理しようと提案する,混乱を解消する意図,sort out は「整理する」という句動詞,Let's organize|Let's clarify|Get this straight
+173,その点は重要です。,That's an important point.,1,1,要点を強調。,work,important を使う,point を使う,重要な点であることを強調する,注目すべき事項を示す,important point は「重要な点」,That's key|That matters|Critical point
+174,少し待ってもらえますか？,Could you wait a moment?,1,1,短時間待ってもらう。,daily,wait を使う,Could you を使う,少し待ってもらうよう丁寧に依頼する,Can you より丁寧な依頼,Could you + 動詞で丁寧な依頼,Can you hold on?|Just a moment|Wait a second please
+175,今すぐでなくて大丈夫です。,It doesn't have to be right now.,1,1,急ぎでない。,daily,right now を使う,doesn't have to を使う,今すぐでなくてもいいと伝える,急ぎではないことを安心させる表現,doesn't have to は「〜する必要はない」,Not urgent|No rush|Can be later
+176,それは私の責任です。,That's my responsibility.,1,1,責任を取る。,work,responsibility を使う,my を使う,自分の責任であることを認める,責任の所在を明確にする表現,responsibility は「責任」という名詞,That's on me|My job|I'm responsible
+177,もう一度やり直しましょう。,Let's try again.,1,1,再挑戦。,daily,try again を使う,Let's を使う,もう一度挑戦しようと提案する,失敗を気にせず再チャレンジする姿勢,try again は「もう一度試す」という慣用表現,Let's give it another shot|One more time|Let's redo it
+178,その方法で行きましょう。,Let's go with that.,1,1,方針決定。,work,go with を使う,that を使う,その方法を選択しようと決める,提案を受け入れて決定する表現,go with は「〜を選ぶ」という句動詞,Let's do that|That works|Let's choose that
+179,問題があるかもしれません。,There might be an issue.,1,1,潜在的問題。,work,might を使う,issue を使う,問題の可能性を示唆する,確信はないが懸念を共有,might は「〜かもしれない」という推量,Could be a problem|Possible issue|May have a problem
+180,それで進めてください。,Please proceed with that.,1,1,その方針で進行。,work,proceed を使う,with that を使う,その方針で進めてほしいと依頼する,決定事項の実行を指示,proceed は「進める」という動詞,Go ahead with that|Move forward|Continue with that

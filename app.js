@@ -20,21 +20,21 @@ const now = () => Date.now();
  * Sample Data (for first-time users)
  *************************************************/
 const SAMPLE_CARDS = [
-  { no: 1, jp: "おはようございます。", en: "Good morning.", slots: [], video: "sample", lv: 1, note: "朝の挨拶。", scene: "daily", hint_1: "morning を使う", hint_2: "Good を使う", explain_meaning: "朝の基本的な挨拶", explain_nuance: "フォーマルでもカジュアルでも使える万能挨拶", explain_grammar: "Good + 時間帯で挨拶", similars: "Hi|Hello|Morning" },
-  { no: 2, jp: "ありがとうございます。", en: "Thank you.", slots: [], video: "sample", lv: 1, note: "感謝の基本。", scene: "daily", hint_1: "thank を使う", hint_2: "Thank you", explain_meaning: "感謝を伝える最も基本的な表現", explain_nuance: "どんな場面でも使える", explain_grammar: "Thank you は定型表現", similars: "Thanks|I appreciate it|Cheers" },
-  { no: 3, jp: "すみません。", en: "Excuse me.", slots: [], video: "sample", lv: 1, note: "声をかける時。", scene: "daily", hint_1: "excuse を使う", hint_2: "me を使う", explain_meaning: "人に話しかける時の前置き", explain_nuance: "丁寧に注意を引く表現", explain_grammar: "Excuse me は慣用表現", similars: "Sorry|Pardon me|Sorry to bother you" },
-  { no: 4, jp: "わかりました。", en: "I understand.", slots: [], video: "sample", lv: 1, note: "理解を示す。", scene: "daily", hint_1: "understand を使う", hint_2: "I で始まる", explain_meaning: "理解したことを伝える", explain_nuance: "相手の話を受け止めたことを示す", explain_grammar: "I understand は現在形", similars: "I got it|I see|Got it" },
-  { no: 5, jp: "少々お待ちください。", en: "Just a moment, please.", slots: [], video: "sample", lv: 1, note: "待ってもらう時。", scene: "work", hint_1: "moment を使う", hint_2: "Just を使う", explain_meaning: "少し待ってほしいと丁寧に依頼する", explain_nuance: "ビジネスでも日常でも使える", explain_grammar: "Just a moment で「ちょっと待って」", similars: "One moment|Please wait|Hold on" },
-  { no: 6, jp: "手伝いましょうか？", en: "Can I help you?", slots: [], video: "sample", lv: 1, note: "手助けの申し出。", scene: "daily", hint_1: "help を使う", hint_2: "Can I を使う", explain_meaning: "手伝いを申し出る基本表現", explain_nuance: "親切な印象を与える", explain_grammar: "Can I + 動詞で申し出", similars: "Need any help?|May I help you?|Do you need help?" },
-  { no: 7, jp: "いいですね。", en: "Sounds good.", slots: [], video: "sample", lv: 1, note: "同意・賛成。", scene: "daily", hint_1: "sound を使う", hint_2: "good を使う", explain_meaning: "提案に同意する", explain_nuance: "カジュアルで前向きな返答", explain_grammar: "Sounds + 形容詞で印象", similars: "That works|Sounds great|I'm in" },
-  { no: 8, jp: "どういう意味ですか？", en: "What does that mean?", slots: [], video: "sample", lv: 1, note: "意味を聞く。", scene: "daily", hint_1: "mean を使う", hint_2: "What を使う", explain_meaning: "意味を尋ねる", explain_nuance: "理解できない時の素直な質問", explain_grammar: "What does ~ mean? で意味を聞く", similars: "What do you mean?|I don't get it|Can you explain?" },
-  { no: 9, jp: "後で連絡します。", en: "I'll contact you later.", slots: [], video: "sample", lv: 1, note: "後で連絡。", scene: "work", hint_1: "contact を使う", hint_2: "later を使う", explain_meaning: "後で連絡することを約束する", explain_nuance: "ビジネスでよく使う", explain_grammar: "I'll + 動詞 + later で後の約束", similars: "I'll get back to you|Talk to you later|I'll reach out later" },
-  { no: 10, jp: "確認させてください。", en: "Let me check.", slots: [], video: "sample", lv: 1, note: "確認する時。", scene: "work", hint_1: "check を使う", hint_2: "Let me を使う", explain_meaning: "確認させてほしいと伝える", explain_nuance: "丁寧で責任感のある対応", explain_grammar: "Let me + 動詞で許可を求める", similars: "I'll check|Let me verify|I'll look into it" },
-  { no: 11, jp: "大丈夫です。", en: "I'm fine.", slots: [], video: "sample", lv: 1, note: "問題ない時。", scene: "daily", hint_1: "fine を使う", hint_2: "I'm を使う", explain_meaning: "問題ないことを伝える", explain_nuance: "心配に対する安心の返答", explain_grammar: "I'm fine は状態を示す", similars: "I'm okay|I'm good|No worries" },
-  { no: 12, jp: "いい考えですね。", en: "That's a good idea.", slots: [], video: "sample", lv: 1, note: "提案を評価。", scene: "work", hint_1: "idea を使う", hint_2: "good を使う", explain_meaning: "提案を肯定的に評価する", explain_nuance: "相手のアイデアを認める", explain_grammar: "That's a + 形容詞 + 名詞", similars: "Good thinking|Great idea|Smart idea" },
-  { no: 13, jp: "もう一度お願いします。", en: "Could you say that again?", slots: [], video: "sample", lv: 1, note: "聞き返す時。", scene: "daily", hint_1: "again を使う", hint_2: "Could you を使う", explain_meaning: "もう一度言ってほしいと依頼する", explain_nuance: "丁寧な聞き返し", explain_grammar: "Could you + 動詞で丁寧な依頼", similars: "Pardon?|Come again?|Could you repeat that?" },
-  { no: 14, jp: "頑張ってください。", en: "Good luck.", slots: [], video: "sample", lv: 1, note: "応援する時。", scene: "daily", hint_1: "luck を使う", hint_2: "Good を使う", explain_meaning: "成功を祈る応援の言葉", explain_nuance: "別れ際や挑戦前に使う", explain_grammar: "Good luck は定型表現", similars: "Best of luck|You got this|Go for it" },
-  { no: 15, jp: "お疲れ様でした。", en: "Good job.", slots: [], video: "sample", lv: 1, note: "労いの言葉。", scene: "work", hint_1: "job を使う", hint_2: "Good を使う", explain_meaning: "仕事を終えた人を労う", explain_nuance: "努力を認める表現", explain_grammar: "Good job は褒め言葉", similars: "Well done|Nice work|Great effort" }
+  { no: 1, jp: "おはようございます。", en: "Good morning.", video: "sample", lv: 1, note: "朝の挨拶。", scene: "daily", hint_1: "morning を使う", hint_2: "Good を使う", explain_meaning: "朝の基本的な挨拶", explain_nuance: "フォーマルでもカジュアルでも使える万能挨拶", explain_grammar: "Good + 時間帯で挨拶", similars: "Hi|Hello|Morning" },
+  { no: 2, jp: "ありがとうございます。", en: "Thank you.", video: "sample", lv: 1, note: "感謝の基本。", scene: "daily", hint_1: "thank を使う", hint_2: "Thank you", explain_meaning: "感謝を伝える最も基本的な表現", explain_nuance: "どんな場面でも使える", explain_grammar: "Thank you は定型表現", similars: "Thanks|I appreciate it|Cheers" },
+  { no: 3, jp: "すみません。", en: "Excuse me.", video: "sample", lv: 1, note: "声をかける時。", scene: "daily", hint_1: "excuse を使う", hint_2: "me を使う", explain_meaning: "人に話しかける時の前置き", explain_nuance: "丁寧に注意を引く表現", explain_grammar: "Excuse me は慣用表現", similars: "Sorry|Pardon me|Sorry to bother you" },
+  { no: 4, jp: "わかりました。", en: "I understand.", video: "sample", lv: 1, note: "理解を示す。", scene: "daily", hint_1: "understand を使う", hint_2: "I で始まる", explain_meaning: "理解したことを伝える", explain_nuance: "相手の話を受け止めたことを示す", explain_grammar: "I understand は現在形", similars: "I got it|I see|Got it" },
+  { no: 5, jp: "少々お待ちください。", en: "Just a moment, please.", video: "sample", lv: 1, note: "待ってもらう時。", scene: "work", hint_1: "moment を使う", hint_2: "Just を使う", explain_meaning: "少し待ってほしいと丁寧に依頼する", explain_nuance: "ビジネスでも日常でも使える", explain_grammar: "Just a moment で「ちょっと待って」", similars: "One moment|Please wait|Hold on" },
+  { no: 6, jp: "手伝いましょうか？", en: "Can I help you?", video: "sample", lv: 1, note: "手助けの申し出。", scene: "daily", hint_1: "help を使う", hint_2: "Can I を使う", explain_meaning: "手伝いを申し出る基本表現", explain_nuance: "親切な印象を与える", explain_grammar: "Can I + 動詞で申し出", similars: "Need any help?|May I help you?|Do you need help?" },
+  { no: 7, jp: "いいですね。", en: "Sounds good.", video: "sample", lv: 1, note: "同意・賛成。", scene: "daily", hint_1: "sound を使う", hint_2: "good を使う", explain_meaning: "提案に同意する", explain_nuance: "カジュアルで前向きな返答", explain_grammar: "Sounds + 形容詞で印象", similars: "That works|Sounds great|I'm in" },
+  { no: 8, jp: "どういう意味ですか？", en: "What does that mean?", video: "sample", lv: 1, note: "意味を聞く。", scene: "daily", hint_1: "mean を使う", hint_2: "What を使う", explain_meaning: "意味を尋ねる", explain_nuance: "理解できない時の素直な質問", explain_grammar: "What does ~ mean? で意味を聞く", similars: "What do you mean?|I don't get it|Can you explain?" },
+  { no: 9, jp: "後で連絡します。", en: "I'll contact you later.", video: "sample", lv: 1, note: "後で連絡。", scene: "work", hint_1: "contact を使う", hint_2: "later を使う", explain_meaning: "後で連絡することを約束する", explain_nuance: "ビジネスでよく使う", explain_grammar: "I'll + 動詞 + later で後の約束", similars: "I'll get back to you|Talk to you later|I'll reach out later" },
+  { no: 10, jp: "確認させてください。", en: "Let me check.", video: "sample", lv: 1, note: "確認する時。", scene: "work", hint_1: "check を使う", hint_2: "Let me を使う", explain_meaning: "確認させてほしいと伝える", explain_nuance: "丁寧で責任感のある対応", explain_grammar: "Let me + 動詞で許可を求める", similars: "I'll check|Let me verify|I'll look into it" },
+  { no: 11, jp: "大丈夫です。", en: "I'm fine.", video: "sample", lv: 1, note: "問題ない時。", scene: "daily", hint_1: "fine を使う", hint_2: "I'm を使う", explain_meaning: "問題ないことを伝える", explain_nuance: "心配に対する安心の返答", explain_grammar: "I'm fine は状態を示す", similars: "I'm okay|I'm good|No worries" },
+  { no: 12, jp: "いい考えですね。", en: "That's a good idea.", video: "sample", lv: 1, note: "提案を評価。", scene: "work", hint_1: "idea を使う", hint_2: "good を使う", explain_meaning: "提案を肯定的に評価する", explain_nuance: "相手のアイデアを認める", explain_grammar: "That's a + 形容詞 + 名詞", similars: "Good thinking|Great idea|Smart idea" },
+  { no: 13, jp: "もう一度お願いします。", en: "Could you say that again?", video: "sample", lv: 1, note: "聞き返す時。", scene: "daily", hint_1: "again を使う", hint_2: "Could you を使う", explain_meaning: "もう一度言ってほしいと依頼する", explain_nuance: "丁寧な聞き返し", explain_grammar: "Could you + 動詞で丁寧な依頼", similars: "Pardon?|Come again?|Could you repeat that?" },
+  { no: 14, jp: "頑張ってください。", en: "Good luck.", video: "sample", lv: 1, note: "応援する時。", scene: "daily", hint_1: "luck を使う", hint_2: "Good を使う", explain_meaning: "成功を祈る応援の言葉", explain_nuance: "別れ際や挑戦前に使う", explain_grammar: "Good luck は定型表現", similars: "Best of luck|You got this|Go for it" },
+  { no: 15, jp: "お疲れ様でした。", en: "Good job.", video: "sample", lv: 1, note: "労いの言葉。", scene: "work", hint_1: "job を使う", hint_2: "Good を使う", explain_meaning: "仕事を終えた人を労う", explain_nuance: "努力を認める表現", explain_grammar: "Good job は褒め言葉", similars: "Well done|Nice work|Great effort" }
 ];
 
 /*************************************************
@@ -189,14 +189,10 @@ let index = 0;
 let revealed = false;
 let showNote = false;
 let currentAnswer = "";
-let currentSlotIndex = null; // スロット別トラッキング用
 
 // Session control: 1周目→Due周回（Easyになるまで）
-let sessionMode = "normal";      // "normal" | "due" | "variation"
+let sessionMode = "normal";      // "normal" | "due" | "weak" | "newBlock"
 let sessionDueSet = new Set();   // again/hard になったカード番号
-
-// Variation mode: 全スロットを順番に練習
-let variationSlotIndex = 0;      // 現在練習中のスロットインデックス
 
 /*************************************************
  * Videos meta (optional)
@@ -212,7 +208,6 @@ const studyView = document.getElementById("studyView");
 const statsView = document.getElementById("statsView");
 
 const homeVideoBtn = document.getElementById("homeVideo");
-const homeVariationBtn = document.getElementById("homeVariation");
 const homeStatsBtn = document.getElementById("homeStats");
 
 const backHomeBtn = document.getElementById("backHome");
@@ -385,7 +380,7 @@ function parseCSV(text) {
       const no = Number(cols[0]);
       const jp = (cols[1] || "").trim();
       const en = (cols[2] || "").trim();
-      const slotsRaw = (cols[3] || "").trim();
+      // cols[3] はslots列（削除済み）
       const video = (cols[4] || "").trim();
       const lv = Number((cols[5] || "1").trim());
       const note = (cols[6] || "").trim();
@@ -399,15 +394,6 @@ function parseCSV(text) {
       const explain_grammar = (cols[12] || "").trim();
       const similarsRaw = (cols[13] || "").trim();
 
-      let slots = null;
-      if (slotsRaw) {
-        slots = slotsRaw.split("|").map(s => {
-          const [enSlot, jpSlot] = s.split("=");  // データは「英語=日本語」の順
-          return { jp: (jpSlot || "").trim(), en: (enSlot || "").trim() };
-        }).filter(x => x.jp && x.en);
-        if (!slots.length) slots = null;
-      }
-
       // 類似表現のパース
       let similars = null;
       if (similarsRaw) {
@@ -416,7 +402,7 @@ function parseCSV(text) {
       }
 
       return {
-        no, jp, en, slots, video, lv, note, scene,
+        no, jp, en, video, lv, note, scene,
         hint_1, hint_2, explain_meaning, explain_nuance, explain_grammar, similars
       };
     })
@@ -765,26 +751,6 @@ function startVideoOrder(goStudy=false) {
   if (goStudy) showStudy(); else render();
 }
 
-function startVariationMode(goStudy=false) {
-  sessionMode = "variation";
-  sessionDueSet = new Set();
-
-  // スロットを持つカードのみをフィルタ
-  cardsByMode = [...cards]
-    .filter(c => c.slots && c.slots.length > 0)
-    .sort((a,b)=>a.no-b.no);
-
-  if (!cardsByMode.length) {
-    alert("スロットを持つカードがありません");
-    return;
-  }
-
-  index = 0;
-  variationSlotIndex = 0;
-  resetCardView();
-  if (goStudy) showStudy(); else render();
-}
-
 // 苦手克服モード（30問）
 function startWeakMode(goStudy=false) {
   sessionMode = "weak";
@@ -981,104 +947,11 @@ function renderDailyMissions() {
 }
 
 /*************************************************
- * Card rendering (Lv behavior)
+ * Card rendering
  *************************************************/
-function getSlotSRS(card, slotIdx) {
-  const level = prefs.level;
-  return srs[card.no]?.[level]?.slots?.[slotIdx];
-}
-
-function pickSlot(card) {
-  if (!card.slots || !card.slots.length) {
-    currentSlotIndex = null;
-    return null;
-  }
-
-  let idx;
-
-  // バリエーションモード = 順番に全スロット練習
-  if (sessionMode === "variation") {
-    idx = variationSlotIndex % card.slots.length;
-  }
-  // Lv1 = 固定（カード番号で固定化）
-  else if (prefs.level === 1) {
-    idx = (card.no % card.slots.length);
-  }
-  // Lv2/3 = スマート選択（苦手なスロット優先）
-  else {
-    const level = prefs.level;
-    const slotPriorities = card.slots.map((slot, i) => {
-      const slotData = srs[card.no]?.[level]?.slots?.[i];
-
-      if (!slotData || !slotData.total) {
-        // 未学習スロットは最優先
-        return { idx: i, priority: 1000 };
-      }
-
-      // 優先度計算
-      const againRate = (slotData.againCount || 0) / (slotData.total || 1);
-      const lastGradeScore = (4 - (slotData.lastGrade || 3)) * 20;
-      const overdueDays = slotData.dueAt && slotData.dueAt <= now()
-        ? (now() - slotData.dueAt) / DAY
-        : 0;
-
-      const priority = (againRate * 100) + lastGradeScore + Math.min(overdueDays * 5, 30);
-
-      return { idx: i, priority };
-    });
-
-    // 優先度順にソート
-    slotPriorities.sort((a, b) => b.priority - a.priority);
-
-    // 上位3つからランダム選択（完全決定論的にならないように）
-    const topCandidates = slotPriorities.slice(0, Math.min(3, slotPriorities.length));
-    const selected = topCandidates[Math.floor(Math.random() * topCandidates.length)];
-    idx = selected.idx;
-  }
-
-  currentSlotIndex = idx;
-  return card.slots[idx];
-}
-
 function renderNote(card) {
   if (!noteEl) return;
   noteEl.textContent = (showNote && card.note) ? `💡 ${card.note}` : "";
-}
-
-function renderSlotProgress(card) {
-  const statsEl = document.getElementById("statsText");
-  if (!statsEl) return;
-
-  if (!card.slots || card.slots.length === 0) {
-    statsEl.textContent = "";
-    return;
-  }
-
-  const level = prefs.level;
-  let masteredCount = 0;
-  let totalSlots = card.slots.length;
-
-  // 各スロットの習得状況をチェック
-  for (let i = 0; i < totalSlots; i++) {
-    const slotData = srs[card.no]?.[level]?.slots?.[i];
-    if (slotData && slotData.total >= 2 && slotData.lastGrade === 3) {
-      masteredCount++;
-    }
-  }
-
-  // 進捗表示
-  const dots = Array(totalSlots).fill(0).map((_, i) => {
-    const slotData = srs[card.no]?.[level]?.slots?.[i];
-    if (slotData && slotData.total >= 2 && slotData.lastGrade === 3) {
-      return "●"; // 習得済み
-    } else if (slotData && slotData.total > 0) {
-      return "◐"; // 学習中
-    } else {
-      return "○"; // 未学習
-    }
-  }).join("");
-
-  statsEl.textContent = `バリエーション: ${dots} (${masteredCount}/${totalSlots}習得)`;
 }
 
 /*************************************************
@@ -1173,16 +1046,10 @@ function render() {
   if (!cardsByMode.length) return;
 
   const card = cardsByMode[index];
-  const slot = pickSlot(card);
 
-  // answer決定（JP/ENのセットで置換）
-  if (slot && card.jp.includes("{x}") && card.en.includes("{x}")) {
-    jpEl.textContent = card.jp.replace("{x}", slot.jp);
-    currentAnswer = card.en.replace("{x}", slot.en);
-  } else {
-    jpEl.textContent = card.jp;
-    currentAnswer = card.en;
-  }
+  // 日本語・英語をそのまま表示
+  jpEl.textContent = card.jp;
+  currentAnswer = card.en;
 
   // 表示（全レベル統一: タップして答え）
   if (!revealed) {
@@ -1194,7 +1061,6 @@ function render() {
   renderNote(card);
   renderHints(card);
   renderExplain(card);
-  renderSlotProgress(card);
   renderProgress();
   renderLevelButtons();
 }
@@ -1280,24 +1146,6 @@ function handleEndOfRound() {
 }
 
 function goNext() {
-  // バリエーションモード: 全スロット練習してから次のカードへ
-  if (sessionMode === "variation") {
-    const card = cardsByMode[index];
-    if (card && card.slots && card.slots.length > 0) {
-      variationSlotIndex++;
-
-      // まだこのカードのスロットが残っている
-      if (variationSlotIndex < card.slots.length) {
-        resetCardView();
-        render();
-        return;
-      }
-
-      // このカードの全スロット完了 → 次のカードへ
-      variationSlotIndex = 0;
-    }
-  }
-
   index += 1;
   resetCardView();
 
@@ -1352,39 +1200,17 @@ function gradeCard(grade) {
 
   const rec = srs[card.no][level];
 
-  // スロット有りの場合はスロット別に記録
-  if (card.slots && card.slots.length > 0 && currentSlotIndex !== null) {
-    if (!rec.slots) rec.slots = {};
-    if (!rec.slots[currentSlotIndex]) rec.slots[currentSlotIndex] = {};
-
-    const slotRec = rec.slots[currentSlotIndex];
-
-    // スロット別カウント
-    slotRec.total = (slotRec.total || 0) + 1;
-    if (grade === 1) {
-      slotRec.againCount = (slotRec.againCount || 0) + 1;
-    } else if (grade === 3) {
-      slotRec.easy = (slotRec.easy || 0) + 1;
-    }
-
-    // スロット別SRS
-    slotRec.lastGrade = grade;
-    slotRec.intervalMs = nextIntervalMs(grade);
-    slotRec.dueAt = now() + slotRec.intervalMs;
+  // SRS記録
+  rec.total = (rec.total || 0) + 1;
+  if (grade === 1) {
+    rec.againCount = (rec.againCount || 0) + 1;
+  } else if (grade === 3) {
+    rec.easy = (rec.easy || 0) + 1;
   }
-  // スロット無しの場合は従来通り
-  else {
-    rec.total = (rec.total || 0) + 1;
-    if (grade === 1) {
-      rec.againCount = (rec.againCount || 0) + 1;
-    } else if (grade === 3) {
-      rec.easy = (rec.easy || 0) + 1;
-    }
 
-    rec.lastGrade = grade;
-    rec.intervalMs = nextIntervalMs(grade);
-    rec.dueAt = now() + rec.intervalMs;
-  }
+  rec.lastGrade = grade;
+  rec.intervalMs = nextIntervalMs(grade);
+  rec.dueAt = now() + rec.intervalMs;
 
   // 今日の学習記録を更新
   ensureDaily();
@@ -1484,7 +1310,6 @@ if (missionNewBlockBtn) {
 }
 
 if (homeVideoBtn) homeVideoBtn.addEventListener("click", () => startVideoOrder(true));
-if (homeVariationBtn) homeVariationBtn.addEventListener("click", () => startVariationMode(true));
 if (homeStatsBtn) homeStatsBtn.addEventListener("click", showStats);
 
 if (backHomeBtn) backHomeBtn.addEventListener("click", showHome);

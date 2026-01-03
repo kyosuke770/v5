@@ -1,31 +1,31 @@
-no,jp,en,slots,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
-211,今は問題ありません。,No issues at the moment.,,1,1,現時点では問題なし。,work,issues を使う,at the moment を使う,現時点で問題がないことを報告する,現在の状況を示す表現,at the moment は「現時点では」,Everything's fine now|All clear|No problems now
-212,少し様子を見ます。,I'll keep an eye on it.,,1,1,経過観察する。,work,eye を使う,keep を使う,注視して観察することを伝える,継続的にモニタリングする意思,keep an eye on は「見守る」という慣用表現,I'll monitor it|Watch it|Keep track
-213,それについて確認します。,I'll check on that.,,1,1,対象について確認。,work,check を使う,on that を使う,その件を確認すると約束する,特定事項の確認を示す,check on は「確認する」という句動詞,I'll verify that|Look into it|I'll investigate
-214,今すぐ対応は不要です。,No action needed right now.,,1,1,現時点では対応不要。,work,action を使う,right now を使う,今は何もしなくていいと伝える,現時点での不要性を示す,no action needed は「対応不要」,Nothing to do now|No need to act|Can wait
-215,それは後回しで大丈夫です。,That can wait.,,1,1,優先度が低い。,daily,wait を使う,can を使う,後回しにできることを伝える,急ぎではないことを示す,can wait は「待てる」という意味,Not urgent|Later is fine|No rush
-216,今は判断できません。,I can't decide right now.,,1,1,即断できない。,daily,decide を使う,right now を使う,今は決められないことを伝える,情報不足や時間不足を示す,can't decide は「決められない」,Need more info|Can't say yet|Undecided
-217,それは検討中です。,It's under consideration.,,1,1,検討段階。,work,consideration を使う,under を使う,現在検討中であることを伝える,まだ結論が出ていない状態,under consideration は「検討中」という慣用表現,We're considering it|Still thinking|Being reviewed
-218,その点は後で話しましょう。,Let's discuss that later.,,1,1,話題を後回し。,work,discuss を使う,later を使う,その話題は後で話そうと提案する,今は議論しない意思,Let's + 動詞で提案,Talk about it later|Save that discussion|Later on that
-219,その件は把握しています。,I'm aware of it.,,1,1,認識済み。,work,aware を使う,of it を使う,知っていることを伝える,情報共有済みを示す,be aware of は「認識している」,I know|I'm informed|Already aware
-220,少し時間が必要です。,I need a bit more time.,,1,1,時間が必要。,daily,time を使う,a bit more を使う,もう少し時間が欲しいと伝える,完了に時間がかかることを示す,I need + 名詞で必要性を伝える,Need more time|Give me time|A little longer
-221,もう少しで{x}。,I'm almost {x}.,done=終わり|ready=準備完了|there=到着,1,2,定番の進捗表現。,daily,almost を使う,{x}は状態を示す単語,完了まであと少しという進捗を伝える,90%くらい完了している時に使う,almost は副詞で「ほぼ」,Nearly done|Just about ready|Almost finished
-222,{x}してもいいですか？,Can I {x}?,ask something=一つ聞く|check this=これ確認する|join you=参加する,1,2,許可を求める基本形。,daily,Can I を使う,{x}は動詞,何かをする許可を求める基本パターン,日常的な許可依頼の表現,Can I + 動詞の原形で許可を求める,May I ~?|Could I ~?|Is it okay if I ~?
-223,少し{x}ありますか？,Do you have {x}?,a minute=時間|a moment=少し,1,2,会話の切り出し。,work,Do you have を使う,{x}は時間を示す単語,少し時間をもらえるか尋ねる,話しかける前の丁寧な確認,Do you have + 名詞で所有確認,Got a minute?|Have time?|Free for a moment?
-224,それは{x}次第です。,It depends on {x}.,the situation=状況|the timing=タイミング,1,2,条件付き判断。,work,depends on を使う,{x}は条件,状況や条件によって変わることを表す,確定的な答えを避ける表現,depend on + 名詞で「〜に依存する」,Depends on the situation|It varies|Based on ~
-225,後で{x}します。,I'll {x} later.,check=確認する|explain=説明する|reply=返信する,1,2,後回し対応。,work,later を使う,{x}は動詞,後で対応することを約束する,今は無理だが後で実行する意思,I'll + 動詞 + later で後の約束,Do it later|Handle it later|Take care of it later
-226,{x}してくれてありがとう。,Thanks for {x}.,waiting=待ってくれて|checking=確認してくれて,1,2,行為への感謝。,daily,Thanks for を使う,{x}は動名詞,具体的な行為に対する感謝,相手の行動を評価する表現,Thanks for + 動名詞で感謝,Thank you for ~|Appreciate your ~|Thanks for doing ~
-227,それは{x}ですね。,That's {x}.,fine=問題ない|interesting=興味深い,1,2,短い評価表現。,daily,That's を使う,{x}は形容詞,短く評価を述べる表現,シンプルな感想や判断,That's + 形容詞で評価,That's good|That's okay|That's great
-228,私が{x}します。,I'll {x}.,handle it=対応する|take care of it=片付ける,1,2,引き受け表現。,work,I'll を使う,{x}は動詞句,自分が対応すると宣言する,責任を持って処理する意思,I'll + 動詞で未来の約束,I'll do it|I'll manage|I'll deal with it
-229,{x}する必要があります。,We need to {x}.,fix this=修正する|decide=決める,1,2,必要性を伝える。,work,need to を使う,{x}は動詞,何かをする必要性を伝える,行動を促す表現,We need to + 動詞で必要性,Must ~|Have to ~|Should ~
-230,もう一度{x}してください。,Please {x} again.,check=確認|explain=説明,1,2,再依頼。,work,again を使う,{x}は動詞,もう一度やってほしいと依頼する,繰り返しを求める丁寧な表現,Please + 動詞 + again で再依頼,Could you ~ again?|Do it once more|Repeat please
-231,それは良い方向です。,That's a good sign.,,1,1,ポジティブ評価。,daily,sign を使う,good を使う,良い兆候だと評価する,前向きな進展を示す表現,sign は「兆候・サイン」という名詞,Good news|Positive sign|Looking good
-232,少し違和感があります。,Something feels off.,,1,1,違和感を表す。,daily,feels を使う,off を使う,何か変だと感じることを伝える,直感的な違和感を表現,feel off は「しっくりこない」という慣用表現,Something's wrong|Doesn't feel right|Something's strange
-233,その点は重要です。,That point is important.,,1,1,重要点を強調。,work,point を使う,important を使う,その点が重要だと強調する,注目すべき事項を示す,point is important は「点が重要」,Key point|That matters|Important aspect
-234,問題はそこです。,That's the issue.,,1,1,問題点を指摘。,work,issue を使う,That's を使う,問題の核心を指摘する,問題の本質を示す表現,issue は「問題」という名詞,That's the problem|That's where the issue is|Root cause
-235,それは想定内です。,That's within expectations.,,1,1,想定内。,work,expectations を使う,within を使う,想定の範囲内だと伝える,予想通りであることを示す,within expectations は「期待の範囲内」,Expected|As anticipated|Normal
-236,今のところ順調です。,Everything looks good so far.,,1,1,現状良好。,work,looks good を使う,so far を使う,現時点では順調だと報告する,現状の良好さを示す表現,so far は「今のところ」という副詞,Going well|All good|On track
-237,もう少し様子を見ましょう。,Let's monitor it a bit more.,,1,1,継続観察。,work,monitor を使う,a bit more を使う,もう少し観察しようと提案する,継続的な経過観察の提案,monitor は「監視する」という動詞,Keep watching|Observe more|Check progress
-238,対応を進めています。,We're working on it.,,1,1,対応中。,work,working を使う,on it を使う,現在対応中であることを伝える,作業進行中を示す表現,work on は「取り組む」という句動詞,Handling it|In progress|Taking care of it
-239,それは後で対応します。,I'll deal with that later.,,1,1,後対応。,work,deal with を使う,later を使う,後で処理すると約束する,今は無理だが後で対応する意思,deal with は「対処する」という句動詞,Handle it later|Take care of it later|Address it later
-240,ここまでで大丈夫です。,That should be enough for now.,,1,1,一旦十分。,daily,enough を使う,for now を使う,とりあえず十分だと判断する,一区切りつけることを示す,should be enough は「十分なはず」,That's good for now|Enough for the moment|We're set
+no,jp,en,video,lv,note,scene,hint_1,hint_2,explain_meaning,explain_nuance,explain_grammar,similars
+211,今は問題ありません。,No issues at the moment.,1,1,現時点では問題なし。,work,issues を使う,at the moment を使う,現時点で問題がないことを報告する,現在の状況を示す表現,at the moment は「現時点では」,Everything's fine now|All clear|No problems now
+212,少し様子を見ます。,I'll keep an eye on it.,1,1,経過観察する。,work,eye を使う,keep を使う,注視して観察することを伝える,継続的にモニタリングする意思,keep an eye on は「見守る」という慣用表現,I'll monitor it|Watch it|Keep track
+213,それについて確認します。,I'll check on that.,1,1,対象について確認。,work,check を使う,on that を使う,その件を確認すると約束する,特定事項の確認を示す,check on は「確認する」という句動詞,I'll verify that|Look into it|I'll investigate
+214,今すぐ対応は不要です。,No action needed right now.,1,1,現時点では対応不要。,work,action を使う,right now を使う,今は何もしなくていいと伝える,現時点での不要性を示す,no action needed は「対応不要」,Nothing to do now|No need to act|Can wait
+215,それは後回しで大丈夫です。,That can wait.,1,1,優先度が低い。,daily,wait を使う,can を使う,後回しにできることを伝える,急ぎではないことを示す,can wait は「待てる」という意味,Not urgent|Later is fine|No rush
+216,今は判断できません。,I can't decide right now.,1,1,即断できない。,daily,decide を使う,right now を使う,今は決められないことを伝える,情報不足や時間不足を示す,can't decide は「決められない」,Need more info|Can't say yet|Undecided
+217,それは検討中です。,It's under consideration.,1,1,検討段階。,work,consideration を使う,under を使う,現在検討中であることを伝える,まだ結論が出ていない状態,under consideration は「検討中」という慣用表現,We're considering it|Still thinking|Being reviewed
+218,その点は後で話しましょう。,Let's discuss that later.,1,1,話題を後回し。,work,discuss を使う,later を使う,その話題は後で話そうと提案する,今は議論しない意思,Let's + 動詞で提案,Talk about it later|Save that discussion|Later on that
+219,その件は把握しています。,I'm aware of it.,1,1,認識済み。,work,aware を使う,of it を使う,知っていることを伝える,情報共有済みを示す,be aware of は「認識している」,I know|I'm informed|Already aware
+220,少し時間が必要です。,I need a bit more time.,1,1,時間が必要。,daily,time を使う,a bit more を使う,もう少し時間が欲しいと伝える,完了に時間がかかることを示す,I need + 名詞で必要性を伝える,Need more time|Give me time|A little longer
+221,もう少しで{x}。,I'm almost {x}.,1,2,定番の進捗表現。,daily,almost を使う,{x}は状態を示す単語,完了まであと少しという進捗を伝える,90%くらい完了している時に使う,almost は副詞で「ほぼ」,Nearly done|Just about ready|Almost finished
+222,{x}してもいいですか？,Can I {x}?,1,2,許可を求める基本形。,daily,Can I を使う,{x}は動詞,何かをする許可を求める基本パターン,日常的な許可依頼の表現,Can I + 動詞の原形で許可を求める,May I ~?|Could I ~?|Is it okay if I ~?
+223,少し{x}ありますか？,Do you have {x}?,1,2,会話の切り出し。,work,Do you have を使う,{x}は時間を示す単語,少し時間をもらえるか尋ねる,話しかける前の丁寧な確認,Do you have + 名詞で所有確認,Got a minute?|Have time?|Free for a moment?
+224,それは{x}次第です。,It depends on {x}.,1,2,条件付き判断。,work,depends on を使う,{x}は条件,状況や条件によって変わることを表す,確定的な答えを避ける表現,depend on + 名詞で「〜に依存する」,Depends on the situation|It varies|Based on ~
+225,後で{x}します。,I'll {x} later.,1,2,後回し対応。,work,later を使う,{x}は動詞,後で対応することを約束する,今は無理だが後で実行する意思,I'll + 動詞 + later で後の約束,Do it later|Handle it later|Take care of it later
+226,{x}してくれてありがとう。,Thanks for {x}.,1,2,行為への感謝。,daily,Thanks for を使う,{x}は動名詞,具体的な行為に対する感謝,相手の行動を評価する表現,Thanks for + 動名詞で感謝,Thank you for ~|Appreciate your ~|Thanks for doing ~
+227,それは{x}ですね。,That's {x}.,1,2,短い評価表現。,daily,That's を使う,{x}は形容詞,短く評価を述べる表現,シンプルな感想や判断,That's + 形容詞で評価,That's good|That's okay|That's great
+228,私が{x}します。,I'll {x}.,1,2,引き受け表現。,work,I'll を使う,{x}は動詞句,自分が対応すると宣言する,責任を持って処理する意思,I'll + 動詞で未来の約束,I'll do it|I'll manage|I'll deal with it
+229,{x}する必要があります。,We need to {x}.,1,2,必要性を伝える。,work,need to を使う,{x}は動詞,何かをする必要性を伝える,行動を促す表現,We need to + 動詞で必要性,Must ~|Have to ~|Should ~
+230,もう一度{x}してください。,Please {x} again.,1,2,再依頼。,work,again を使う,{x}は動詞,もう一度やってほしいと依頼する,繰り返しを求める丁寧な表現,Please + 動詞 + again で再依頼,Could you ~ again?|Do it once more|Repeat please
+231,それは良い方向です。,That's a good sign.,1,1,ポジティブ評価。,daily,sign を使う,good を使う,良い兆候だと評価する,前向きな進展を示す表現,sign は「兆候・サイン」という名詞,Good news|Positive sign|Looking good
+232,少し違和感があります。,Something feels off.,1,1,違和感を表す。,daily,feels を使う,off を使う,何か変だと感じることを伝える,直感的な違和感を表現,feel off は「しっくりこない」という慣用表現,Something's wrong|Doesn't feel right|Something's strange
+233,その点は重要です。,That point is important.,1,1,重要点を強調。,work,point を使う,important を使う,その点が重要だと強調する,注目すべき事項を示す,point is important は「点が重要」,Key point|That matters|Important aspect
+234,問題はそこです。,That's the issue.,1,1,問題点を指摘。,work,issue を使う,That's を使う,問題の核心を指摘する,問題の本質を示す表現,issue は「問題」という名詞,That's the problem|That's where the issue is|Root cause
+235,それは想定内です。,That's within expectations.,1,1,想定内。,work,expectations を使う,within を使う,想定の範囲内だと伝える,予想通りであることを示す,within expectations は「期待の範囲内」,Expected|As anticipated|Normal
+236,今のところ順調です。,Everything looks good so far.,1,1,現状良好。,work,looks good を使う,so far を使う,現時点では順調だと報告する,現状の良好さを示す表現,so far は「今のところ」という副詞,Going well|All good|On track
+237,もう少し様子を見ましょう。,Let's monitor it a bit more.,1,1,継続観察。,work,monitor を使う,a bit more を使う,もう少し観察しようと提案する,継続的な経過観察の提案,monitor は「監視する」という動詞,Keep watching|Observe more|Check progress
+238,対応を進めています。,We're working on it.,1,1,対応中。,work,working を使う,on it を使う,現在対応中であることを伝える,作業進行中を示す表現,work on は「取り組む」という句動詞,Handling it|In progress|Taking care of it
+239,それは後で対応します。,I'll deal with that later.,1,1,後対応。,work,deal with を使う,later を使う,後で処理すると約束する,今は無理だが後で対応する意思,deal with は「対処する」という句動詞,Handle it later|Take care of it later|Address it later
+240,ここまでで大丈夫です。,That should be enough for now.,1,1,一旦十分。,daily,enough を使う,for now を使う,とりあえず十分だと判断する,一区切りつけることを示す,should be enough は「十分なはず」,That's good for now|Enough for the moment|We're set
