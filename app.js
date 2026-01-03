@@ -7,6 +7,7 @@ const PREF_KEY = "prefs_levels_v2_3step";
 const VISITED_KEY = "has_visited_v2";
 const MISSION_KEY = "daily_mission_v1";
 const STREAK_KEY = "learning_streak_v1";
+const HISTORY_KEY = "daily_history_v1";
 
 /*************************************************
  * Time
@@ -104,17 +105,54 @@ let streak = JSON.parse(localStorage.getItem(STREAK_KEY) || "null") || {
   lastCompletedDate: null
 };
 
+// Daily history for stats (past 30 days)
+// [{ date: "2026-01-03", answers: 50, correct: 35, accuracy: 70, totalStudied: 120 }, ...]
+let dailyHistory = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
+
 function saveAll() {
   localStorage.setItem(SRS_KEY, JSON.stringify(srs));
   localStorage.setItem(DAILY_KEY, JSON.stringify(daily));
   localStorage.setItem(PREF_KEY, JSON.stringify(prefs));
   localStorage.setItem(MISSION_KEY, JSON.stringify(dailyMission));
   localStorage.setItem(STREAK_KEY, JSON.stringify(streak));
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(dailyHistory));
 }
 
 function ensureDaily() {
   const today = new Date().toDateString();
   if (daily.day !== today) {
+    // 前日のデータを履歴に保存
+    if (daily.stats) {
+      const answers = daily.stats.grades.again + daily.stats.grades.hard + daily.stats.grades.easy;
+      const correct = daily.stats.grades.easy;
+      const accuracy = answers > 0 ? Math.round((correct / answers) * 100) : 0;
+
+      // 累計学習問題数を計算（全SRSデータからユニーク問題数）
+      const allStudiedCards = new Set();
+      Object.keys(srs).forEach(no => {
+        const cardNo = Number(no);
+        for (let lv = 1; lv <= 3; lv++) {
+          if (srs[cardNo]?.[lv]?.total > 0) {
+            allStudiedCards.add(cardNo);
+            break;
+          }
+        }
+      });
+
+      dailyHistory.push({
+        date: daily.day,
+        answers: answers,
+        correct: correct,
+        accuracy: accuracy,
+        totalStudied: allStudiedCards.size
+      });
+
+      // 過去30日分のみ保持
+      if (dailyHistory.length > 30) {
+        dailyHistory = dailyHistory.slice(-30);
+      }
+    }
+
     // 前日の連続日数チェック
     checkStreakOnDayChange(today);
 
@@ -1315,144 +1353,136 @@ if (hint2BtnEl) hint2BtnEl.addEventListener("click", () => {
 /*************************************************
  * Stats View
  *************************************************/
-function calculateStats() {
-  const totalCards = cards.length;
-  let studied = 0;
-  let dueCount = 0;
-  let mastered = 0;
-
-  const levelStats = { 1: {}, 2: {}, 3: {} };
-  const gradeCount = { 1: 0, 2: 0, 3: 0 };
-  const sceneCount = {};
-
-  cards.forEach(card => {
-    const scene = card.scene || "その他";
-    sceneCount[scene] = (sceneCount[scene] || 0) + 1;
-
-    for (let lv = 1; lv <= 3; lv++) {
-      const rec = srs[card.no]?.[lv];
-
-      if (!levelStats[lv][scene]) {
-        levelStats[lv][scene] = { studied: 0, mastered: 0 };
-      }
-
-      if (rec && rec.total > 0) {
-        levelStats[lv][scene].studied++;
-
-        if (lv === prefs.level) {
-          studied++;
-        }
-
-        if (rec.lastGrade) {
-          gradeCount[rec.lastGrade]++;
-        }
-
-        // 習得済み判定：easy率が80%以上
-        if (rec.easy && rec.total >= 3 && (rec.easy / rec.total) >= 0.8) {
-          levelStats[lv][scene].mastered++;
-          if (lv === prefs.level) {
-            mastered++;
-          }
-        }
-
-        // Due判定
-        if (rec.dueAt && rec.dueAt <= now() && lv === prefs.level) {
-          dueCount++;
-        }
-      }
-    }
-  });
-
-  return {
-    totalCards,
-    studied,
-    dueCount,
-    mastered,
-    levelStats,
-    gradeCount,
-    sceneCount
-  };
+function renderStats() {
+  renderDailyChart();
+  renderCumulativeChart();
 }
 
-function renderStats() {
-  const stats = calculateStats();
+function renderDailyChart() {
+  const chartEl = document.getElementById("dailyChart");
+  if (!chartEl) return;
 
-  // 全体サマリー
-  document.getElementById("totalCards").textContent = stats.totalCards;
-  document.getElementById("studiedCards").textContent = stats.studied;
-  document.getElementById("dueCards").textContent = stats.dueCount;
-  document.getElementById("masteredCards").textContent = stats.mastered;
+  // Get last 30 days data (including today)
+  const data = [...dailyHistory];
 
-  // レベル別進捗
-  const levelStatsEl = document.getElementById("levelStats");
-  let levelHtml = "";
-  for (let lv = 1; lv <= 3; lv++) {
-    const total = stats.totalCards;
-    const studied = Object.values(stats.levelStats[lv]).reduce((sum, s) => sum + s.studied, 0);
-    const mastered = Object.values(stats.levelStats[lv]).reduce((sum, s) => sum + s.mastered, 0);
-    const pct = total > 0 ? Math.round((studied / total) * 100) : 0;
+  // Add today's data
+  ensureDaily();
+  const todayAnswers = daily.stats.grades.again + daily.stats.grades.hard + daily.stats.grades.easy;
+  const todayCorrect = daily.stats.grades.easy;
+  const todayAccuracy = todayAnswers > 0 ? Math.round((todayCorrect / todayAnswers) * 100) : 0;
 
-    levelHtml += `
-      <div class="levelStatRow">
-        <div class="levelStatLabel">Lv${lv}</div>
-        <div class="levelStatBar">
-          <div class="levelStatProgress" style="width: ${pct}%"></div>
-        </div>
-        <div class="levelStatText">${studied} / ${total} (習得: ${mastered})</div>
-      </div>
-    `;
-  }
-  levelStatsEl.innerHTML = levelHtml;
-
-  // 評価の分布
-  const gradeDistEl = document.getElementById("gradeDistribution");
-  const gradeTotal = stats.gradeCount[1] + stats.gradeCount[2] + stats.gradeCount[3];
-  let gradeHtml = "";
-
-  if (gradeTotal > 0) {
-    const grades = [
-      { grade: 1, label: "Again", color: "#ef4444" },
-      { grade: 2, label: "Hard", color: "#f59e0b" },
-      { grade: 3, label: "Easy", color: "#10b981" }
-    ];
-
-    grades.forEach(({ grade, label, color }) => {
-      const count = stats.gradeCount[grade];
-      const pct = Math.round((count / gradeTotal) * 100);
-      gradeHtml += `
-        <div class="gradeStatRow">
-          <div class="gradeStatLabel">${label}</div>
-          <div class="gradeStatBar">
-            <div class="gradeStatProgress" style="width: ${pct}%; background: ${color}"></div>
-          </div>
-          <div class="gradeStatText">${count} (${pct}%)</div>
-        </div>
-      `;
+  if (todayAnswers > 0) {
+    data.push({
+      date: daily.day,
+      answers: todayAnswers,
+      correct: todayCorrect,
+      accuracy: todayAccuracy,
+      totalStudied: 0 // Not needed for daily chart
     });
-  } else {
-    gradeHtml = '<div class="noData">まだ学習データがありません</div>';
   }
-  gradeDistEl.innerHTML = gradeHtml;
 
-  // シーン別カード数
-  const sceneStatsEl = document.getElementById("sceneStats");
-  let sceneHtml = "";
-  const scenes = Object.keys(stats.sceneCount).sort();
+  // Take last 30 days
+  const last30 = data.slice(-30);
 
-  scenes.forEach(scene => {
-    const count = stats.sceneCount[scene];
-    sceneHtml += `
-      <div class="sceneStatRow">
-        <div class="sceneStatLabel">${scene}</div>
-        <div class="sceneStatValue">${count}</div>
+  if (last30.length === 0) {
+    chartEl.innerHTML = '<div class="noData">まだ学習データがありません<br>問題を解くと表示されます</div>';
+    return;
+  }
+
+  // Find max for scaling
+  const maxAnswers = Math.max(...last30.map(d => d.answers), 1);
+
+  // Build chart HTML
+  let html = '<div class="chartRow">';
+
+  last30.forEach(day => {
+    const incorrect = day.answers - day.correct;
+    const correctHeight = Math.round((day.correct / maxAnswers) * 100);
+    const incorrectHeight = Math.round((incorrect / maxAnswers) * 100);
+    const dateLabel = formatDateShort(day.date);
+
+    html += `
+      <div class="chartBar" title="${day.date}\n回答: ${day.answers}問\n正解: ${day.correct}問 (${day.accuracy}%)">
+        ${incorrect > 0 ? `<div class="barIncorrect" style="height: ${incorrectHeight}%"></div>` : ''}
+        ${day.correct > 0 ? `<div class="barCorrect" style="height: ${correctHeight}%"></div>` : ''}
+        <div class="chartDate">${dateLabel}</div>
       </div>
     `;
   });
-  sceneStatsEl.innerHTML = sceneHtml || '<div class="noData">データがありません</div>';
 
-  // 最近7日間の学習
-  const recentEl = document.getElementById("recentActivity");
-  recentEl.innerHTML = '<div class="noData">履歴機能は今後実装予定</div>';
+  html += '</div>';
+
+  // Add legend
+  html += `
+    <div class="chartLegend">
+      <div class="legendItem">
+        <div class="legendColor green"></div>
+        <span>正解 (Easy)</span>
+      </div>
+      <div class="legendItem">
+        <div class="legendColor red"></div>
+        <span>不正解 (Again/Hard)</span>
+      </div>
+    </div>
+  `;
+
+  chartEl.innerHTML = html;
+}
+
+function renderCumulativeChart() {
+  const chartEl = document.getElementById("cumulativeChart");
+  if (!chartEl) return;
+
+  const data = [...dailyHistory];
+
+  if (data.length === 0) {
+    chartEl.innerHTML = '<div class="noData">まだ学習データがありません<br>問題を解くと表示されます</div>';
+    return;
+  }
+
+  // Take last 30 days
+  const last30 = data.slice(-30);
+
+  // Find max for scaling
+  const maxTotal = Math.max(...last30.map(d => d.totalStudied), 1);
+
+  // Build chart HTML
+  let html = '<div class="chartRow">';
+
+  last30.forEach(day => {
+    const height = Math.round((day.totalStudied / maxTotal) * 100);
+    const dateLabel = formatDateShort(day.date);
+
+    html += `
+      <div class="cumulativeBar" title="${day.date}\n累計: ${day.totalStudied}問">
+        <div class="barFill" style="height: ${height}%">
+          ${height > 30 ? `<div class="barValue">${day.totalStudied}</div>` : ''}
+        </div>
+        <div class="chartDate">${dateLabel}</div>
+      </div>
+    `;
+  });
+
+  html += '</div>';
+
+  // Add legend
+  html += `
+    <div class="chartLegend">
+      <div class="legendItem">
+        <div class="legendColor blue"></div>
+        <span>累計学習問題数</span>
+      </div>
+    </div>
+  `;
+
+  chartEl.innerHTML = html;
+}
+
+function formatDateShort(dateString) {
+  const date = new Date(dateString);
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  return `${month}/${day}`;
 }
 
 /*************************************************

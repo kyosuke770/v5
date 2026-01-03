@@ -154,45 +154,13 @@
     </header>
 
     <section class="cardBox">
-      <div class="hLabel">全体サマリー</div>
-      <div class="statsGrid">
-        <div class="statItem">
-          <div class="statValue" id="totalCards">0</div>
-          <div class="statLabel">総カード数</div>
-        </div>
-        <div class="statItem">
-          <div class="statValue" id="studiedCards">0</div>
-          <div class="statLabel">学習済み</div>
-        </div>
-        <div class="statItem">
-          <div class="statValue" id="dueCards">0</div>
-          <div class="statLabel">復習待ち</div>
-        </div>
-        <div class="statItem">
-          <div class="statValue" id="masteredCards">0</div>
-          <div class="statLabel">習得済み</div>
-        </div>
-      </div>
+      <div class="hLabel">📊 過去30日の学習記録</div>
+      <div id="dailyChart" class="dailyChart"></div>
     </section>
 
     <section class="cardBox">
-      <div class="hLabel">レベル別進捗</div>
-      <div id="levelStats"></div>
-    </section>
-
-    <section class="cardBox">
-      <div class="hLabel">評価の分布（全レベル）</div>
-      <div id="gradeDistribution"></div>
-    </section>
-
-    <section class="cardBox">
-      <div class="hLabel">シーン別カード数</div>
-      <div id="sceneStats"></div>
-    </section>
-
-    <section class="cardBox">
-      <div class="hLabel">最近7日間の学習</div>
-      <div id="recentActivity"></div>
+      <div class="hLabel">📈 累計学習問題数</div>
+      <div id="cumulativeChart" class="cumulativeChart"></div>
     </section>
   </div>
 

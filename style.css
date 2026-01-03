@@ -893,6 +893,148 @@ a{ color:inherit; }
   cursor: not-allowed;
 }
 
+/*************************************************
+ * Daily Charts (Stats View)
+ *************************************************/
+.dailyChart, .cumulativeChart{
+  padding: 10px 0;
+}
+
+.chartRow{
+  display: flex;
+  align-items: flex-end;
+  height: 150px;
+  margin-bottom: 8px;
+  gap: 2px;
+}
+
+.chartBar{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.chartBar:hover{
+  opacity: 0.7;
+}
+
+.barCorrect{
+  width: 100%;
+  background: var(--green);
+  border-radius: 2px 2px 0 0;
+  min-height: 2px;
+}
+
+.barIncorrect{
+  width: 100%;
+  background: var(--red);
+  border-radius: 0;
+  min-height: 2px;
+}
+
+.chartDate{
+  font-size: 9px;
+  color: var(--sub);
+  margin-top: 4px;
+  text-align: center;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  white-space: nowrap;
+}
+
+.chartLegend{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.legendItem{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendColor{
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legendColor.green{
+  background: var(--green);
+}
+
+.legendColor.red{
+  background: var(--red);
+}
+
+.legendColor.blue{
+  background: var(--blue);
+}
+
+.chartTooltip{
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.cumulativeLine{
+  position: relative;
+  height: 180px;
+  margin: 20px 0;
+}
+
+.cumulativeBar{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.cumulativeBar:hover{
+  opacity: 0.7;
+}
+
+.barFill{
+  width: 100%;
+  background: linear-gradient(to top, var(--blue), #5ac8fa);
+  border-radius: 2px 2px 0 0;
+  min-height: 2px;
+  position: relative;
+}
+
+.barValue{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.noData{
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--sub);
+  font-size: 14px;
+}
+
 /* small screens */
 @media (max-width: 380px){
   .row{ grid-template-columns: 78px 1fr 1fr 1fr; }
@@ -905,4 +1047,7 @@ a{ color:inherit; }
   .landingCatchCopy{ font-size: 24px; }
   .benefitCard{ padding: 20px; }
   .ctaButton{ padding: 16px 40px; font-size: 16px; }
+  .chartDate{ font-size: 8px; }
+  .chartRow{ height: 120px; }
+  .cumulativeLine{ height: 150px; }
 }
