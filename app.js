@@ -315,7 +315,6 @@ function showHome() {
   renderDailyMissions();
   renderProgress();
   renderBlockTable();
-  renderSceneButtons();
 }
 
 function showStudy() {
@@ -692,38 +691,6 @@ function renderBlockTable() {
   });
 }
 
-/*************************************************
- * Scenes filter
- *************************************************/
-function getScenes() {
-  return [...new Set(cards.map(c => c.scene).filter(Boolean))];
-}
-function renderSceneButtons() {
-  const wrap = document.getElementById("scenes");
-  if (!wrap) return;
-  wrap.innerHTML = "";
-
-  const allBtn = document.createElement("button");
-  allBtn.textContent = "ALL";
-  allBtn.onclick = () => startVideoOrder(true);
-  wrap.appendChild(allBtn);
-
-  getScenes().forEach(sc => {
-    const btn = document.createElement("button");
-    btn.textContent = sc;
-    btn.onclick = () => startScene(sc);
-    wrap.appendChild(btn);
-  });
-}
-
-function startScene(scene) {
-  sessionMode = "normal";
-  sessionDueSet = new Set();
-
-  cardsByMode = cards.filter(c => c.scene === scene).sort((a,b)=>a.no-b.no);
-  index = 0; resetCardView();
-  showStudy();
-}
 
 /*************************************************
  * Start modes
